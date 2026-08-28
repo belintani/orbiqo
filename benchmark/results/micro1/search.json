@@ -1,0 +1,1934 @@
+[
+  {
+    "columns": 400,
+    "pitch_px": 4.665265090580843,
+    "payload_cells": 360,
+    "channel_bytes": 90,
+    "capacities": {
+      "fast": 50,
+      "balanced": 18,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 398,
+    "pitch_px": 4.688708633749591,
+    "payload_cells": 358,
+    "channel_bytes": 89,
+    "capacities": {
+      "fast": 49,
+      "balanced": 17,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 396,
+    "pitch_px": 4.71238898038469,
+    "payload_cells": 356,
+    "channel_bytes": 89,
+    "capacities": {
+      "fast": 49,
+      "balanced": 17,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 394,
+    "pitch_px": 4.736309736630297,
+    "payload_cells": 354,
+    "channel_bytes": 88,
+    "capacities": {
+      "fast": 48,
+      "balanced": 16,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 392,
+    "pitch_px": 4.760474582225349,
+    "payload_cells": 352,
+    "channel_bytes": 88,
+    "capacities": {
+      "fast": 48,
+      "balanced": 16,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 390,
+    "pitch_px": 4.784887272390608,
+    "payload_cells": 350,
+    "channel_bytes": 87,
+    "capacities": {
+      "fast": 47,
+      "balanced": 15,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 388,
+    "pitch_px": 4.809551639774065,
+    "payload_cells": 348,
+    "channel_bytes": 87,
+    "capacities": {
+      "fast": 47,
+      "balanced": 15,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 386,
+    "pitch_px": 4.834471596456833,
+    "payload_cells": 346,
+    "channel_bytes": 86,
+    "capacities": {
+      "fast": 46,
+      "balanced": 14,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 384,
+    "pitch_px": 4.859651136021711,
+    "payload_cells": 344,
+    "channel_bytes": 86,
+    "capacities": {
+      "fast": 46,
+      "balanced": 14,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 382,
+    "pitch_px": 4.8850943356867464,
+    "payload_cells": 342,
+    "channel_bytes": 85,
+    "capacities": {
+      "fast": 45,
+      "balanced": 13,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 380,
+    "pitch_px": 4.910805358506151,
+    "payload_cells": 340,
+    "channel_bytes": 85,
+    "capacities": {
+      "fast": 45,
+      "balanced": 13,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 378,
+    "pitch_px": 4.9367884556411035,
+    "payload_cells": 338,
+    "channel_bytes": 84,
+    "capacities": {
+      "fast": 44,
+      "balanced": 12,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 376,
+    "pitch_px": 4.963047968703024,
+    "payload_cells": 336,
+    "channel_bytes": 84,
+    "capacities": {
+      "fast": 44,
+      "balanced": 12,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 374,
+    "pitch_px": 4.9895883321720245,
+    "payload_cells": 334,
+    "channel_bytes": 83,
+    "capacities": {
+      "fast": 43,
+      "balanced": 11,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 372,
+    "pitch_px": 5.01641407589338,
+    "payload_cells": 332,
+    "channel_bytes": 83,
+    "capacities": {
+      "fast": 43,
+      "balanced": 11,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 370,
+    "pitch_px": 5.043529827654965,
+    "payload_cells": 330,
+    "channel_bytes": 82,
+    "capacities": {
+      "fast": 42,
+      "balanced": 10,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 368,
+    "pitch_px": 5.070940315848742,
+    "payload_cells": 328,
+    "channel_bytes": 82,
+    "capacities": {
+      "fast": 42,
+      "balanced": 10,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 366,
+    "pitch_px": 5.098650372219501,
+    "payload_cells": 326,
+    "channel_bytes": 81,
+    "capacities": {
+      "fast": 41,
+      "balanced": 9,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 364,
+    "pitch_px": 5.126664934704223,
+    "payload_cells": 324,
+    "channel_bytes": 81,
+    "capacities": {
+      "fast": 41,
+      "balanced": 9,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 362,
+    "pitch_px": 5.154989050365573,
+    "payload_cells": 322,
+    "channel_bytes": 80,
+    "capacities": {
+      "fast": 40,
+      "balanced": 8,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 360,
+    "pitch_px": 5.183627878423159,
+    "payload_cells": 320,
+    "channel_bytes": 80,
+    "capacities": {
+      "fast": 40,
+      "balanced": 8,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 358,
+    "pitch_px": 5.212586693386416,
+    "payload_cells": 318,
+    "channel_bytes": 79,
+    "capacities": {
+      "fast": 39,
+      "balanced": 7,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 356,
+    "pitch_px": 5.241870888293082,
+    "payload_cells": 316,
+    "channel_bytes": 79,
+    "capacities": {
+      "fast": 39,
+      "balanced": 7,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 354,
+    "pitch_px": 5.2714859780574495,
+    "payload_cells": 314,
+    "channel_bytes": 78,
+    "capacities": {
+      "fast": 38,
+      "balanced": 6,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 352,
+    "pitch_px": 5.3014376029327765,
+    "payload_cells": 312,
+    "channel_bytes": 78,
+    "capacities": {
+      "fast": 38,
+      "balanced": 6,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 350,
+    "pitch_px": 5.331731532092392,
+    "payload_cells": 310,
+    "channel_bytes": 77,
+    "capacities": {
+      "fast": 37,
+      "balanced": 5,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 348,
+    "pitch_px": 5.362373667334302,
+    "payload_cells": 308,
+    "channel_bytes": 77,
+    "capacities": {
+      "fast": 37,
+      "balanced": 5,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 346,
+    "pitch_px": 5.39337004691427,
+    "payload_cells": 306,
+    "channel_bytes": 76,
+    "capacities": {
+      "fast": 36,
+      "balanced": 4,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 344,
+    "pitch_px": 5.424726849512608,
+    "payload_cells": 304,
+    "channel_bytes": 76,
+    "capacities": {
+      "fast": 36,
+      "balanced": 4,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 342,
+    "pitch_px": 5.456450398340166,
+    "payload_cells": 302,
+    "channel_bytes": 75,
+    "capacities": {
+      "fast": 35,
+      "balanced": 3,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 340,
+    "pitch_px": 5.488547165389227,
+    "payload_cells": 300,
+    "channel_bytes": 75,
+    "capacities": {
+      "fast": 35,
+      "balanced": 3,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 338,
+    "pitch_px": 5.521023775835317,
+    "payload_cells": 298,
+    "channel_bytes": 74,
+    "capacities": {
+      "fast": 34,
+      "balanced": 2,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 336,
+    "pitch_px": 5.553887012596243,
+    "payload_cells": 296,
+    "channel_bytes": 74,
+    "capacities": {
+      "fast": 34,
+      "balanced": 2,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 334,
+    "pitch_px": 5.587143821054901,
+    "payload_cells": 294,
+    "channel_bytes": 73,
+    "capacities": {
+      "fast": 33,
+      "balanced": 1,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 332,
+    "pitch_px": 5.620801313952823,
+    "payload_cells": 292,
+    "channel_bytes": 73,
+    "capacities": {
+      "fast": 33,
+      "balanced": 1,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 330,
+    "pitch_px": 5.654866776461628,
+    "payload_cells": 290,
+    "channel_bytes": 72,
+    "capacities": {
+      "fast": 32,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 328,
+    "pitch_px": 5.689347671440053,
+    "payload_cells": 288,
+    "channel_bytes": 72,
+    "capacities": {
+      "fast": 32,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 326,
+    "pitch_px": 5.72425164488447,
+    "payload_cells": 286,
+    "channel_bytes": 71,
+    "capacities": {
+      "fast": 31,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 324,
+    "pitch_px": 5.759586531581287,
+    "payload_cells": 284,
+    "channel_bytes": 71,
+    "capacities": {
+      "fast": 31,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 322,
+    "pitch_px": 5.795360360969991,
+    "payload_cells": 282,
+    "channel_bytes": 70,
+    "capacities": {
+      "fast": 30,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 320,
+    "pitch_px": 5.831581363226054,
+    "payload_cells": 280,
+    "channel_bytes": 70,
+    "capacities": {
+      "fast": 30,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 318,
+    "pitch_px": 5.868257975573387,
+    "payload_cells": 278,
+    "channel_bytes": 69,
+    "capacities": {
+      "fast": 29,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 316,
+    "pitch_px": 5.90539884883651,
+    "payload_cells": 276,
+    "channel_bytes": 69,
+    "capacities": {
+      "fast": 29,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 314,
+    "pitch_px": 5.943012854243112,
+    "payload_cells": 274,
+    "channel_bytes": 68,
+    "capacities": {
+      "fast": 28,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 312,
+    "pitch_px": 5.9811090904882604,
+    "payload_cells": 272,
+    "channel_bytes": 68,
+    "capacities": {
+      "fast": 28,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 310,
+    "pitch_px": 6.019696891072055,
+    "payload_cells": 270,
+    "channel_bytes": 67,
+    "capacities": {
+      "fast": 27,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 308,
+    "pitch_px": 6.058785831923172,
+    "payload_cells": 268,
+    "channel_bytes": 67,
+    "capacities": {
+      "fast": 27,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 306,
+    "pitch_px": 6.098385739321363,
+    "payload_cells": 266,
+    "channel_bytes": 66,
+    "capacities": {
+      "fast": 26,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 304,
+    "pitch_px": 6.138506698132688,
+    "payload_cells": 264,
+    "channel_bytes": 66,
+    "capacities": {
+      "fast": 26,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 302,
+    "pitch_px": 6.179159060371978,
+    "payload_cells": 262,
+    "channel_bytes": 65,
+    "capacities": {
+      "fast": 25,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 300,
+    "pitch_px": 6.220353454107791,
+    "payload_cells": 260,
+    "channel_bytes": 65,
+    "capacities": {
+      "fast": 25,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 298,
+    "pitch_px": 6.262100792725964,
+    "payload_cells": 258,
+    "channel_bytes": 64,
+    "capacities": {
+      "fast": 24,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 296,
+    "pitch_px": 6.3044122845687065,
+    "payload_cells": 256,
+    "channel_bytes": 64,
+    "capacities": {
+      "fast": 24,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 294,
+    "pitch_px": 6.347299442967134,
+    "payload_cells": 254,
+    "channel_bytes": 63,
+    "capacities": {
+      "fast": 23,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 292,
+    "pitch_px": 6.390774096686086,
+    "payload_cells": 252,
+    "channel_bytes": 63,
+    "capacities": {
+      "fast": 23,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 290,
+    "pitch_px": 6.4348484008011635,
+    "payload_cells": 250,
+    "channel_bytes": 62,
+    "capacities": {
+      "fast": 22,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 288,
+    "pitch_px": 6.4795348480289485,
+    "payload_cells": 248,
+    "channel_bytes": 62,
+    "capacities": {
+      "fast": 22,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 286,
+    "pitch_px": 6.524846280532648,
+    "payload_cells": 246,
+    "channel_bytes": 61,
+    "capacities": {
+      "fast": 21,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 284,
+    "pitch_px": 6.570795902226539,
+    "payload_cells": 244,
+    "channel_bytes": 61,
+    "capacities": {
+      "fast": 21,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 282,
+    "pitch_px": 6.617397291604033,
+    "payload_cells": 242,
+    "channel_bytes": 60,
+    "capacities": {
+      "fast": 20,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 280,
+    "pitch_px": 6.664664415115491,
+    "payload_cells": 240,
+    "channel_bytes": 60,
+    "capacities": {
+      "fast": 20,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 278,
+    "pitch_px": 6.712611641123515,
+    "payload_cells": 238,
+    "channel_bytes": 59,
+    "capacities": {
+      "fast": 19,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 276,
+    "pitch_px": 6.76125375446499,
+    "payload_cells": 236,
+    "channel_bytes": 59,
+    "capacities": {
+      "fast": 19,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 274,
+    "pitch_px": 6.810605971650865,
+    "payload_cells": 234,
+    "channel_bytes": 58,
+    "capacities": {
+      "fast": 18,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 272,
+    "pitch_px": 6.860683956736534,
+    "payload_cells": 232,
+    "channel_bytes": 58,
+    "capacities": {
+      "fast": 18,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 270,
+    "pitch_px": 6.911503837897545,
+    "payload_cells": 230,
+    "channel_bytes": 57,
+    "capacities": {
+      "fast": 17,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 268,
+    "pitch_px": 6.963082224747527,
+    "payload_cells": 228,
+    "channel_bytes": 57,
+    "capacities": {
+      "fast": 17,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 266,
+    "pitch_px": 7.015436226437358,
+    "payload_cells": 226,
+    "channel_bytes": 56,
+    "capacities": {
+      "fast": 16,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 264,
+    "pitch_px": 7.068583470577035,
+    "payload_cells": 224,
+    "channel_bytes": 56,
+    "capacities": {
+      "fast": 16,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 262,
+    "pitch_px": 7.122542123024189,
+    "payload_cells": 222,
+    "channel_bytes": 55,
+    "capacities": {
+      "fast": 15,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 260,
+    "pitch_px": 7.177330908585912,
+    "payload_cells": 220,
+    "channel_bytes": 55,
+    "capacities": {
+      "fast": 15,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 258,
+    "pitch_px": 7.232969132683478,
+    "payload_cells": 218,
+    "channel_bytes": 54,
+    "capacities": {
+      "fast": 14,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 256,
+    "pitch_px": 7.289476704032568,
+    "payload_cells": 216,
+    "channel_bytes": 54,
+    "capacities": {
+      "fast": 14,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 254,
+    "pitch_px": 7.346874158395029,
+    "payload_cells": 214,
+    "channel_bytes": 53,
+    "capacities": {
+      "fast": 13,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 252,
+    "pitch_px": 7.405182683461655,
+    "payload_cells": 212,
+    "channel_bytes": 53,
+    "capacities": {
+      "fast": 13,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 250,
+    "pitch_px": 7.464424144929349,
+    "payload_cells": 210,
+    "channel_bytes": 52,
+    "capacities": {
+      "fast": 12,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 248,
+    "pitch_px": 7.524621113840069,
+    "payload_cells": 208,
+    "channel_bytes": 52,
+    "capacities": {
+      "fast": 12,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 246,
+    "pitch_px": 7.585796895253403,
+    "payload_cells": 206,
+    "channel_bytes": 51,
+    "capacities": {
+      "fast": 11,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 244,
+    "pitch_px": 7.64797555832925,
+    "payload_cells": 204,
+    "channel_bytes": 51,
+    "capacities": {
+      "fast": 11,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 242,
+    "pitch_px": 7.71118196790222,
+    "payload_cells": 202,
+    "channel_bytes": 50,
+    "capacities": {
+      "fast": 10,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 240,
+    "pitch_px": 7.775441817634738,
+    "payload_cells": 200,
+    "channel_bytes": 50,
+    "capacities": {
+      "fast": 10,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 238,
+    "pitch_px": 7.840781664841753,
+    "payload_cells": 198,
+    "channel_bytes": 49,
+    "capacities": {
+      "fast": 9,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 236,
+    "pitch_px": 7.907228967086175,
+    "payload_cells": 196,
+    "channel_bytes": 49,
+    "capacities": {
+      "fast": 9,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 234,
+    "pitch_px": 7.974812120651014,
+    "payload_cells": 194,
+    "channel_bytes": 48,
+    "capacities": {
+      "fast": 8,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 232,
+    "pitch_px": 8.043560501001453,
+    "payload_cells": 192,
+    "channel_bytes": 48,
+    "capacities": {
+      "fast": 8,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 230,
+    "pitch_px": 8.113504505357989,
+    "payload_cells": 190,
+    "channel_bytes": 47,
+    "capacities": {
+      "fast": 7,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 228,
+    "pitch_px": 8.184675597510251,
+    "payload_cells": 188,
+    "channel_bytes": 47,
+    "capacities": {
+      "fast": 7,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 226,
+    "pitch_px": 8.257106355010341,
+    "payload_cells": 186,
+    "channel_bytes": 46,
+    "capacities": {
+      "fast": 6,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 224,
+    "pitch_px": 8.330830518894363,
+    "payload_cells": 184,
+    "channel_bytes": 46,
+    "capacities": {
+      "fast": 6,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 222,
+    "pitch_px": 8.405883046091608,
+    "payload_cells": 182,
+    "channel_bytes": 45,
+    "capacities": {
+      "fast": 5,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 220,
+    "pitch_px": 8.482300164692441,
+    "payload_cells": 180,
+    "channel_bytes": 45,
+    "capacities": {
+      "fast": 5,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 218,
+    "pitch_px": 8.560119432258428,
+    "payload_cells": 178,
+    "channel_bytes": 44,
+    "capacities": {
+      "fast": 4,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 216,
+    "pitch_px": 8.639379797371932,
+    "payload_cells": 176,
+    "channel_bytes": 44,
+    "capacities": {
+      "fast": 4,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 214,
+    "pitch_px": 8.720121664637091,
+    "payload_cells": 175,
+    "channel_bytes": 43,
+    "capacities": {
+      "fast": 3,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 212,
+    "pitch_px": 8.802386963360082,
+    "payload_cells": 172,
+    "channel_bytes": 43,
+    "capacities": {
+      "fast": 3,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 210,
+    "pitch_px": 8.886219220153986,
+    "payload_cells": 171,
+    "channel_bytes": 42,
+    "capacities": {
+      "fast": 2,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 208,
+    "pitch_px": 8.97166363573239,
+    "payload_cells": 168,
+    "channel_bytes": 42,
+    "capacities": {
+      "fast": 2,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 206,
+    "pitch_px": 9.058767166176393,
+    "payload_cells": 167,
+    "channel_bytes": 41,
+    "capacities": {
+      "fast": 1,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 204,
+    "pitch_px": 9.147578608982046,
+    "payload_cells": 164,
+    "channel_bytes": 41,
+    "capacities": {
+      "fast": 1,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 202,
+    "pitch_px": 9.23814869421949,
+    "payload_cells": 163,
+    "channel_bytes": 40,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 200,
+    "pitch_px": 9.330530181161686,
+    "payload_cells": 160,
+    "channel_bytes": 40,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 198,
+    "pitch_px": 9.42477796076938,
+    "payload_cells": 159,
+    "channel_bytes": 39,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 196,
+    "pitch_px": 9.520949164450698,
+    "payload_cells": 156,
+    "channel_bytes": 39,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 194,
+    "pitch_px": 9.61910327954813,
+    "payload_cells": 155,
+    "channel_bytes": 38,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 192,
+    "pitch_px": 9.719302272043421,
+    "payload_cells": 152,
+    "channel_bytes": 38,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 190,
+    "pitch_px": 9.821610717012302,
+    "payload_cells": 153,
+    "channel_bytes": 38,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 188,
+    "pitch_px": 9.926095937406048,
+    "payload_cells": 152,
+    "channel_bytes": 38,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 186,
+    "pitch_px": 10.03282815178676,
+    "payload_cells": 149,
+    "channel_bytes": 37,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 184,
+    "pitch_px": 10.141880631697484,
+    "payload_cells": 148,
+    "channel_bytes": 37,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 182,
+    "pitch_px": 10.253329869408446,
+    "payload_cells": 145,
+    "channel_bytes": 36,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 180,
+    "pitch_px": 10.367255756846317,
+    "payload_cells": 144,
+    "channel_bytes": 36,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 178,
+    "pitch_px": 10.483741776586164,
+    "payload_cells": 141,
+    "channel_bytes": 35,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 176,
+    "pitch_px": 10.602875205865553,
+    "payload_cells": 140,
+    "channel_bytes": 35,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 174,
+    "pitch_px": 10.724747334668605,
+    "payload_cells": 137,
+    "channel_bytes": 34,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 172,
+    "pitch_px": 10.849453699025217,
+    "payload_cells": 136,
+    "channel_bytes": 34,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 170,
+    "pitch_px": 10.977094330778455,
+    "payload_cells": 133,
+    "channel_bytes": 33,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 168,
+    "pitch_px": 11.107774025192485,
+    "payload_cells": 132,
+    "channel_bytes": 33,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 166,
+    "pitch_px": 11.241602627905646,
+    "payload_cells": 130,
+    "channel_bytes": 32,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 164,
+    "pitch_px": 11.378695342880105,
+    "payload_cells": 128,
+    "channel_bytes": 32,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 162,
+    "pitch_px": 11.519173063162574,
+    "payload_cells": 126,
+    "channel_bytes": 31,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 160,
+    "pitch_px": 11.663162726452107,
+    "payload_cells": 124,
+    "channel_bytes": 31,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 158,
+    "pitch_px": 11.81079769767302,
+    "payload_cells": 122,
+    "channel_bytes": 30,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 156,
+    "pitch_px": 11.962218180976521,
+    "payload_cells": 120,
+    "channel_bytes": 30,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 154,
+    "pitch_px": 12.117571663846345,
+    "payload_cells": 118,
+    "channel_bytes": 29,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 152,
+    "pitch_px": 12.277013396265376,
+    "payload_cells": 116,
+    "channel_bytes": 29,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 150,
+    "pitch_px": 12.440706908215581,
+    "payload_cells": 114,
+    "channel_bytes": 28,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 148,
+    "pitch_px": 12.608824569137413,
+    "payload_cells": 112,
+    "channel_bytes": 28,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 146,
+    "pitch_px": 12.781548193372172,
+    "payload_cells": 110,
+    "channel_bytes": 27,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 144,
+    "pitch_px": 12.959069696057897,
+    "payload_cells": 108,
+    "channel_bytes": 27,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 142,
+    "pitch_px": 13.141591804453078,
+    "payload_cells": 106,
+    "channel_bytes": 26,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 140,
+    "pitch_px": 13.329328830230981,
+    "payload_cells": 104,
+    "channel_bytes": 26,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 138,
+    "pitch_px": 13.52250750892998,
+    "payload_cells": 102,
+    "channel_bytes": 25,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 136,
+    "pitch_px": 13.721367913473069,
+    "payload_cells": 100,
+    "channel_bytes": 25,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 134,
+    "pitch_px": 13.926164449495054,
+    "payload_cells": 98,
+    "channel_bytes": 24,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 132,
+    "pitch_px": 14.13716694115407,
+    "payload_cells": 96,
+    "channel_bytes": 24,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 130,
+    "pitch_px": 14.354661817171824,
+    "payload_cells": 94,
+    "channel_bytes": 23,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 128,
+    "pitch_px": 14.578953408065136,
+    "payload_cells": 92,
+    "channel_bytes": 23,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 126,
+    "pitch_px": 14.81036536692331,
+    "payload_cells": 90,
+    "channel_bytes": 22,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 124,
+    "pitch_px": 15.049242227680137,
+    "payload_cells": 88,
+    "channel_bytes": 22,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 122,
+    "pitch_px": 15.2959511166585,
+    "payload_cells": 86,
+    "channel_bytes": 21,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 120,
+    "pitch_px": 15.550883635269477,
+    "payload_cells": 84,
+    "channel_bytes": 21,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 118,
+    "pitch_px": 15.81445793417235,
+    "payload_cells": 82,
+    "channel_bytes": 20,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 116,
+    "pitch_px": 16.087121002002906,
+    "payload_cells": 80,
+    "channel_bytes": 20,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 114,
+    "pitch_px": 16.369351195020503,
+    "payload_cells": 78,
+    "channel_bytes": 19,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 112,
+    "pitch_px": 16.661661037788726,
+    "payload_cells": 76,
+    "channel_bytes": 19,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 110,
+    "pitch_px": 16.964600329384883,
+    "payload_cells": 74,
+    "channel_bytes": 18,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 108,
+    "pitch_px": 17.278759594743864,
+    "payload_cells": 72,
+    "channel_bytes": 18,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 106,
+    "pitch_px": 17.604773926720164,
+    "payload_cells": 70,
+    "channel_bytes": 17,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 104,
+    "pitch_px": 17.94332727146478,
+    "payload_cells": 68,
+    "channel_bytes": 17,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 102,
+    "pitch_px": 18.295157217964093,
+    "payload_cells": 66,
+    "channel_bytes": 16,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 100,
+    "pitch_px": 18.661060362323372,
+    "payload_cells": 64,
+    "channel_bytes": 16,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 98,
+    "pitch_px": 19.041898328901397,
+    "payload_cells": 62,
+    "channel_bytes": 15,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 96,
+    "pitch_px": 19.438604544086843,
+    "payload_cells": 60,
+    "channel_bytes": 15,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 94,
+    "pitch_px": 19.852191874812096,
+    "payload_cells": 58,
+    "channel_bytes": 14,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 92,
+    "pitch_px": 20.283761263394968,
+    "payload_cells": 56,
+    "channel_bytes": 14,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 90,
+    "pitch_px": 20.734511513692635,
+    "payload_cells": 54,
+    "channel_bytes": 13,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 88,
+    "pitch_px": 21.205750411731106,
+    "payload_cells": 52,
+    "channel_bytes": 13,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 86,
+    "pitch_px": 21.698907398050434,
+    "payload_cells": 50,
+    "channel_bytes": 12,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 84,
+    "pitch_px": 22.21554805038497,
+    "payload_cells": 48,
+    "channel_bytes": 12,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 82,
+    "pitch_px": 22.75739068576021,
+    "payload_cells": 46,
+    "channel_bytes": 11,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  },
+  {
+    "columns": 80,
+    "pitch_px": 23.326325452904214,
+    "payload_cells": 44,
+    "channel_bytes": 11,
+    "capacities": {
+      "fast": 0,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    }
+  }
+]

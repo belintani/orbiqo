@@ -1,0 +1,46 @@
+[
+  {
+    "version": 1,
+    "geometry": "small",
+    "columns": 160,
+    "data_inner": 0.41,
+    "pitch_px": 7.613453446434014,
+    "total_cells": 1920,
+    "maximum_payload_bytes": 334,
+    "strict_validation": "24/24",
+    "product_non_occlusion_validation": "28/28"
+  },
+  {
+    "version": 2,
+    "geometry": "medium",
+    "columns": 168,
+    "data_inner": 0.41,
+    "pitch_px": 7.134033317526822,
+    "total_cells": 3024,
+    "maximum_payload_bytes": 546,
+    "strict_validation": "24/24",
+    "product_non_occlusion_validation": null
+  },
+  {
+    "version": 3,
+    "geometry": "large",
+    "columns": 168,
+    "data_inner": 0.41,
+    "pitch_px": 7.075595954178797,
+    "total_cells": 4032,
+    "maximum_payload_bytes": 734,
+    "strict_validation": "24/24",
+    "product_non_occlusion_validation": null
+  },
+  {
+    "version": 4,
+    "geometry": "xl",
+    "columns": 168,
+    "data_inner": 0.41,
+    "pitch_px": 7.040533536169983,
+    "total_cells": 5040,
+    "maximum_payload_bytes": 922,
+    "strict_validation": "24/24",
+    "product_non_occlusion_validation": null
+  }
+]

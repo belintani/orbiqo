@@ -1,0 +1,29 @@
+{
+  "iterations": 9,
+  "rows": [
+    {
+      "payload_bytes": 64,
+      "geometry_version": 1,
+      "legacy_median_ms": 65.40901493281126,
+      "optimized_median_ms": 65.97059802152216,
+      "speedup": 0.9914873730790239,
+      "payload_exact": true
+    },
+    {
+      "payload_bytes": 571,
+      "geometry_version": 3,
+      "legacy_median_ms": 280.65380291081965,
+      "optimized_median_ms": 99.66087294742465,
+      "speedup": 2.816088145835091,
+      "payload_exact": true
+    },
+    {
+      "payload_bytes": 1000,
+      "geometry_version": 4,
+      "legacy_median_ms": 472.46540896594524,
+      "optimized_median_ms": 162.215372081846,
+      "speedup": 2.9125809897200257,
+      "payload_exact": true
+    }
+  ]
+}

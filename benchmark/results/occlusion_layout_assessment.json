@@ -1,0 +1,255 @@
+{
+  "rows": [
+    {
+      "scenario": "center_safe_r020",
+      "success": true,
+      "corrected_rs_symbols": 0,
+      "erasure_bytes": 0,
+      "header_corrected_bits": [
+        0,
+        0,
+        0
+      ],
+      "decoded_format": 4,
+      "expected_format": 4,
+      "payload_case": 0
+    },
+    {
+      "scenario": "center_header_r028",
+      "success": true,
+      "corrected_rs_symbols": 0,
+      "erasure_bytes": 0,
+      "header_corrected_bits": [
+        0,
+        0
+      ],
+      "decoded_format": 4,
+      "expected_format": 4,
+      "payload_case": 0
+    },
+    {
+      "scenario": "center_header_r034",
+      "success": false,
+      "error": "DecodeError: header ring has insufficient luminance separation",
+      "payload_case": 0
+    },
+    {
+      "scenario": "data_window_10deg",
+      "success": true,
+      "corrected_rs_symbols": 10,
+      "erasure_bytes": 10,
+      "header_corrected_bits": [
+        0,
+        0,
+        0
+      ],
+      "decoded_format": 4,
+      "expected_format": 4,
+      "payload_case": 0
+    },
+    {
+      "scenario": "data_window_20deg",
+      "success": true,
+      "corrected_rs_symbols": 20,
+      "erasure_bytes": 20,
+      "header_corrected_bits": [
+        0,
+        0,
+        0
+      ],
+      "decoded_format": 4,
+      "expected_format": 4,
+      "payload_case": 0
+    },
+    {
+      "scenario": "data_window_30deg",
+      "success": true,
+      "corrected_rs_symbols": 37,
+      "erasure_bytes": 37,
+      "header_corrected_bits": [
+        0,
+        0,
+        0
+      ],
+      "decoded_format": 4,
+      "expected_format": 4,
+      "payload_case": 0
+    },
+    {
+      "scenario": "center_safe_r020",
+      "success": true,
+      "corrected_rs_symbols": 0,
+      "erasure_bytes": 0,
+      "header_corrected_bits": [
+        0,
+        0,
+        0
+      ],
+      "decoded_format": 4,
+      "expected_format": 4,
+      "payload_case": 1
+    },
+    {
+      "scenario": "center_header_r028",
+      "success": true,
+      "corrected_rs_symbols": 0,
+      "erasure_bytes": 0,
+      "header_corrected_bits": [
+        0,
+        0
+      ],
+      "decoded_format": 4,
+      "expected_format": 4,
+      "payload_case": 1
+    },
+    {
+      "scenario": "center_header_r034",
+      "success": false,
+      "error": "DecodeError: header ring has insufficient luminance separation",
+      "payload_case": 1
+    },
+    {
+      "scenario": "data_window_10deg",
+      "success": true,
+      "corrected_rs_symbols": 7,
+      "erasure_bytes": 7,
+      "header_corrected_bits": [
+        0,
+        0,
+        0
+      ],
+      "decoded_format": 4,
+      "expected_format": 4,
+      "payload_case": 1
+    },
+    {
+      "scenario": "data_window_20deg",
+      "success": true,
+      "corrected_rs_symbols": 15,
+      "erasure_bytes": 15,
+      "header_corrected_bits": [
+        0,
+        0,
+        0
+      ],
+      "decoded_format": 4,
+      "expected_format": 4,
+      "payload_case": 1
+    },
+    {
+      "scenario": "data_window_30deg",
+      "success": true,
+      "corrected_rs_symbols": 39,
+      "erasure_bytes": 39,
+      "header_corrected_bits": [
+        0,
+        0,
+        0
+      ],
+      "decoded_format": 4,
+      "expected_format": 4,
+      "payload_case": 1
+    },
+    {
+      "scenario": "center_safe_r020",
+      "success": true,
+      "corrected_rs_symbols": 0,
+      "erasure_bytes": 0,
+      "header_corrected_bits": [
+        0,
+        0,
+        0
+      ],
+      "decoded_format": 4,
+      "expected_format": 4,
+      "payload_case": 2
+    },
+    {
+      "scenario": "center_header_r028",
+      "success": true,
+      "corrected_rs_symbols": 0,
+      "erasure_bytes": 0,
+      "header_corrected_bits": [
+        0,
+        0
+      ],
+      "decoded_format": 4,
+      "expected_format": 4,
+      "payload_case": 2
+    },
+    {
+      "scenario": "center_header_r034",
+      "success": false,
+      "error": "DecodeError: header ring has insufficient luminance separation",
+      "payload_case": 2
+    },
+    {
+      "scenario": "data_window_10deg",
+      "success": true,
+      "corrected_rs_symbols": 10,
+      "erasure_bytes": 10,
+      "header_corrected_bits": [
+        0,
+        0,
+        0
+      ],
+      "decoded_format": 4,
+      "expected_format": 4,
+      "payload_case": 2
+    },
+    {
+      "scenario": "data_window_20deg",
+      "success": true,
+      "corrected_rs_symbols": 23,
+      "erasure_bytes": 23,
+      "header_corrected_bits": [
+        0,
+        0,
+        0
+      ],
+      "decoded_format": 4,
+      "expected_format": 4,
+      "payload_case": 2
+    },
+    {
+      "scenario": "data_window_30deg",
+      "success": true,
+      "corrected_rs_symbols": 40,
+      "erasure_bytes": 40,
+      "header_corrected_bits": [
+        0,
+        0,
+        0
+      ],
+      "decoded_format": 4,
+      "expected_format": 4,
+      "payload_case": 2
+    }
+  ],
+  "summary": {
+    "center_safe_r020": {
+      "successes": 3,
+      "trials": 3
+    },
+    "center_header_r028": {
+      "successes": 3,
+      "trials": 3
+    },
+    "center_header_r034": {
+      "successes": 0,
+      "trials": 3
+    },
+    "data_window_10deg": {
+      "successes": 3,
+      "trials": 3
+    },
+    "data_window_20deg": {
+      "successes": 3,
+      "trials": 3
+    },
+    "data_window_30deg": {
+      "successes": 3,
+      "trials": 3
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "zxing_cpp": "3.1.1",
+  "rows": [
+    {
+      "format": "qr",
+      "shape": [
+        264,
+        264
+      ],
+      "dtype": "uint8",
+      "barcode_attributes": [
+        "bytes",
+        "content_type",
+        "ec_level",
+        "error",
+        "extra",
+        "format",
+        "orientation",
+        "position",
+        "symbology",
+        "symbology_identifier",
+        "text",
+        "to_image",
+        "to_svg",
+        "valid"
+      ],
+      "decoded_valid": true,
+      "decoded_bytes_equal": true,
+      "decoded_text": "orbiqo benchmark smoke"
+    },
+    {
+      "format": "aztec",
+      "shape": [
+        152,
+        152
+      ],
+      "dtype": "uint8",
+      "barcode_attributes": [
+        "bytes",
+        "content_type",
+        "ec_level",
+        "error",
+        "extra",
+        "format",
+        "orientation",
+        "position",
+        "symbology",
+        "symbology_identifier",
+        "text",
+        "to_image",
+        "to_svg",
+        "valid"
+      ],
+      "decoded_valid": true,
+      "decoded_bytes_equal": true,
+      "decoded_text": "orbiqo benchmark smoke"
+    }
+  ]
+}

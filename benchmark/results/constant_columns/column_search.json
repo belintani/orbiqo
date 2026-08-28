@@ -1,0 +1,514 @@
+[
+  {
+    "version": 1,
+    "geometry": "small",
+    "columns": 160,
+    "data_inner": 0.38,
+    "pitch_px": 7.10539900948629,
+    "total_cells": 1920,
+    "maximum_payload_bytes": 334,
+    "eligible": true,
+    "profiles": [
+      {
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      }
+    ]
+  },
+  {
+    "version": 1,
+    "geometry": "small",
+    "columns": 164,
+    "data_inner": 0.39,
+    "pitch_px": 7.097317549725722,
+    "total_cells": 1968,
+    "maximum_payload_bytes": 346,
+    "eligible": true,
+    "profiles": [
+      {
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      }
+    ]
+  },
+  {
+    "version": 1,
+    "geometry": "small",
+    "columns": 168,
+    "data_inner": 0.4,
+    "pitch_px": 7.089620921382323,
+    "total_cells": 2016,
+    "maximum_payload_bytes": 358,
+    "eligible": true,
+    "profiles": [
+      {
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      }
+    ]
+  },
+  {
+    "version": 1,
+    "geometry": "small",
+    "columns": 172,
+    "data_inner": 0.41,
+    "pitch_px": 7.08228227575257,
+    "total_cells": 2064,
+    "maximum_payload_bytes": 370,
+    "eligible": true,
+    "profiles": [
+      {
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "geometry": "medium",
+    "columns": 156,
+    "data_inner": 0.38,
+    "pitch_px": 7.15417173197291,
+    "total_cells": 2808,
+    "maximum_payload_bytes": 492,
+    "eligible": true,
+    "profiles": [
+      {
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "geometry": "medium",
+    "columns": 160,
+    "data_inner": 0.39,
+    "pitch_px": 7.14712328691678,
+    "total_cells": 2880,
+    "maximum_payload_bytes": 510,
+    "eligible": true,
+    "profiles": [
+      {
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "geometry": "medium",
+    "columns": 164,
+    "data_inner": 0.4,
+    "pitch_px": 7.140418668448754,
+    "total_cells": 2952,
+    "maximum_payload_bytes": 528,
+    "eligible": true,
+    "profiles": [
+      {
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "geometry": "medium",
+    "columns": 168,
+    "data_inner": 0.41,
+    "pitch_px": 7.134033317526822,
+    "total_cells": 3024,
+    "maximum_payload_bytes": 546,
+    "eligible": true,
+    "profiles": [
+      {
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      }
+    ]
+  },
+  {
+    "version": 3,
+    "geometry": "large",
+    "columns": 156,
+    "data_inner": 0.38,
+    "pitch_px": 7.087463234120242,
+    "total_cells": 3744,
+    "maximum_payload_bytes": 662,
+    "eligible": true,
+    "profiles": [
+      {
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      }
+    ]
+  },
+  {
+    "version": 3,
+    "geometry": "large",
+    "columns": 160,
+    "data_inner": 0.39,
+    "pitch_px": 7.083309686140738,
+    "total_cells": 3840,
+    "maximum_payload_bytes": 686,
+    "eligible": true,
+    "profiles": [
+      {
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      }
+    ]
+  },
+  {
+    "version": 3,
+    "geometry": "large",
+    "columns": 164,
+    "data_inner": 0.4,
+    "pitch_px": 7.079358750257794,
+    "total_cells": 3936,
+    "maximum_payload_bytes": 710,
+    "eligible": true,
+    "profiles": [
+      {
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      }
+    ]
+  },
+  {
+    "version": 3,
+    "geometry": "large",
+    "columns": 168,
+    "data_inner": 0.41,
+    "pitch_px": 7.075595954178797,
+    "total_cells": 4032,
+    "maximum_payload_bytes": 734,
+    "eligible": true,
+    "profiles": [
+      {
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      }
+    ]
+  },
+  {
+    "version": 4,
+    "geometry": "xl",
+    "columns": 156,
+    "data_inner": 0.38,
+    "pitch_px": 7.047438135408641,
+    "total_cells": 4680,
+    "maximum_payload_bytes": 832,
+    "eligible": true,
+    "profiles": [
+      {
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      }
+    ]
+  },
+  {
+    "version": 4,
+    "geometry": "xl",
+    "columns": 160,
+    "data_inner": 0.39,
+    "pitch_px": 7.045021525675111,
+    "total_cells": 4800,
+    "maximum_payload_bytes": 862,
+    "eligible": true,
+    "profiles": [
+      {
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      }
+    ]
+  },
+  {
+    "version": 4,
+    "geometry": "xl",
+    "columns": 164,
+    "data_inner": 0.4,
+    "pitch_px": 7.042722799343217,
+    "total_cells": 4920,
+    "maximum_payload_bytes": 892,
+    "eligible": true,
+    "profiles": [
+      {
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      }
+    ]
+  },
+  {
+    "version": 4,
+    "geometry": "xl",
+    "columns": 168,
+    "data_inner": 0.41,
+    "pitch_px": 7.040533536169983,
+    "total_cells": 5040,
+    "maximum_payload_bytes": 922,
+    "eligible": true,
+    "profiles": [
+      {
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      }
+    ]
+  }
+]

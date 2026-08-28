@@ -1,0 +1,158 @@
+Metadata-Version: 2.4
+Name: radialcode
+Version: 0.1.0a2
+Summary: Open radial color 2D code reference implementation
+Author: RadialCode contributors
+License-Expression: Apache-2.0
+Keywords: barcode,2d-code,computer-vision,error-correction,color
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Multimedia :: Graphics
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: NOTICE
+Requires-Dist: numpy>=1.24
+Requires-Dist: Pillow>=10
+Requires-Dist: CairoSVG>=2.7
+Requires-Dist: reedsolo>=1.7.0
+Provides-Extra: vision
+Requires-Dist: opencv-python-headless>=4.8; extra == "vision"
+Provides-Extra: dev
+Requires-Dist: pytest>=8; extra == "dev"
+Requires-Dist: pytest-cov>=5; extra == "dev"
+Requires-Dist: hypothesis>=6; extra == "dev"
+Dynamic: license-file
+
+# RadialCode
+
+**RadialCode** é uma simbologia 2D radial open source para transportar URLs, texto UTF-8 e dados binários. O projeto combina bootstrap monocromático, payload COLOR4, correção Reed–Solomon, referências cromáticas internas e renderização vetorial em diâmetro parametrizado.
+
+> **Estado:** `0.1.0a2`, Design Draft 0.3. Esta é uma versão de pesquisa e interoperabilidade, não uma recomendação de substituir QR Code em produção sem ensaios físicos próprios.
+
+![Exemplo RadialCode COLOR4 Small](examples/generated/radialcode_small_30mm.png)
+
+## Características
+
+A primeira implementação inclui encoder e decoder de referência em Python, saída SVG/PNG, quatro geometrias, diâmetro arbitrário, payload COLOR4 com fallback MONO2, BCH no header, Reed–Solomon com erasures, CRC32C, máscaras visuais, golden vectors e pipeline OpenCV para guard, pose e homografia.
+
+| Perfil | Anéis de dados | Diâmetro sugerido | Capacidade COLOR4 Balanced | Pitch no diâmetro sugerido |
+| --- | ---: | ---: | ---: | ---: |
+| Small | 12 | 30 mm | 183 bytes | 0,662 mm |
+| Medium | 18 | 40 mm | 410 bytes | 0,589 mm |
+| Large | 24 | 50 mm | 762 bytes | 0,552 mm |
+| XL | 30 | 70 mm | 1.252 bytes | 0,618 mm |
+
+As capacidades acima incluem o frame interno, CRC e redundância do perfil Balanced. Qualquer diâmetro positivo pode ser solicitado; o encoder emite um aviso quando o pitch nominal fica abaixo do limite provisório de impressão de 0,50 mm.
+
+## Instalação
+
+```bash
+python -m pip install -e .
+```
+
+Para habilitar detecção e homografia em imagens de câmera, instale o extra de visão:
+
+```bash
+python -m pip install -e '.[vision]'
+```
+
+Para desenvolvimento e testes:
+
+```bash
+python -m pip install -e '.[dev,vision]'
+pytest -q
+```
+
+## Linha de comando
+
+O gerador aceita texto, URLs, arquivos binários e dados enviados por `stdin`. O exemplo abaixo cria SVG e PNG COLOR4 em 40 mm:
+
+```bash
+radialcode-generate \
+  --text 'https://example.org/demo' \
+  --payload-type url \
+  --geometry medium \
+  --diameter-mm 40 \
+  --ecc balanced \
+  --center-text RC \
+  --output demo \
+  --format both
+```
+
+Para decodificar uma fotografia ou cena com perspectiva:
+
+```bash
+radialcode-decode demo.png --json
+```
+
+Quando a imagem já está perfeitamente centralizada e frontal, a detecção pode ser ignorada:
+
+```bash
+radialcode-decode demo.png --canonical --geometry 2
+```
+
+A tabela de capacidade pode ser consultada sem gerar um símbolo:
+
+```bash
+radialcode-inspect --alphabet color4 --ecc balanced
+```
+
+## API Python
+
+```python
+from radialcode import EccLevel, RenderOptions, encode, save_png, save_svg
+from radialcode.vision import decode_image
+
+symbol = encode(
+    "https://example.org/demo",
+    geometry="auto",
+    diameter_mm=42.0,
+    ecc_level=EccLevel.BALANCED,
+)
+save_svg(symbol, "demo.svg", RenderOptions(center_text="RC"))
+save_png(symbol, "demo.png", dpi=300, options=RenderOptions(center_text="RC"))
+
+result = decode_image("demo.png")
+print(result.decoded.text())
+```
+
+## Arquitetura
+
+O bootstrap permanece monocromático para evitar dependência circular da calibração COLOR4. Um clock track espesso de 64 slots fornece uma sequência visualmente distinta em 30 mm. Três cópias físicas do header BCH(63,45) descrevem geometria, alfabeto, paleta, ECC, máscara e comprimento. O payload usa um frame versionado com CRC32C, blocos Reed–Solomon encurtados sobre GF(256), interleaving e permutação espacial. Referências COLOR4 internas estimam os centroides observados na própria captura; células de baixa confiança são convertidas em erasures antes do decoder RS.
+
+![Arquitetura do encoder e decoder](assets/architecture.png)
+
+A ampliação abaixo mostra o clock Draft 0.3 imediatamente ao redor do centro livre, agora com 64 slots claramente segmentados:
+
+![Ampliação do clock track no símbolo Small de 30 mm](assets/clock_track_30mm_closeup.png)
+
+## Validação atual
+
+A suíte contém **91 testes automatizados** quando os testes de CLI e os golden vectors dos Drafts 0.2 e 0.3 são incluídos. O benchmark canônico sintético cobre blur, ruído, JPEG, downsampling e oclusão. O benchmark de visão cobre oito poses em dois perfis de imagem e obteve 14/16 decodes; a pose sintética mais foreshortened ainda falha nos dois perfis. Consulte [`docs/SYNTHETIC_BENCHMARK.md`](docs/SYNTHETIC_BENCHMARK.md) e [`docs/PERSPECTIVE_BENCHMARK.md`](docs/PERSPECTIVE_BENCHMARK.md).
+
+Fotografias reais em diferentes impressoras, papéis, iluminações e câmeras ainda são necessárias antes de declarar um envelope operacional físico. Falhas são explícitas: BCH, header inconsistente, RS irrecuperável, CRC inválido ou confiança insuficiente nunca devem ser tratadas como decode válido.
+
+## Especificação e vetores
+
+A especificação normativa atual está em [`spec/RADIALCODE-DRAFT-0.3.md`](spec/RADIALCODE-DRAFT-0.3.md). Os vetores correspondentes estão em [`vectors/draft-0.3/`](vectors/draft-0.3/). O decoder mantém compatibilidade de leitura com os vetores históricos de [`draft-0.2`](vectors/draft-0.2/).
+
+## Licenças e atribuição
+
+O código é distribuído sob **Apache License 2.0**. A especificação e os diagramas autorais são distribuídos sob **CC BY 4.0**, cuja licença oficial exige atribuição razoável, indicação de alterações e referência à licença quando o material é compartilhado.[1]
+
+A forma preferida de crédito é:
+
+> Built with RadialCode — an open radial 2D code project.
+
+Consulte [`ATTRIBUTION.md`](ATTRIBUTION.md), [`NOTICE`](NOTICE) e [`docs/LICENSE_POLICY.md`](docs/LICENSE_POLICY.md). Os símbolos gerados incluem metadados SVG de origem por padrão; o payload decodificado não depende dessa informação.
+
+## Contribuição e segurança
+
+Mudanças no formato exigem novo número de Design Draft, atualização dos golden vectors e testes de interoperabilidade. Consulte [`CONTRIBUTING.md`](CONTRIBUTING.md). Para vulnerabilidades ou formas de provocar decode incorreto, siga [`SECURITY.md`](SECURITY.md) em vez de abrir uma discussão pública com payloads sensíveis.
+
+## Referências
+
+[1]: https://creativecommons.org/licenses/by/4.0/legalcode.en "Creative Commons Attribution 4.0 International — Legal Code"

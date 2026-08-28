@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Se você usar o RadialCode em pesquisa ou produto, cite este projeto e o Design Draft correspondente."
+title: "RadialCode: implementação de referência de uma simbologia 2D radial colorida"
+type: software
+authors:
+  - name: "RadialCode contributors"
+version: "0.1.0a2"
+date-released: "2026-08-24"
+license: Apache-2.0
+abstract: >-
+  Encoder, renderer, decoder e pipeline de visão de referência para o
+  RadialCode Design Draft 0.3, com COLOR4, bootstrap monocromático,
+  BCH, Reed–Solomon, erasures, homografia e geração multidiâmetro.
+keywords:
+  - barcode
+  - 2D code
+  - color barcode
+  - computer vision
+  - error correction

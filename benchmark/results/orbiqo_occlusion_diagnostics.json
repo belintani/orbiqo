@@ -1,0 +1,91 @@
+{
+  "profile": {
+    "blur_radius": 0.0,
+    "noise_sigma": 0.0,
+    "brightness": 1.0,
+    "contrast": 1.0,
+    "saturation": 1.0,
+    "jpeg_quality": 100,
+    "downsample_factor": 1.0,
+    "occlusion_fraction": 0.06,
+    "seed": 1
+  },
+  "rows": [
+    {
+      "trial": 0,
+      "seed": 101,
+      "vision": {
+        "path": "vision",
+        "success": false,
+        "error": "EccDecodeError: RS block 0 is not recoverable"
+      },
+      "canonical": {
+        "path": "canonical",
+        "success": false,
+        "error": "DecodeError: all three BCH header copies failed"
+      },
+      "dark_extent": {
+        "path": "dark_extent",
+        "success": false,
+        "error": "EccDecodeError: RS block 0 is not recoverable"
+      }
+    },
+    {
+      "trial": 1,
+      "seed": 102,
+      "vision": {
+        "path": "vision",
+        "success": false,
+        "error": "ValueError: insufficient bits: required 699336, got 1428"
+      },
+      "canonical": {
+        "path": "canonical",
+        "success": false,
+        "error": "DecodeError: all three BCH header copies failed"
+      },
+      "dark_extent": {
+        "path": "dark_extent",
+        "success": false,
+        "error": "EccDecodeError: RS block 0 is not recoverable"
+      }
+    },
+    {
+      "trial": 2,
+      "seed": 103,
+      "vision": {
+        "path": "vision",
+        "success": false,
+        "error": "DetectionError: all rectification hypotheses completed but canonical decoding failed"
+      },
+      "canonical": {
+        "path": "canonical",
+        "success": false,
+        "error": "DecodeError: all three BCH header copies failed"
+      },
+      "dark_extent": {
+        "path": "dark_extent",
+        "success": false,
+        "error": "DecodeError: all three BCH header copies failed"
+      }
+    },
+    {
+      "trial": 3,
+      "seed": 104,
+      "vision": {
+        "path": "vision",
+        "success": false,
+        "error": "EccDecodeError: RS block 0 is not recoverable"
+      },
+      "canonical": {
+        "path": "canonical",
+        "success": false,
+        "error": "DecodeError: all three BCH header copies failed"
+      },
+      "dark_extent": {
+        "path": "dark_extent",
+        "success": false,
+        "error": "EccDecodeError: RS block 0 is not recoverable"
+      }
+    }
+  ]
+}

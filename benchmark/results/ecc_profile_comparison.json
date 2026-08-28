@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "environment": {
+    "generated_utc": "2026-08-26T23:37:26.106948+00:00",
+    "python": "3.12.3",
+    "platform": "Linux-6.1.102-x86_64-with-glibc2.39",
+    "radialcode": "0.1.0a6"
+  },
+  "method": {
+    "scope": "digital-only internal ECC-profile comparison",
+    "payload_bytes": 64,
+    "payload_sha256": "cb6862268ca7c02e7b6af558f0e3d236ce9ec7ff41cc746b2848c04c582da94e",
+    "payload_base64": "E1yl7jeAyRJbpO02f8gRWqPsNX7HEFmi6zR9xg9YoeozfMUOV6DpMnvEDVaf6DF6wwxVnucwecILVJ3mL3jBCg==",
+    "geometry_selection": "auto selects the smallest compatible Orbiqo geometry independently for each profile",
+    "encode_measurement": "encode() framing, ECC and placement only; direct PNG rendering is excluded",
+    "decode_measurement": "full decode from the same normalized 1024 px digital raster, including vision",
+    "timing_runs": 10,
+    "occlusion": {
+      "fraction": 0.06,
+      "payload_patterns": [
+        "benchmark",
+        "counter",
+        "periodic"
+      ],
+      "trials_per_pattern": 4,
+      "seeds": [
+        101,
+        102,
+        103,
+        104
+      ],
+      "success_criterion": "exact byte equality"
+    }
+  },
+  "profiles": [
+    {
+      "ecc": "fast",
+      "geometry": "micro-4",
+      "geometry_version": 5,
+      "data_rings": 4,
+      "diameter_mm": 30.0,
+      "nominal_pitch_px": 53.57142857142857,
+      "code": "fast",
+      "encode": {
+        "runs": 10,
+        "median_ms": 7.818078040145338,
+        "mean_ms": 7.84192408900708,
+        "p95_ms": 8.482218952849507
+      },
+      "decode": {
+        "runs": 10,
+        "median_ms": 131.29168504383415,
+        "mean_ms": 131.79603591561317,
+        "p95_ms": 157.05305384472013
+      },
+      "occlusion": {
+        "minimum_successes": 0,
+        "trials_per_pattern": 4,
+        "rows": [
+          {
+            "payload": "benchmark",
+            "bytes": 64,
+            "successes": 0,
+            "trials": 4,
+            "outcomes": [
+              false,
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "payload": "counter",
+            "bytes": 64,
+            "successes": 0,
+            "trials": 4,
+            "outcomes": [
+              false,
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "payload": "periodic",
+            "bytes": 64,
+            "successes": 0,
+            "trials": 4,
+            "outcomes": [
+              false,
+              false,
+              false,
+              false
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "ecc": "balanced",
+      "geometry": "micro-4",
+      "geometry_version": 5,
+      "data_rings": 4,
+      "diameter_mm": 30.0,
+      "nominal_pitch_px": 53.57142857142857,
+      "code": "balanced",
+      "encode": {
+        "runs": 10,
+        "median_ms": 8.34326702170074,
+        "mean_ms": 8.37874982971698,
+        "p95_ms": 8.847577963024378
+      },
+      "decode": {
+        "runs": 10,
+        "median_ms": 129.27567842416465,
+        "mean_ms": 135.5261435965076,
+        "p95_ms": 180.7534780818969
+      },
+      "occlusion": {
+        "minimum_successes": 0,
+        "trials_per_pattern": 4,
+        "rows": [
+          {
+            "payload": "benchmark",
+            "bytes": 64,
+            "successes": 1,
+            "trials": 4,
+            "outcomes": [
+              true,
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "payload": "counter",
+            "bytes": 64,
+            "successes": 0,
+            "trials": 4,
+            "outcomes": [
+              false,
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "payload": "periodic",
+            "bytes": 64,
+            "successes": 1,
+            "trials": 4,
+            "outcomes": [
+              true,
+              false,
+              false,
+              false
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "ecc": "robust",
+      "geometry": "micro-4",
+      "geometry_version": 5,
+      "data_rings": 4,
+      "diameter_mm": 30.0,
+      "nominal_pitch_px": 53.57142857142857,
+      "code": "robust",
+      "encode": {
+        "runs": 10,
+        "median_ms": 9.594851522706449,
+        "mean_ms": 9.63128732983023,
+        "p95_ms": 9.822351159527898
+      },
+      "decode": {
+        "runs": 10,
+        "median_ms": 112.39303357433528,
+        "mean_ms": 128.94518105313182,
+        "p95_ms": 161.8880471214652
+      },
+      "occlusion": {
+        "minimum_successes": 3,
+        "trials_per_pattern": 4,
+        "rows": [
+          {
+            "payload": "benchmark",
+            "bytes": 64,
+            "successes": 3,
+            "trials": 4,
+            "outcomes": [
+              true,
+              true,
+              false,
+              true
+            ]
+          },
+          {
+            "payload": "counter",
+            "bytes": 64,
+            "successes": 3,
+            "trials": 4,
+            "outcomes": [
+              true,
+              true,
+              false,
+              true
+            ]
+          },
+          {
+            "payload": "periodic",
+            "bytes": 64,
+            "successes": 3,
+            "trials": 4,
+            "outcomes": [
+              true,
+              true,
+              false,
+              true
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "ecc": "extreme",
+      "geometry": "small",
+      "geometry_version": 1,
+      "data_rings": 12,
+      "diameter_mm": 30.0,
+      "nominal_pitch_px": 17.857142857142854,
+      "code": "extreme",
+      "encode": {
+        "runs": 10,
+        "median_ms": 20.921763498336077,
+        "mean_ms": 23.466587928123772,
+        "p95_ms": 45.38910812698305
+      },
+      "decode": {
+        "runs": 10,
+        "median_ms": 190.07312948815525,
+        "mean_ms": 191.67734899092466,
+        "p95_ms": 199.69711801968515
+      },
+      "occlusion": {
+        "minimum_successes": 0,
+        "trials_per_pattern": 4,
+        "rows": [
+          {
+            "payload": "benchmark",
+            "bytes": 64,
+            "successes": 0,
+            "trials": 4,
+            "outcomes": [
+              false,
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "payload": "counter",
+            "bytes": 64,
+            "successes": 0,
+            "trials": 4,
+            "outcomes": [
+              false,
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "payload": "periodic",
+            "bytes": 64,
+            "successes": 0,
+            "trials": 4,
+            "outcomes": [
+              false,
+              false,
+              false,
+              false
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "This compares practical auto-selected Orbiqo profile configurations, not a fixed-geometry coding-theory experiment.",
+    "Timings are reference-implementation timings on one machine and should not be read as device guarantees.",
+    "The occlusion corpus is digital and synthetic; it does not validate print, camera, logo, or arbitrary-overlay behavior.",
+    "More parity is not assumed to be monotonic; every profile is reported from the measured corpus."
+  ]
+}

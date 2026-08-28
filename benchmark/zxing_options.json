@@ -1,0 +1,54 @@
+{
+  "option_names": [],
+  "option_docs": {},
+  "attempts": [
+    {
+      "format": "qr",
+      "kwargs": {
+        "version": 1
+      },
+      "ok": true,
+      "ec_level": "M"
+    },
+    {
+      "format": "qr",
+      "kwargs": {
+        "ec_level": "M"
+      },
+      "ok": true,
+      "ec_level": "M"
+    },
+    {
+      "format": "qr",
+      "kwargs": {
+        "size_hint": 1
+      },
+      "ok": true,
+      "ec_level": "M"
+    },
+    {
+      "format": "aztec",
+      "kwargs": {
+        "version": 1
+      },
+      "ok": true,
+      "ec_level": "17%"
+    },
+    {
+      "format": "aztec",
+      "kwargs": {
+        "ec_level": "M"
+      },
+      "ok": false,
+      "error": "Invalid ecLevel: 'M'"
+    },
+    {
+      "format": "aztec",
+      "kwargs": {
+        "size_hint": 1
+      },
+      "ok": true,
+      "ec_level": "17%"
+    }
+  ]
+}

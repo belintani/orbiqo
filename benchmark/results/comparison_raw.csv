@@ -1,0 +1,209 @@
+metric,format,profile,trial,payload_bytes,success,time_ms,width,height,detail
+generation_time,orbiqo,clean,0,64,True,288.42359292320907,373,373,radialcode 0.1.0a2
+generation_time,orbiqo,clean,1,64,True,246.71288509853184,373,373,radialcode 0.1.0a2
+generation_time,orbiqo,clean,2,64,True,244.4128750357777,373,373,radialcode 0.1.0a2
+generation_time,orbiqo,clean,3,64,True,253.6255109589547,373,373,radialcode 0.1.0a2
+generation_time,orbiqo,clean,4,64,True,248.1055639218539,373,373,radialcode 0.1.0a2
+generation_time,orbiqo,clean,5,64,True,279.11059302277863,373,373,radialcode 0.1.0a2
+generation_time,orbiqo,clean,6,64,True,246.9711599405855,373,373,radialcode 0.1.0a2
+generation_time,orbiqo,clean,7,64,True,247.69895104691386,373,373,radialcode 0.1.0a2
+generation_time,orbiqo,clean,8,64,True,244.99576492235065,373,373,radialcode 0.1.0a2
+generation_time,orbiqo,clean,9,64,True,250.52272295579314,373,373,radialcode 0.1.0a2
+decode_time,orbiqo,clean,0,64,True,121.13894801586866,1024,1024,radialcode 0.1.0a2
+decode_time,orbiqo,clean,1,64,True,110.92577106319368,1024,1024,radialcode 0.1.0a2
+decode_time,orbiqo,clean,2,64,True,105.59108899906278,1024,1024,radialcode 0.1.0a2
+decode_time,orbiqo,clean,3,64,True,105.56558007374406,1024,1024,radialcode 0.1.0a2
+decode_time,orbiqo,clean,4,64,True,104.86594494432211,1024,1024,radialcode 0.1.0a2
+decode_time,orbiqo,clean,5,64,True,108.23756316676736,1024,1024,radialcode 0.1.0a2
+decode_time,orbiqo,clean,6,64,True,133.1151609774679,1024,1024,radialcode 0.1.0a2
+decode_time,orbiqo,clean,7,64,True,106.109598884359,1024,1024,radialcode 0.1.0a2
+decode_time,orbiqo,clean,8,64,True,109.37973810359836,1024,1024,radialcode 0.1.0a2
+decode_time,orbiqo,clean,9,64,True,105.89252784848213,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,clean,0,64,True,108.0078580416739,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,clean,1,64,True,105.37058906629682,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,clean,2,64,True,104.81662000529468,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,clean,3,64,True,104.4245338998735,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,blur_1_5,0,64,True,104.3637590482831,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,blur_1_5,1,64,True,102.7069038245827,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,blur_1_5,2,64,True,102.59159398265183,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,blur_1_5,3,64,True,104.37567601911724,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,blur_3_0,0,64,True,99.83030892908573,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,blur_3_0,1,64,True,97.95311186462641,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,blur_3_0,2,64,True,97.05448895692825,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,blur_3_0,3,64,True,101.49083705618978,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,noise_8,0,64,True,335.37345193326473,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,noise_8,1,64,True,112.36137198284268,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,noise_8,2,64,True,103.70857594534755,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,noise_8,3,64,True,394.77111701853573,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,jpeg_40,0,64,True,104.35396200045943,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,jpeg_40,1,64,True,102.07270504906774,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,jpeg_40,2,64,True,104.15231995284557,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,jpeg_40,3,64,True,104.71872612833977,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,downsample_0_35,0,64,True,104.09288806840777,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,downsample_0_35,1,64,True,108.97167888469994,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,downsample_0_35,2,64,True,107.26318694651127,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,downsample_0_35,3,64,True,107.38906520418823,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,occlusion_0_06,0,64,False,221.70497803017497,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,occlusion_0_06,1,64,False,219.9104498140514,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,occlusion_0_06,2,64,False,221.60927392542362,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,occlusion_0_06,3,64,False,216.44554287195206,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,combined,0,64,False,237.62541194446385,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,combined,1,64,True,113.01533388905227,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,combined,2,64,True,105.8342489413917,1024,1024,radialcode 0.1.0a2
+degradation_decode,orbiqo,combined,3,64,True,111.35773407295346,1024,1024,radialcode 0.1.0a2
+generation_time,qr,clean,0,64,True,0.9571209084242582,328,328,zxing-cpp 3.1.1
+generation_time,qr,clean,1,64,True,0.8632461540400982,328,328,zxing-cpp 3.1.1
+generation_time,qr,clean,2,64,True,1.08359195291996,328,328,zxing-cpp 3.1.1
+generation_time,qr,clean,3,64,True,0.823348993435502,328,328,zxing-cpp 3.1.1
+generation_time,qr,clean,4,64,True,0.8073330391198397,328,328,zxing-cpp 3.1.1
+generation_time,qr,clean,5,64,True,0.7258390542119741,328,328,zxing-cpp 3.1.1
+generation_time,qr,clean,6,64,True,0.7287201005965471,328,328,zxing-cpp 3.1.1
+generation_time,qr,clean,7,64,True,0.7224881555885077,328,328,zxing-cpp 3.1.1
+generation_time,qr,clean,8,64,True,0.7129160221666098,328,328,zxing-cpp 3.1.1
+generation_time,qr,clean,9,64,True,0.7432291749864817,328,328,zxing-cpp 3.1.1
+decode_time,qr,clean,0,64,True,5.169664043933153,1024,1024,zxing-cpp 3.1.1
+decode_time,qr,clean,1,64,True,4.593194928020239,1024,1024,zxing-cpp 3.1.1
+decode_time,qr,clean,2,64,True,4.529643803834915,1024,1024,zxing-cpp 3.1.1
+decode_time,qr,clean,3,64,True,4.527451004832983,1024,1024,zxing-cpp 3.1.1
+decode_time,qr,clean,4,64,True,4.537072032690048,1024,1024,zxing-cpp 3.1.1
+decode_time,qr,clean,5,64,True,4.682742990553379,1024,1024,zxing-cpp 3.1.1
+decode_time,qr,clean,6,64,True,4.5322279911488295,1024,1024,zxing-cpp 3.1.1
+decode_time,qr,clean,7,64,True,4.5445088762789965,1024,1024,zxing-cpp 3.1.1
+decode_time,qr,clean,8,64,True,4.527450073510408,1024,1024,zxing-cpp 3.1.1
+decode_time,qr,clean,9,64,True,4.526104079559445,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,clean,0,64,True,4.982335027307272,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,clean,1,64,True,4.691508831456304,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,clean,2,64,True,4.793904023244977,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,clean,3,64,True,4.594824044033885,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,blur_1_5,0,64,True,5.343594821169972,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,blur_1_5,1,64,True,5.451297154650092,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,blur_1_5,2,64,True,5.317622097209096,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,blur_1_5,3,64,True,5.165361100807786,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,blur_3_0,0,64,True,5.5762589909136295,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,blur_3_0,1,64,True,5.731052020564675,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,blur_3_0,2,64,True,5.632912972941995,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,blur_3_0,3,64,True,5.542452912777662,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,noise_8,0,64,True,5.409072153270245,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,noise_8,1,64,True,5.56927896104753,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,noise_8,2,64,True,5.4580168798565865,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,noise_8,3,64,True,5.551039939746261,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,jpeg_40,0,64,True,6.6999150440096855,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,jpeg_40,1,64,True,4.94740717113018,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,jpeg_40,2,64,True,4.9108960665762424,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,jpeg_40,3,64,True,4.839620087295771,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,downsample_0_35,0,64,True,4.670749884098768,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,downsample_0_35,1,64,True,4.645732929930091,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,downsample_0_35,2,64,True,4.673023940995336,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,downsample_0_35,3,64,True,4.660411970689893,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,occlusion_0_06,0,64,False,5.5022831074893475,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,occlusion_0_06,1,64,False,5.141600966453552,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,occlusion_0_06,2,64,False,5.362753989174962,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,occlusion_0_06,3,64,False,4.993963986635208,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,combined,0,64,True,5.078485934063792,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,combined,1,64,True,5.351009080186486,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,combined,2,64,True,5.272116046398878,1024,1024,zxing-cpp 3.1.1
+degradation_decode,qr,combined,3,64,True,5.5794548243284225,1024,1024,zxing-cpp 3.1.1
+generation_time,aztec,clean,0,64,True,0.5821380764245987,328,328,zxing-cpp 3.1.1
+generation_time,aztec,clean,1,64,True,0.5009670276194811,328,328,zxing-cpp 3.1.1
+generation_time,aztec,clean,2,64,True,0.46786386519670486,328,328,zxing-cpp 3.1.1
+generation_time,aztec,clean,3,64,True,0.476551940664649,328,328,zxing-cpp 3.1.1
+generation_time,aztec,clean,4,64,True,0.4603089764714241,328,328,zxing-cpp 3.1.1
+generation_time,aztec,clean,5,64,True,0.4700159188359976,328,328,zxing-cpp 3.1.1
+generation_time,aztec,clean,6,64,True,0.46150898560881615,328,328,zxing-cpp 3.1.1
+generation_time,aztec,clean,7,64,True,0.46629016287624836,328,328,zxing-cpp 3.1.1
+generation_time,aztec,clean,8,64,True,0.47566788271069527,328,328,zxing-cpp 3.1.1
+generation_time,aztec,clean,9,64,True,0.467090867459774,328,328,zxing-cpp 3.1.1
+decode_time,aztec,clean,0,64,True,5.591741995885968,1024,1024,zxing-cpp 3.1.1
+decode_time,aztec,clean,1,64,True,5.17694279551506,1024,1024,zxing-cpp 3.1.1
+decode_time,aztec,clean,2,64,True,5.070477956905961,1024,1024,zxing-cpp 3.1.1
+decode_time,aztec,clean,3,64,True,5.0387210212647915,1024,1024,zxing-cpp 3.1.1
+decode_time,aztec,clean,4,64,True,5.373403895646334,1024,1024,zxing-cpp 3.1.1
+decode_time,aztec,clean,5,64,True,5.0358951557427645,1024,1024,zxing-cpp 3.1.1
+decode_time,aztec,clean,6,64,True,5.071318941190839,1024,1024,zxing-cpp 3.1.1
+decode_time,aztec,clean,7,64,True,5.037657916545868,1024,1024,zxing-cpp 3.1.1
+decode_time,aztec,clean,8,64,True,5.069567123427987,1024,1024,zxing-cpp 3.1.1
+decode_time,aztec,clean,9,64,True,5.027541890740395,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,clean,0,64,True,5.46860508620739,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,clean,1,64,True,5.129801109433174,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,clean,2,64,True,5.242823855951428,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,clean,3,64,True,5.268536973744631,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,blur_1_5,0,64,True,6.133991992101073,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,blur_1_5,1,64,True,6.103635067120194,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,blur_1_5,2,64,True,6.139668868854642,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,blur_1_5,3,64,True,5.990983918309212,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,blur_3_0,0,64,True,6.623042980208993,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,blur_3_0,1,64,True,6.62463903427124,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,blur_3_0,2,64,True,6.7844989243894815,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,blur_3_0,3,64,True,6.719009950757027,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,noise_8,0,64,True,5.943119991570711,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,noise_8,1,64,True,5.960744805634022,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,noise_8,2,64,True,6.100278813391924,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,noise_8,3,64,True,6.067786132916808,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,jpeg_40,0,64,True,5.338053917512298,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,jpeg_40,1,64,True,5.506416084244847,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,jpeg_40,2,64,True,5.302530946210027,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,jpeg_40,3,64,True,5.374867003411055,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,downsample_0_35,0,64,True,5.591270048171282,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,downsample_0_35,1,64,True,5.455818958580494,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,downsample_0_35,2,64,True,5.583244143053889,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,downsample_0_35,3,64,True,6.220120005309582,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,occlusion_0_06,0,64,False,5.90205704793334,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,occlusion_0_06,1,64,False,5.6359579320997,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,occlusion_0_06,2,64,False,5.627427017316222,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,occlusion_0_06,3,64,False,5.849865963682532,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,combined,0,64,True,5.652332911267877,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,combined,1,64,True,5.744067952036858,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,combined,2,64,True,5.665889009833336,1024,1024,zxing-cpp 3.1.1
+degradation_decode,aztec,combined,3,64,True,5.92671986669302,1024,1024,zxing-cpp 3.1.1
+generation_time,jab,clean,0,64,True,8.681801846250892,200,200,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+generation_time,jab,clean,1,64,True,8.264339994639158,200,200,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+generation_time,jab,clean,2,64,True,8.130321046337485,200,200,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+generation_time,jab,clean,3,64,True,8.085895096883178,200,200,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+generation_time,jab,clean,4,64,True,8.073689183220267,200,200,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+generation_time,jab,clean,5,64,True,8.07799189351499,200,200,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+generation_time,jab,clean,6,64,True,8.088062983006239,200,200,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+generation_time,jab,clean,7,64,True,8.084929082542658,200,200,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+generation_time,jab,clean,8,64,True,8.17814003676176,200,200,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+generation_time,jab,clean,9,64,True,8.223375072702765,200,200,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+decode_time,jab,clean,0,64,True,138.11649614945054,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+decode_time,jab,clean,1,64,True,138.23229493573308,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+decode_time,jab,clean,2,64,True,138.30401189625263,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+decode_time,jab,clean,3,64,True,138.11373081989586,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+decode_time,jab,clean,4,64,True,138.57155479490757,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+decode_time,jab,clean,5,64,True,138.09350808151066,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+decode_time,jab,clean,6,64,True,138.12448387034237,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+decode_time,jab,clean,7,64,True,138.91986198723316,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+decode_time,jab,clean,8,64,True,138.3607608731836,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+decode_time,jab,clean,9,64,True,138.43385293148458,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,clean,0,64,True,138.3809440303594,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,clean,1,64,True,138.55383917689323,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,clean,2,64,True,138.53477989323437,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,clean,3,64,True,138.34579708054662,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,blur_1_5,0,64,True,146.98543213307858,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,blur_1_5,1,64,True,146.61599695682526,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,blur_1_5,2,64,True,147.36745203845203,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,blur_1_5,3,64,True,147.1171120647341,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,blur_3_0,0,64,True,167.04115993343294,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,blur_3_0,1,64,True,167.19301394186914,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,blur_3_0,2,64,True,166.79056989960372,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,blur_3_0,3,64,True,167.44457301683724,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,noise_8,0,64,True,574.7139749582857,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,noise_8,1,64,True,580.4985100403428,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,noise_8,2,64,True,570.540692191571,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,noise_8,3,64,True,570.1381489634514,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,jpeg_40,0,64,True,200.3895288798958,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,jpeg_40,1,64,True,199.92275000549853,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,jpeg_40,2,64,True,200.53547294810414,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,jpeg_40,3,64,True,200.11868979781866,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,downsample_0_35,0,64,True,167.69628482870758,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,downsample_0_35,1,64,True,167.62404283508658,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,downsample_0_35,2,64,True,167.10788593627512,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,downsample_0_35,3,64,True,167.7846701350063,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,occlusion_0_06,0,64,False,138.95990094169974,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,occlusion_0_06,1,64,False,138.95205804146826,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,occlusion_0_06,2,64,False,139.72637290135026,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,occlusion_0_06,3,64,False,139.86047310754657,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,combined,0,64,True,372.9181319940835,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,combined,1,64,True,371.2664011400193,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,combined,2,64,True,373.56980703771114,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)
+degradation_decode,jab,combined,3,64,True,381.5188300795853,1024,1024,jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)

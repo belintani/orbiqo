@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-08-27T15:33:29.445437+00:00",
+  "environment": {
+    "python": "3.12.3",
+    "radialcode": "0.1.0a6"
+  },
+  "method": {
+    "payload_bytes": 64,
+    "ecc": "balanced",
+    "geometry": "auto",
+    "diameter_mm": 30.0,
+    "dpi": 725,
+    "supersample": 2,
+    "runs": 10,
+    "scope": "sequential reference stages for a PNG-ready raster; not a cross-format benchmark"
+  },
+  "median_ms": {
+    "encoder_core": 8.875889470800757,
+    "direct_png_renderer": 152.29024994187057,
+    "png_open_convert": 13.481313013471663,
+    "normalize_canvas": 3.0294955940917134,
+    "sequential_total": 177.80399112962186
+  }
+}

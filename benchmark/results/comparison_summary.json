@@ -1,0 +1,408 @@
+{
+  "schema_version": 1,
+  "environment": {
+    "generated_utc": "2026-08-25T19:25:17.404407+00:00",
+    "python": "3.12.3",
+    "platform": "Linux-6.1.102-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "radialcode": "0.1.0a2",
+    "zxing_cpp": "3.1.1",
+    "pillow": "12.3.0",
+    "numpy": "2.5.1",
+    "jab_commit": "3b56eef72436c88fc8538dc4d63920e058537874",
+    "payload_sha256": "cb6862268ca7c02e7b6af558f0e3d236ce9ec7ff41cc746b2848c04c582da94e",
+    "payload_base64": "E1yl7jeAyRJbpO02f8gRWqPsNX7HEFmi6zR9xg9YoeozfMUOV6DpMnvEDVaf6DF6wwxVnucwecILVJ3mL3jBCg==",
+    "timing_runs": 10,
+    "degradation_trials": 4,
+    "canvas_size": 1024,
+    "scope": "digital generation, digital raster decode, and deterministic synthetic degradation only"
+  },
+  "adapters": [
+    {
+      "format": "orbiqo",
+      "toolchain": "radialcode 0.1.0a2"
+    },
+    {
+      "format": "qr",
+      "toolchain": "zxing-cpp 3.1.1"
+    },
+    {
+      "format": "aztec",
+      "toolchain": "zxing-cpp 3.1.1"
+    },
+    {
+      "format": "jab",
+      "toolchain": "jabcode CLI 2.0.0 (official C11 source; -no-pie linker compatibility flag)"
+    }
+  ],
+  "jab_status": {
+    "included": true,
+    "reason": "official writer and reader compiled and passed a deterministic round trip"
+  },
+  "capacity": [
+    {
+      "format": "orbiqo",
+      "profile": "small / COLOR4 / balanced",
+      "maximum_payload_bytes": 183,
+      "ec_level": "balanced",
+      "source": "exact reference capacity model"
+    },
+    {
+      "format": "qr",
+      "profile": "version 1 / ZXing default",
+      "maximum_payload_bytes": 15,
+      "raster_modules_with_quiet_zone": [
+        29,
+        29
+      ],
+      "ec_level": "H",
+      "source": "largest binary payload retaining the version-1 raster size"
+    },
+    {
+      "format": "aztec",
+      "profile": "version 1 / ZXing default",
+      "maximum_payload_bytes": 3,
+      "raster_modules_with_quiet_zone": [
+        15,
+        15
+      ],
+      "ec_level": "41%",
+      "source": "largest binary payload retaining the version-1 raster size"
+    },
+    {
+      "format": "jab",
+      "profile": "single symbol / version 1\u00d71 / COLOR4",
+      "maximum_payload_bytes": 43,
+      "raster_modules": [
+        21,
+        21
+      ],
+      "ec_level": "3 (6%)",
+      "source": "largest binary payload accepted by the fixed official CLI profile"
+    }
+  ],
+  "timing": [
+    {
+      "format": "aztec",
+      "metric": "decode_time",
+      "runs": 10,
+      "median_ms": 5.070022540166974,
+      "mean_ms": 5.149326869286597,
+      "p95_ms": 5.591741995885968,
+      "success_rate": 1.0
+    },
+    {
+      "format": "aztec",
+      "metric": "generation_time",
+      "runs": 10,
+      "median_ms": 0.4689398920163512,
+      "mean_ms": 0.4828403703868389,
+      "p95_ms": 0.5821380764245987,
+      "success_rate": 1.0
+    },
+    {
+      "format": "jab",
+      "metric": "decode_time",
+      "runs": 10,
+      "median_ms": 138.26815341599286,
+      "mean_ms": 138.3270556339994,
+      "p95_ms": 138.91986198723316,
+      "success_rate": 1.0
+    },
+    {
+      "format": "jab",
+      "metric": "generation_time",
+      "runs": 10,
+      "median_ms": 8.109192014671862,
+      "mean_ms": 8.18885462358594,
+      "p95_ms": 8.681801846250892,
+      "success_rate": 1.0
+    },
+    {
+      "format": "orbiqo",
+      "metric": "decode_time",
+      "runs": 10,
+      "median_ms": 107.17358102556318,
+      "mean_ms": 111.0821922076866,
+      "p95_ms": 133.1151609774679,
+      "success_rate": 1.0
+    },
+    {
+      "format": "orbiqo",
+      "metric": "generation_time",
+      "runs": 10,
+      "median_ms": 247.90225748438388,
+      "mean_ms": 255.0579619826749,
+      "p95_ms": 288.42359292320907,
+      "success_rate": 1.0
+    },
+    {
+      "format": "qr",
+      "metric": "decode_time",
+      "runs": 10,
+      "median_ms": 4.534650011919439,
+      "mean_ms": 4.61700598243624,
+      "p95_ms": 5.169664043933153,
+      "success_rate": 1.0
+    },
+    {
+      "format": "qr",
+      "metric": "generation_time",
+      "runs": 10,
+      "median_ms": 0.7752811070531607,
+      "mean_ms": 0.8167833555489779,
+      "p95_ms": 1.08359195291996,
+      "success_rate": 1.0
+    }
+  ],
+  "degradation": [
+    {
+      "format": "aztec",
+      "profile": "blur_1_5",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "aztec",
+      "profile": "blur_3_0",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "aztec",
+      "profile": "clean",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "aztec",
+      "profile": "combined",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "aztec",
+      "profile": "downsample_0_35",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "aztec",
+      "profile": "jpeg_40",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "aztec",
+      "profile": "noise_8",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "aztec",
+      "profile": "occlusion_0_06",
+      "successes": 0,
+      "trials": 4,
+      "success_rate": 0.0
+    },
+    {
+      "format": "jab",
+      "profile": "blur_1_5",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "jab",
+      "profile": "blur_3_0",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "jab",
+      "profile": "clean",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "jab",
+      "profile": "combined",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "jab",
+      "profile": "downsample_0_35",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "jab",
+      "profile": "jpeg_40",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "jab",
+      "profile": "noise_8",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "jab",
+      "profile": "occlusion_0_06",
+      "successes": 0,
+      "trials": 4,
+      "success_rate": 0.0
+    },
+    {
+      "format": "orbiqo",
+      "profile": "blur_1_5",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "orbiqo",
+      "profile": "blur_3_0",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "orbiqo",
+      "profile": "clean",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "orbiqo",
+      "profile": "combined",
+      "successes": 3,
+      "trials": 4,
+      "success_rate": 0.75
+    },
+    {
+      "format": "orbiqo",
+      "profile": "downsample_0_35",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "orbiqo",
+      "profile": "jpeg_40",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "orbiqo",
+      "profile": "noise_8",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "orbiqo",
+      "profile": "occlusion_0_06",
+      "successes": 0,
+      "trials": 4,
+      "success_rate": 0.0
+    },
+    {
+      "format": "qr",
+      "profile": "blur_1_5",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "qr",
+      "profile": "blur_3_0",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "qr",
+      "profile": "clean",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "qr",
+      "profile": "combined",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "qr",
+      "profile": "downsample_0_35",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "qr",
+      "profile": "jpeg_40",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "qr",
+      "profile": "noise_8",
+      "successes": 4,
+      "trials": 4,
+      "success_rate": 1.0
+    },
+    {
+      "format": "qr",
+      "profile": "occlusion_0_06",
+      "successes": 0,
+      "trials": 4,
+      "success_rate": 0.0
+    }
+  ],
+  "orbiqo_perspective": {
+    "available": true,
+    "successes": 14,
+    "trials": 16,
+    "known_failures": [
+      {
+        "pose": "foreshortened",
+        "profile": "clean",
+        "error": "DetectionError: rectification completed but canonical decoding failed"
+      },
+      {
+        "pose": "foreshortened",
+        "profile": "camera_like",
+        "error": "DetectionError: rectification completed but canonical decoding failed"
+      }
+    ]
+  },
+  "limitations": [
+    "All measurements are digital-only and do not support claims about printed symbols.",
+    "Fixed-profile capacities are descriptive, not an ECC-equivalent comparison.",
+    "JAB timing includes command-process startup; Orbiqo and ZXing run in-process.",
+    "The degradation corpus is deterministic and synthetic, not a camera-device corpus.",
+    "Orbiqo strong-foreshortening remains 14/16 in its separate perspective matrix."
+  ]
+}

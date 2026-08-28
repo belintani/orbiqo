@@ -1,0 +1,129 @@
+{
+  "iterations": 20,
+  "stages": [
+    {
+      "payload_bytes": 64,
+      "geometry_version": 1,
+      "geometry_name": "small",
+      "frame_ms": 0.016165897250175476,
+      "geometry_ms": 2.4266918073408306,
+      "reed_solomon_ms": 1.6006223973818123,
+      "interleave_ms": 0.022442499175667763,
+      "channel_and_mask_ms": 4.150499450042844,
+      "encode_total_ms": 10.012731957249343
+    },
+    {
+      "payload_bytes": 571,
+      "geometry_version": 3,
+      "geometry_name": "large",
+      "frame_ms": 0.09734794730320573,
+      "geometry_ms": 12.114297843072563,
+      "reed_solomon_ms": 6.134317594114691,
+      "interleave_ms": 0.08177125127986073,
+      "channel_and_mask_ms": 17.136943200603127,
+      "encode_total_ms": 49.21927659306675
+    }
+  ],
+  "rendering": [
+    {
+      "payload_bytes": 64,
+      "geometry_version": 1,
+      "cell_count": 1104,
+      "svg_ms": 5.305968597531319,
+      "png_ms": 225.21606078371406,
+      "png_fast_ms": 37.12436161004007,
+      "png_fast_1x_ms": 25.49642683006823
+    },
+    {
+      "payload_bytes": 571,
+      "geometry_version": 3,
+      "cell_count": 4400,
+      "svg_ms": 19.66019810643047,
+      "png_ms": 752.1508314181119,
+      "png_fast_ms": 98.22153919376433,
+      "png_fast_1x_ms": 42.77187138795853
+    }
+  ],
+  "decode_boundaries": [
+    {
+      "payload_bytes": 64,
+      "geometry_version": 1,
+      "canonical_success": false,
+      "canonical_ms": 0.0,
+      "canonical_error": "DecodeError: header ring has insufficient luminance separation",
+      "vision_success": true,
+      "vision_ms": 94.96263079345226,
+      "vision_error": ""
+    },
+    {
+      "payload_bytes": 571,
+      "geometry_version": 3,
+      "canonical_success": false,
+      "canonical_ms": 0.0,
+      "canonical_error": "DecodeError: header ring has insufficient luminance separation",
+      "vision_success": true,
+      "vision_ms": 160.6020306237042,
+      "vision_error": ""
+    },
+    {
+      "payload_bytes": 572,
+      "geometry_version": 3,
+      "canonical_success": false,
+      "canonical_ms": 0.0,
+      "canonical_error": "DecodeError: header ring has insufficient luminance separation",
+      "vision_success": true,
+      "vision_ms": 160.66767959855497,
+      "vision_error": ""
+    },
+    {
+      "payload_bytes": 800,
+      "geometry_version": 4,
+      "canonical_success": false,
+      "canonical_ms": 0.0,
+      "canonical_error": "DecodeError: header ring has insufficient luminance separation",
+      "vision_success": true,
+      "vision_ms": 203.9198026061058,
+      "vision_error": ""
+    },
+    {
+      "payload_bytes": 1000,
+      "geometry_version": 4,
+      "canonical_success": false,
+      "canonical_ms": 0.0,
+      "canonical_error": "DecodeError: header ring has insufficient luminance separation",
+      "vision_success": true,
+      "vision_ms": 206.82467678561807,
+      "vision_error": ""
+    }
+  ],
+  "theoretical_capacity": [
+    {
+      "version": 1,
+      "name": "small",
+      "payload_cells": 1064,
+      "maximum_payload_bytes": 183,
+      "normalized_pitch_px": 18.928571428571427
+    },
+    {
+      "version": 2,
+      "name": "medium",
+      "payload_cells": 2440,
+      "maximum_payload_bytes": 410,
+      "normalized_pitch_px": 12.61904761904762
+    },
+    {
+      "version": 3,
+      "name": "large",
+      "payload_cells": 4360,
+      "maximum_payload_bytes": 762,
+      "normalized_pitch_px": 9.464285714285714
+    },
+    {
+      "version": 4,
+      "name": "xl",
+      "payload_cells": 6832,
+      "maximum_payload_bytes": 1252,
+      "normalized_pitch_px": 7.571428571428571
+    }
+  ]
+}

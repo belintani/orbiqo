@@ -1,0 +1,4 @@
+[console_scripts]
+radialcode-decode = radialcode.cli:decode_main
+radialcode-generate = radialcode.cli:generate_main
+radialcode-inspect = radialcode.cli:inspect_main

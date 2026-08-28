@@ -1,0 +1,244 @@
+# Project TODO
+
+- [x] Adotar Orbiqo como identidade local sem remover os registros de compatibilidade RadialCode Draft 0.2 e Draft 0.3
+- [x] Preservar LICENSE, NOTICE, ATTRIBUTION e metadados de citação exigidos pelo projeto de origem
+- [x] Documentar a arquitetura Node.js/tRPC → bridge Python → implementação COLOR4 real
+- [x] Integrar geração real de payloads text, URL e binary via Python
+- [x] Integrar seleção de geometria, diâmetro, ECC e marca central
+- [x] Disponibilizar exportação SVG e PNG gerados pelo renderer de referência
+- [x] Integrar decode real de imagens canônicas e imagens com detecção de visão
+- [x] Implementar upload de imagem com limites explícitos de tamanho e dimensões
+- [x] Implementar leitor por câmera com solicitação explícita de permissão e encerramento seguro do stream
+- [x] Implementar leitor por captura de tela com solicitação explícita de permissão e encerramento seguro do stream
+- [x] Exibir estados de permissão, detecção, falha, conteúdo decodificado e diagnósticos
+- [x] Avaliar o foreshortening forte e manter as duas poses extremas como limite conhecido e trabalho futuro, cobertas por `xfail`
+- [x] Adicionar regressões para as duas poses sintéticas que atualmente falham
+- [x] Criar benchmark reproduzível de capacidade, geração, decode e degradações para Orbiqo, QR e Aztec
+- [x] Validar a manutenção e compatibilidade do toolchain JAB antes de decidir sua inclusão
+- [x] Publicar metodologia, ambiente, parâmetros, dados brutos e limitações sem alegações de impressão física
+- [x] Adicionar fuzzing de headers, payloads, imagens, limites, falsos positivos e falhas graciosas
+- [x] Criar dashboard local com métricas, gráficos e acesso aos dados brutos
+- [x] Aplicar identidade visual elegante, refinada, responsiva e acessível ao Orbiqo Lab
+- [x] Adicionar testes Vitest para contratos tRPC, validações, falhas e dados do dashboard
+- [x] Executar suíte Python, Vitest, typecheck e build final
+- [x] Verificar visualmente gerador, leitor e dashboard em desktop e mobile
+- [x] Manter todo o trabalho local, sem commits, repositório GitHub ou push até revisão do benchmark gate
+- [x] Documentar o foreshortening extremo como limite conhecido com duas regressões estritas `xfail`
+- [x] Definir perfis normalizados por área digital ocupada, payload idêntico e ECC documentado
+- [x] Medir capacidade por área útil e por pixel ocupado sem usar perfis de tamanho incomparáveis
+- [x] Medir geração e decode com o mesmo payload e a mesma dimensão final de raster
+- [x] Executar degradações idênticas sobre rasters normalizados e verificar igualdade exata do payload
+- [x] Publicar separadamente resultados com ECC aproximado e explicar diferenças não normalizáveis
+- [x] Adicionar testes de consistência para dimensões, payload, seeds e perfis da suíte normalizada
+- [x] Atualizar dados brutos, resumo, metodologia, dashboard e relatório com a comparação normalizada
+- [x] Reexecutar Python, Vitest, typecheck, build e revisão visual após a atualização
+- [x] Confirmar novamente que nenhum commit ou push foi criado antes da revisão do novo gate
+- [x] Perfilar separadamente framing, ECC, interleaving, masking, SVG, PNG, detecção, retificação e decode COLOR4
+- [x] Diagnosticar por que a transição Large→XL falha no gate normalizado apesar do pitch nominal permitido
+- [x] Calcular o teto teórico por geometria e identificar overhead recuperável sem remover bootstrap, ECC ou atribuição
+- [x] Prototipar ganhos compatíveis com Draft 0.3 antes de considerar um novo formato Draft 0.4
+- [x] Reduzir a latência do encoder sem alterar bytes normativos, masks ou `cell_states`
+- [x] Reduzir a latência de rasterização com PNG funcionalmente equivalente, documentando que o arquivo não é byte-idêntico ao CairoSVG
+- [x] Reduzir a latência mediana do decode por imagem sem enfraquecer validações
+- [x] Medir e comprovar separadamente a latência do decode canônico em entradas canônicas válidas
+- [x] Fazer Large e XL passarem round-trip limpo no canvas normalizado quando o pitch estiver acima do piso
+- [x] Criar pelo menos três variantes visuais do símbolo e medir contraste, separabilidade COLOR4 e decode exato
+- [x] Selecionar uma assinatura estética própria para guard, anéis, centro e paleta sem fabricar vantagem técnica
+- [x] Refinar o Orbiqo Lab com uma linguagem visual derivada da geometria radial do símbolo
+- [x] Aplicar a gramática radial Pulse aos workspaces Reader e Benchmarks
+- [x] Revisar visualmente Create, Reader e Benchmarks em desktop e mobile após a unificação estética
+- [x] Reexecutar capacidade, latência e degradações após as otimizações
+- [x] Atualizar dashboard e relatório com deltas antes/depois e limitações remanescentes
+- [x] Exibir no dashboard deltas explícitos de capacidade, geração, decode e robustez contra o gate anterior
+- [x] Testar e revisar visualmente a seção de deltas em desktop e mobile
+- [x] Reexecutar fuzzing e regressões completas após as otimizações
+- [x] Manter commits, GitHub e lançamento bloqueados até a revisão do novo gate
+- [x] Medir o desalinhamento angular entre células de anéis adjacentes no layout Draft 0.3
+- [x] Definir uma métrica visual de continuidade das colunas radiais e de colisão aparente
+- [x] Gerar variantes comparáveis: layout atual, fase linear, terraced com divisão hierárquica e colunas constantes
+- [x] Produzir uma contact sheet em Small, Medium, Large e XL com o mesmo payload
+- [x] Comparar capacidade útil, pitch, área pintada, contraste e decode exato das variantes
+- [x] Selecionar um layout em que as linhas pareçam radiais e não sobrepostas
+- [x] Definir compatibilidade e versionamento caso o endereçamento físico mude para Draft 0.4
+- [x] Atualizar encoder, decoder, renderer, especificação e golden vectors do layout selecionado
+- [x] Atualizar o Orbiqo Lab para exibir e explicar a nova tesselação linear
+- [x] Reexecutar benchmark normalizado, degradações, fuzzing e regressões da nova tesselação
+- [x] Manter commits e GitHub bloqueados até a revisão do gate visual linear
+- [x] Adotar Constant Columns como direção visual aprovada pelo proprietário
+- [x] Explorar contagens constantes de colunas por geometria sob o piso normalizado de 7 px
+- [x] Selecionar a maior contagem que preserve decode exato e a aparência de colunas contínuas
+- [x] Documentar a perda ou ganho de capacidade contra Draft 0.3, QR e Aztec
+- [x] Definir versão de formato Draft 0.4 e roteamento de geometria pelo header
+- [x] Preservar decode retrocompatível de símbolos Draft 0.2 e Draft 0.3
+- [x] Atualizar caches de geometria e máscaras para incluir a versão de layout físico
+- [x] Atualizar cálculo de capacidade, encoder, decoder e renderers para Constant Columns
+- [x] Criar testes unitários e golden vectors Draft 0.4 sem sobrescrever os vetores anteriores
+- [x] Atualizar especificação, changelog, README e registros de compatibilidade para Draft 0.4
+- [x] Integrar Constant Columns ao gerador e ao leitor do Orbiqo Lab
+- [x] Reexecutar benchmark normalizado, degradações, perspectiva, fuzzing, Vitest, typecheck e build
+- [x] Revisar Constant Columns nas quatro geometrias e nas três workspaces em desktop e mobile
+- [x] Manter o lançamento, commits e GitHub bloqueados até a revisão do gate Draft 0.4
+- [x] Definir identidades visuais como combinação explícita de paleta funcional e skin de renderização
+- [x] Criar múltiplas paletas COLOR4 registradas por `palette_id`, com nomes e cores estáveis
+- [x] Validar separação cromática e round-trip digital de cada paleta nas quatro geometrias
+- [x] Expor o catálogo de identidades visuais pelo bridge Python e contratos tRPC reais
+- [x] Substituir o seletor simples de assinatura por uma seção visual de templates no gerador
+- [x] Exibir paleta, perfil visual, conformidade e status de validação de cada template
+- [x] Adicionar testes Vitest para catálogo, seleção, geração e decode dos templates
+- [x] Revisar a seção de identidades visuais em desktop e mobile
+- [x] Atualizar documentação normativa e salvar novo checkpoint local sem publicar ou criar commits
+- [x] Exibir em cada card o `tone` e o `visual_style` recebidos do catálogo real
+- [x] Exibir badge explícito de paleta registrada, format version e validação digital
+- [x] Testar no contrato/UI os metadados técnicos apresentados em cada template
+- [x] Testar a interação de seleção e o estado `aria-checked` do template ativo
+- [x] Testar os procedimentos tRPC `identities` e `generate` com `identityId`
+- [x] Definir regra determinística para escolher a menor geometria compatível com payload, compressão e ECC
+- [x] Fazer o modo Auto adotar o diâmetro recomendado da geometria selecionada
+- [x] Preservar modo Manual com geometria e diâmetro escolhidos pelo usuário
+- [x] Expor no bridge e tRPC a geometria solicitada, a geometria resolvida e o motivo da seleção
+- [x] Atualizar o gerador com controles Auto/Manual e feedback de capacidade antes da geração
+- [x] Testar transições nos limites Small/Medium/Large/XL e rejeição acima da capacidade XL
+- [x] Validar round-trip, Vitest, typecheck, build e layout responsivo do auto dimensionamento
+- [x] Atualizar a documentação e salvar checkpoint local sem publicar ou criar commits
+- [x] Mapear e reutilizar os toolchains reais de Orbiqo, QR, Aztec e JAB na comparação visual
+- [x] Gerar os quatro códigos a partir do mesmo payload sem mocks ou imagens pré-calculadas
+- [x] Normalizar a apresentação visual com dimensões, escala e perfil ECC explicitamente identificados
+- [x] Adicionar uma grade simultânea Orbiqo/QR/Aztec/JAB ao Orbiqo Lab
+- [x] Explicar na interface que os perfis ECC não são perfeitamente equivalentes
+- [x] Testar contratos tRPC, conteúdo gerado, typecheck, build e layout desktop/mobile
+- [x] Atualizar documentação e salvar checkpoint local sem publicar ou criar commits
+- [x] Auditar onde geometria e contagem de anéis são codificadas no bootstrap/header atual
+- [x] Determinar se 2 e 4 anéis suportam framing, header, ECC e capacidade útil reais
+- [x] Prototipar geometrias ultracompactas de 2 e 4 anéis com colunas constantes
+- [x] Definir versionamento retrocompatível para registrar as novas contagens fixas
+- [x] Implementar encode/decode, capacidade, renderer e golden vectors das geometrias compactas
+- [x] Diagnosticar se o serrilhado do guard externo vem do raster, da segmentação ou de ambos
+- [x] Renderizar o guard externo como circunferência suave sem enfraquecer detecção e orientação
+- [x] Integrar as novas geometrias ao Auto fit e ao Orbiqo Lab
+- [x] Reexecutar decode, visão, benchmark, Vitest, typecheck, build e revisão desktop/mobile
+- [x] Atualizar documentação e salvar checkpoint local sem publicar ou criar commits
+- [x] Calcular a capacidade teórica de um único anel sob framing e ECC atuais
+- [x] Buscar a maior contagem de colunas Micro 1 que passe round-trip real
+- [x] Medir o menor diâmetro Micro 1 aprovado em múltiplos padrões e degradações
+- [x] Registrar Micro 1 no format 4 somente se houver capacidade útil e ID livre
+- [x] Integrar Micro 1 ao Auto fit, modo Manual e contratos tRPC
+- [x] Validar no navegador que o modo Manual exibe e seleciona explicitamente Micro 1
+- [x] Confirmar visualmente que selecionar Micro 1 aplica Fast ECC, 16 mm e capacidade de 16 bytes
+- [x] Registrar no navegador o valor ativo Fast do campo ECC após selecionar Micro 1
+- [x] Testar na UI o efeito completo Micro 1: Fast, 16 mm e capacidade de 16 bytes
+- [x] Adicionar evidência automatizada do seletor Manual Micro 1 na interface
+- [x] Reexecutar Python, Vitest, typecheck, build e revisão visual
+- [x] Atualizar documentação e salvar checkpoint local sem publicar ou criar commits
+- [x] Isolar se os risquinhos tortos vêm do setor geométrico, antialiasing ou redimensionamento do preview
+- [x] Refinar o raster dos setores coloridos sem alterar endereçamento, células ou formato
+- [x] Confirmar equivalência de estados, round-trip e regressões de visão após o refinamento
+- [x] Revisar visualmente geometrias Micro e Small no preview desktop/mobile
+- [x] Gerar e registrar um preview Micro suavizado com a geometria ativa visível
+- [x] Gerar e registrar um preview Small separado após alternância Manual
+- [x] Registrar no mobile um preview Micro com geometria ativa visível
+- [x] Registrar no mobile um preview Small após seleção Manual e geração
+- [x] Permitir deep-link opcional de `sizing=manual&geometry=small` para revisão visual reproduzível
+- [x] Salvar checkpoint local sem publicar ou criar commits
+- [x] Definir URL, tamanho, formatos e política de rede seguros para imagem central remota
+- [x] Testar no contrato a rejeição de URL não HTTPS e acima do limite
+- [x] Implementar obtenção, validação e normalização de imagem pelo backend
+- [x] Aplicar a imagem central normalizada aos renderers SVG e PNG reais
+- [x] Expor `centerImageUrl` no bridge, tRPC e tipos compartilhados
+- [x] Adicionar campo de URL, prévia, limpeza e estados de erro no gerador
+- [x] Mostrar prévia dedicada ou status visual da imagem central normalizada
+- [x] Exibir erros de URL não HTTPS, host bloqueado, formato inválido e imagem inalcançável
+- [x] Cobrir limpeza, prévia e erros da imagem central em Vitest/UI
+- [x] Mapear `CENTER_IMAGE_INVALID_FORMAT` e `CENTER_IMAGE_UNREACHABLE` para mensagens específicas no gerador
+- [x] Validar em Vitest/UI formato inválido e imagem inalcançável
+- [x] Revisar no navegador prévia e estado de erro da imagem central
+- [x] Testar URLs inválidas, formatos, limites, decode, Vitest, typecheck, build e layout responsivo
+- [x] Registrar no navegador uma mensagem de erro visível da imagem central
+- [x] Revisar em desktop e mobile campo, prévia, limpeza e erro da imagem central
+- [x] Testar a ligação entre falha do bridge e a mensagem do gerador
+- [x] Registrar no mobile a prévia válida e o erro de origem inalcançável da imagem central
+- [x] Validar no navegador a limpeza da imagem central após prévia válida
+- [x] Registrar no navegador o fluxo prévia válida → Clear → campo e miniatura limpos
+- [x] Cobrir em teste UI/integrado formato inválido e limite excedido da imagem central
+- [x] Validar no gerador a mensagem de limite excedido da imagem central
+- [x] Cobrir no teste UI/integrado o erro de limite excedido da imagem central
+- [x] Registrar no viewport móvel o fluxo prévia válida → Clear
+- [x] Permitir deep-link opcional de `centerImageUrl` para pré-preencher o gerador em revisões reproduzíveis
+- [x] Fazer Clear remover URL, prévia e mensagem de erro da imagem central no estado do gerador
+- [x] Eliminar o aviso Fast Refresh causado pela exportação de mapeamento no componente Home
+- [x] Atualizar documentação e salvar checkpoint local sem publicar ou criar commits
+- [x] Mapear menções visíveis a “radial code” e “RadialCode” no Orbiqo Lab
+- [x] Definir Orbiqo como produto/protocolo e RadialCode como implementação de referência técnica
+- [x] Substituir títulos e textos de produto que pareçam nomear uma categoria externa
+- [x] Preservar RadialCode apenas onde a referência de implementação for tecnicamente necessária
+- [x] Testar textos, typecheck, build e revisão desktop/mobile
+- [x] Atualizar documentação e salvar checkpoint local sem publicar ou criar commits
+- [x] Mapear diferenciais legítimos do Orbiqo que não dependam de alegações de superioridade sobre QR, Aztec ou JAB
+- [x] Auditar a arquitetura atual para estimar o custo de oclusão no Orbiqo
+- [x] Medir capacidade, ECC e decode sob oclusões digitais controladas
+- [x] Registrar decisão explícita: implementar, adiar ou descartar oclusão neste ciclo
+- [x] Reposicionar a linguagem do site em torno de diferenciais reais do Orbiqo
+- [x] Testar textos, typecheck, build e revisão desktop/mobile
+- [x] Atualizar documentação e salvar checkpoint local sem publicar ou criar commits
+- [x] Reproduzir os quatro cenários normalizados de oclusão para Orbiqo, QR, Aztec e JAB
+- [x] Diagnosticar as falhas do Orbiqo por posição, header, erasure e correção RS
+- [x] Testar melhorias de ECC/erasure sem alterar a comparabilidade do benchmark
+- [x] Tratar cópia BCH do header sem separação luminosa como erasure, preservando as demais cópias
+- [x] Votar por bit entre cópias BCH rotacionadas quando a mesma oclusão corromper posições diferentes de cada anel
+- [x] Calibrar COLOR4 com mediana robusta para ignorar referências atingidas por uma oclusão local
+- [x] Corrigir a regressão de import na confiança absoluta COLOR4
+- [x] Não adotar a calibração robusta que regrediu o round-trip clean normalizado; manter a limitação documentada
+- [x] Prototipar uma quarta cópia BCH no anel externo livre para separar a redundância do header central
+- [x] Alinhar a amostragem BCH externa ao desvio radial da retificação de visão
+- [x] Marcar células esbranquiçadas fora da paleta como erasures independentes da calibração COLOR4
+- [x] Marcar componentes negros contínuos anormalmente grandes como erasures sem apagar células pretas legítimas isoladas
+- [x] Preservar regressões Draft 0.5 explicitamente em format 4 após o novo default format 5
+- [x] Corrigir o import de visão na regressão do formato 5
+- [x] Adicionar fallback frontal por caixa escura quando a oclusão distorcer a detecção elíptica do guard
+- [x] Provar em regressão que a quarta cópia BCH externa decodifica quando as três cópias internas estão indisponíveis
+- [x] Estender a detecção de manchas negras por componentes ao formato 5
+- [x] Implementar somente a melhoria que eleve o Orbiqo acima de Aztec e JAB no gate
+- [x] Atualizar dados brutos, dashboard e linguagem comparativa com o resultado real
+- [x] Atualizar expectativas web de formato e deltas após regenerar o benchmark Draft 0.6
+- [x] Reexecutar Python, Vitest, typecheck, build e revisão desktop/mobile
+- [x] Atualizar documentação e salvar checkpoint local sem publicar ou criar commits
+- [x] Definir uma narrativa verificável sobre as vantagens composicionais do formato circular, sem alegações de benchmark não medido
+- [x] Adicionar exemplos de uso circular — broches, crachás, perfis e superfícies onde o círculo se encaixa naturalmente
+- [x] Explicar visualmente o centro reservado para foto ou marca sem encobrir células de payload
+- [x] Atualizar testes, revisar desktop/mobile e salvar checkpoint local sem publicar ou criar commits
+- [x] Diagnosticar e corrigir `spawn python3 ENOENT` no runtime de produção sem substituir o pipeline Python real
+- [x] Validar build, bridge e implantação localmente; salvar checkpoint sem publicar novamente
+- [x] Criar explicitamente os diretórios JAB ignorados quando a imagem parte de um contexto limpo
+- [x] Validar o build limpo, o gate vendorizado e salvar checkpoint sem publicar novamente
+- [x] Corrigir o caminho do bridge Python após o bundle para não procurar `dist/python/orbiqo_bridge.py`
+- [x] Validar o layout de produção, testes e checkpoint após a correção do caminho
+- [x] Definir um pitch de adoção focado em resultado percebido, casos de uso e provas honestas
+- [x] Reestruturar a home para priorizar “por que escolher Orbiqo” antes da explicação técnica
+- [x] Atualizar testes, revisar desktop/mobile e salvar checkpoint do novo pitch sem criar commits
+- [x] Auditar e remover CTAs, rótulos ou elementos visuais sem ação clara ou valor de leitura
+- [x] Validar controles reais, responsividade e salvar checkpoint da interface simplificada
+- [x] Remover COLOR4 do pitch e dos rótulos públicos, preservando-o somente em paleta e auditoria técnica
+- [x] Atualizar testes, revisar interface e salvar checkpoint da linguagem simplificada
+- [x] Comparar Fast, Balanced, Robust e Extreme em encode, decode e oclusão sob método comum
+- [x] Separar no dashboard a comparação interna de perfis da comparação externa com QR, Aztec e JAB
+- [x] Validar artefatos, testes, revisão visual e checkpoint do benchmark reorganizado
+- [x] Auditar hierarquia, clareza, densidade, controles e responsividade dos fluxos Create, Read, Compare e Benchmarks
+- [x] Implementar refinamentos de UX/UI que reduzam ruído e melhorem orientação sem alterar o pipeline real
+- [x] Validar acessibilidade, testes, desktop/mobile e salvar checkpoint da revisão de UX/UI
+- [x] Renomear a geração externa como produção completa de raster e expor a diferença para o encoder puro
+- [x] Mapear e avaliar um renderer C++ equivalente, sem trocar o caminho de referência antes de comprovar paridade
+- [x] Validar benchmarks, golden vectors, interface e checkpoint da clarificação e avaliação nativa
+- [x] Definir contrato de entrada, saída, fallback e paridade do renderer C++ opt-in
+- [x] Implementar o renderer C++17 do núcleo do símbolo e conectá-lo de modo experimental ao bridge
+- [x] Medir Python versus C++, validar decode/golden vectors e salvar checkpoint sem tornar C++ o padrão
+- [x] Criar uma página dedicada de comparação Python versus C++ com medições reais, escopo e limites explícitos
+- [x] Expor dados do benchmark nativo por tRPC e integrar navegação sem alterar o renderer padrão
+- [x] Validar testes, desktop/mobile e salvar checkpoint da página comparativa
+- [x] Remover a entrada Python/C++ da navegação pública, preservando o protótipo no código para evolução futura
+- [ ] Validar o fluxo público, preparar autoria exclusiva de belintani e enviar o estado revisado ao remoto autorizado
+- [x] Adicionar GH_TOKEN como segredo de escrita para autenticar exclusivamente o push autorizado
+- [x] Remover o teste temporário de token antes da primeira versão pública
+- [x] Remover o metadado Git aninhado do JAB e ignorar caches Python antes do primeiro push público
+- [ ] Consolidar o JAB em uma única cópia de runtime antes do primeiro push público
+- [x] Criar README de entrada para a primeira versão pública do repositório Orbiqo
+- [x] Espelhar LICENSE, NOTICE, ATTRIBUTION e licença da especificação RadialCode antes do primeiro push
+- [x] Incluir a especificação Draft 0.6 no repositório público junto à sua licença

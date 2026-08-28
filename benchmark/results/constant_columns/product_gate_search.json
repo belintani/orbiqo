@@ -1,0 +1,934 @@
+[
+  {
+    "version": 1,
+    "geometry": "small",
+    "columns": 172,
+    "data_inner": 0.41,
+    "pitch_px": 7.08228227575257,
+    "maximum_payload_bytes": 370,
+    "successful_non_occlusion_trials": 22,
+    "non_occlusion_trial_count": 28,
+    "all_non_occlusion_successful": false,
+    "trials": [
+      {
+        "profile": "clean",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "clean",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "clean",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "clean",
+        "trial": 3,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_1_5",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_1_5",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_1_5",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_1_5",
+        "trial": 3,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_3_0",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_3_0",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_3_0",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_3_0",
+        "trial": 3,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_8",
+        "trial": 0,
+        "success": false,
+        "error": "all rectification hypotheses completed but canonical decoding failed"
+      },
+      {
+        "profile": "noise_8",
+        "trial": 1,
+        "success": false,
+        "error": "all rectification hypotheses completed but canonical decoding failed"
+      },
+      {
+        "profile": "noise_8",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_8",
+        "trial": 3,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_40",
+        "trial": 0,
+        "success": false,
+        "error": "all rectification hypotheses completed but canonical decoding failed"
+      },
+      {
+        "profile": "jpeg_40",
+        "trial": 1,
+        "success": false,
+        "error": "all rectification hypotheses completed but canonical decoding failed"
+      },
+      {
+        "profile": "jpeg_40",
+        "trial": 2,
+        "success": false,
+        "error": "all rectification hypotheses completed but canonical decoding failed"
+      },
+      {
+        "profile": "jpeg_40",
+        "trial": 3,
+        "success": false,
+        "error": "all rectification hypotheses completed but canonical decoding failed"
+      },
+      {
+        "profile": "downsample_0_35",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_35",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_35",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_35",
+        "trial": 3,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "combined",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "combined",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "combined",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "combined",
+        "trial": 3,
+        "success": true,
+        "error": null
+      }
+    ]
+  },
+  {
+    "version": 1,
+    "geometry": "small",
+    "columns": 168,
+    "data_inner": 0.41,
+    "pitch_px": 7.25090804422287,
+    "maximum_payload_bytes": 358,
+    "successful_non_occlusion_trials": 24,
+    "non_occlusion_trial_count": 28,
+    "all_non_occlusion_successful": false,
+    "trials": [
+      {
+        "profile": "clean",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "clean",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "clean",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "clean",
+        "trial": 3,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_1_5",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_1_5",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_1_5",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_1_5",
+        "trial": 3,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_3_0",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_3_0",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_3_0",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_3_0",
+        "trial": 3,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_8",
+        "trial": 0,
+        "success": false,
+        "error": "all rectification hypotheses completed but canonical decoding failed"
+      },
+      {
+        "profile": "noise_8",
+        "trial": 1,
+        "success": false,
+        "error": "all rectification hypotheses completed but canonical decoding failed"
+      },
+      {
+        "profile": "noise_8",
+        "trial": 2,
+        "success": false,
+        "error": "all rectification hypotheses completed but canonical decoding failed"
+      },
+      {
+        "profile": "noise_8",
+        "trial": 3,
+        "success": false,
+        "error": "all rectification hypotheses completed but canonical decoding failed"
+      },
+      {
+        "profile": "jpeg_40",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_40",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_40",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_40",
+        "trial": 3,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_35",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_35",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_35",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_35",
+        "trial": 3,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "combined",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "combined",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "combined",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "combined",
+        "trial": 3,
+        "success": true,
+        "error": null
+      }
+    ]
+  },
+  {
+    "version": 1,
+    "geometry": "small",
+    "columns": 164,
+    "data_inner": 0.41,
+    "pitch_px": 7.427759459935624,
+    "maximum_payload_bytes": 346,
+    "successful_non_occlusion_trials": 24,
+    "non_occlusion_trial_count": 28,
+    "all_non_occlusion_successful": false,
+    "trials": [
+      {
+        "profile": "clean",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "clean",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "clean",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "clean",
+        "trial": 3,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_1_5",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_1_5",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_1_5",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_1_5",
+        "trial": 3,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_3_0",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_3_0",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_3_0",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_3_0",
+        "trial": 3,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_8",
+        "trial": 0,
+        "success": false,
+        "error": "all rectification hypotheses completed but canonical decoding failed"
+      },
+      {
+        "profile": "noise_8",
+        "trial": 1,
+        "success": false,
+        "error": "all rectification hypotheses completed but canonical decoding failed"
+      },
+      {
+        "profile": "noise_8",
+        "trial": 2,
+        "success": false,
+        "error": "all rectification hypotheses completed but canonical decoding failed"
+      },
+      {
+        "profile": "noise_8",
+        "trial": 3,
+        "success": false,
+        "error": "all rectification hypotheses completed but canonical decoding failed"
+      },
+      {
+        "profile": "jpeg_40",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_40",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_40",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_40",
+        "trial": 3,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_35",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_35",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_35",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_35",
+        "trial": 3,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "combined",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "combined",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "combined",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "combined",
+        "trial": 3,
+        "success": true,
+        "error": null
+      }
+    ]
+  },
+  {
+    "version": 1,
+    "geometry": "small",
+    "columns": 160,
+    "data_inner": 0.41,
+    "pitch_px": 7.613453446434014,
+    "maximum_payload_bytes": 334,
+    "successful_non_occlusion_trials": 28,
+    "non_occlusion_trial_count": 28,
+    "all_non_occlusion_successful": true,
+    "trials": [
+      {
+        "profile": "clean",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "clean",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "clean",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "clean",
+        "trial": 3,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_1_5",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_1_5",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_1_5",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_1_5",
+        "trial": 3,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_3_0",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_3_0",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_3_0",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "blur_3_0",
+        "trial": 3,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_8",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_8",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_8",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "noise_8",
+        "trial": 3,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_40",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_40",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_40",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "jpeg_40",
+        "trial": 3,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_35",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_35",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_35",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "downsample_0_35",
+        "trial": 3,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "combined",
+        "trial": 0,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "combined",
+        "trial": 1,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "combined",
+        "trial": 2,
+        "success": true,
+        "error": null
+      },
+      {
+        "profile": "combined",
+        "trial": 3,
+        "success": true,
+        "error": null
+      }
+    ],
+    "strict_full_capacity": {
+      "version": 1,
+      "geometry": "small",
+      "columns": 160,
+      "data_inner": 0.41,
+      "pitch_px": 7.613453446434014,
+      "total_cells": 1920,
+      "maximum_payload_bytes": 334,
+      "eligible": true,
+      "payload_bytes_tested": 334,
+      "trial_count": 24,
+      "successful_trials": 24,
+      "all_successful": true,
+      "trials": [
+        {
+          "pattern": "arithmetic",
+          "profile": "clean",
+          "success": true,
+          "average_confidence": 0.9969672382121934,
+          "decode_ms": 167.73823415860534,
+          "error": null
+        },
+        {
+          "pattern": "arithmetic",
+          "profile": "blur_1_2",
+          "success": true,
+          "average_confidence": 0.9963242944695773,
+          "decode_ms": 153.89139391481876,
+          "error": null
+        },
+        {
+          "pattern": "arithmetic",
+          "profile": "jpeg_55",
+          "success": true,
+          "average_confidence": 0.9977294573502609,
+          "decode_ms": 158.59028906561434,
+          "error": null
+        },
+        {
+          "pattern": "arithmetic",
+          "profile": "downsample_0_55",
+          "success": true,
+          "average_confidence": 0.997031800245983,
+          "decode_ms": 164.33912189677358,
+          "error": null
+        },
+        {
+          "pattern": "arithmetic",
+          "profile": "noise_7_seed_31",
+          "success": true,
+          "average_confidence": 0.9971544395748371,
+          "decode_ms": 169.79578300379217,
+          "error": null
+        },
+        {
+          "pattern": "arithmetic",
+          "profile": "noise_7_seed_53",
+          "success": true,
+          "average_confidence": 0.9969070803976252,
+          "decode_ms": 170.7353461533785,
+          "error": null
+        },
+        {
+          "pattern": "zeros",
+          "profile": "clean",
+          "success": true,
+          "average_confidence": 0.9966289285589167,
+          "decode_ms": 162.7623699605465,
+          "error": null
+        },
+        {
+          "pattern": "zeros",
+          "profile": "blur_1_2",
+          "success": true,
+          "average_confidence": 0.9959409177414923,
+          "decode_ms": 151.35800605639815,
+          "error": null
+        },
+        {
+          "pattern": "zeros",
+          "profile": "jpeg_55",
+          "success": true,
+          "average_confidence": 0.9976949173457996,
+          "decode_ms": 156.83786594308913,
+          "error": null
+        },
+        {
+          "pattern": "zeros",
+          "profile": "downsample_0_55",
+          "success": true,
+          "average_confidence": 0.9966725527290268,
+          "decode_ms": 158.50119991227984,
+          "error": null
+        },
+        {
+          "pattern": "zeros",
+          "profile": "noise_7_seed_31",
+          "success": true,
+          "average_confidence": 0.9968391912089325,
+          "decode_ms": 168.4391680173576,
+          "error": null
+        },
+        {
+          "pattern": "zeros",
+          "profile": "noise_7_seed_53",
+          "success": true,
+          "average_confidence": 0.9965925166275319,
+          "decode_ms": 167.51177492551506,
+          "error": null
+        },
+        {
+          "pattern": "ones",
+          "profile": "clean",
+          "success": true,
+          "average_confidence": 0.9968025014648804,
+          "decode_ms": 164.975605905056,
+          "error": null
+        },
+        {
+          "pattern": "ones",
+          "profile": "blur_1_2",
+          "success": true,
+          "average_confidence": 0.9961597828327821,
+          "decode_ms": 155.92150203883648,
+          "error": null
+        },
+        {
+          "pattern": "ones",
+          "profile": "jpeg_55",
+          "success": true,
+          "average_confidence": 0.9967343334426054,
+          "decode_ms": 163.10835117474198,
+          "error": null
+        },
+        {
+          "pattern": "ones",
+          "profile": "downsample_0_55",
+          "success": true,
+          "average_confidence": 0.9968639755735064,
+          "decode_ms": 164.0336641576141,
+          "error": null
+        },
+        {
+          "pattern": "ones",
+          "profile": "noise_7_seed_31",
+          "success": true,
+          "average_confidence": 0.9970250212773829,
+          "decode_ms": 174.38866407610476,
+          "error": null
+        },
+        {
+          "pattern": "ones",
+          "profile": "noise_7_seed_53",
+          "success": true,
+          "average_confidence": 0.9967215008273488,
+          "decode_ms": 173.75526204705238,
+          "error": null
+        },
+        {
+          "pattern": "alternating",
+          "profile": "clean",
+          "success": true,
+          "average_confidence": 0.9968980210863072,
+          "decode_ms": 168.1029920000583,
+          "error": null
+        },
+        {
+          "pattern": "alternating",
+          "profile": "blur_1_2",
+          "success": true,
+          "average_confidence": 0.9961871846393708,
+          "decode_ms": 157.96241094358265,
+          "error": null
+        },
+        {
+          "pattern": "alternating",
+          "profile": "jpeg_55",
+          "success": true,
+          "average_confidence": 0.9975191996896708,
+          "decode_ms": 165.68481409922242,
+          "error": null
+        },
+        {
+          "pattern": "alternating",
+          "profile": "downsample_0_55",
+          "success": true,
+          "average_confidence": 0.9969722521472245,
+          "decode_ms": 172.0988571178168,
+          "error": null
+        },
+        {
+          "pattern": "alternating",
+          "profile": "noise_7_seed_31",
+          "success": true,
+          "average_confidence": 0.997073571666962,
+          "decode_ms": 174.9754229094833,
+          "error": null
+        },
+        {
+          "pattern": "alternating",
+          "profile": "noise_7_seed_53",
+          "success": true,
+          "average_confidence": 0.9968368051585332,
+          "decode_ms": 172.88604006171227,
+          "error": null
+        }
+      ]
+    }
+  }
+]

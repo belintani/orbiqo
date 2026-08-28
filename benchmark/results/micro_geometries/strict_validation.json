@@ -1,0 +1,262 @@
+[
+  {
+    "rings": 2,
+    "columns": 216,
+    "maximum_payload_bytes": 26,
+    "passed": 20,
+    "total": 20,
+    "eligible": true,
+    "trials": [
+      {
+        "pattern": "deterministic",
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "deterministic",
+        "profile": "blur_1_2",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "deterministic",
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "deterministic",
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "deterministic",
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "reverse",
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "reverse",
+        "profile": "blur_1_2",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "reverse",
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "reverse",
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "reverse",
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "zeros",
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "zeros",
+        "profile": "blur_1_2",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "zeros",
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "zeros",
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "zeros",
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "alternating",
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "alternating",
+        "profile": "blur_1_2",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "alternating",
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "alternating",
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "alternating",
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      }
+    ]
+  },
+  {
+    "rings": 4,
+    "columns": 188,
+    "maximum_payload_bytes": 106,
+    "passed": 20,
+    "total": 20,
+    "eligible": true,
+    "trials": [
+      {
+        "pattern": "deterministic",
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "deterministic",
+        "profile": "blur_1_2",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "deterministic",
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "deterministic",
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "deterministic",
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "reverse",
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "reverse",
+        "profile": "blur_1_2",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "reverse",
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "reverse",
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "reverse",
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "zeros",
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "zeros",
+        "profile": "blur_1_2",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "zeros",
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "zeros",
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "zeros",
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "alternating",
+        "profile": "clean",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "alternating",
+        "profile": "blur_1_2",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "alternating",
+        "profile": "jpeg_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "alternating",
+        "profile": "downsample_0_55",
+        "success": true,
+        "error": null
+      },
+      {
+        "pattern": "alternating",
+        "profile": "noise_7",
+        "success": true,
+        "error": null
+      }
+    ]
+  }
+]

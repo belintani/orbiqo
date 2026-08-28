@@ -1,0 +1,11 @@
+{
+  "gate": "pre-optimization normalized gate",
+  "methodology": "1024 px canvas, 900 px occupied area, 7 px nominal feature floor, 64-byte timing payload",
+  "orbiqo_capacity_bytes": 571,
+  "orbiqo_generation_median_ms": 252.39,
+  "orbiqo_decode_median_ms": 112.15,
+  "all_formats_degradation_successes": 111,
+  "all_formats_degradation_trials": 128,
+  "orbiqo_degradation_successes": 24,
+  "orbiqo_degradation_trials": 32
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "format": "qr",
+    "requested_ec_level": "L",
+    "reported_ec_level": "L",
+    "width_modules_with_quiet_zone": 41,
+    "height_modules_with_quiet_zone": 41
+  },
+  {
+    "format": "qr",
+    "requested_ec_level": "M",
+    "reported_ec_level": "M",
+    "width_modules_with_quiet_zone": 45,
+    "height_modules_with_quiet_zone": 45
+  },
+  {
+    "format": "qr",
+    "requested_ec_level": "Q",
+    "reported_ec_level": "Q",
+    "width_modules_with_quiet_zone": 49,
+    "height_modules_with_quiet_zone": 49
+  },
+  {
+    "format": "qr",
+    "requested_ec_level": "H",
+    "reported_ec_level": "H",
+    "width_modules_with_quiet_zone": 57,
+    "height_modules_with_quiet_zone": 57
+  },
+  {
+    "format": "aztec",
+    "requested_ec_level": "10",
+    "reported_ec_level": "33%",
+    "width_modules_with_quiet_zone": 41,
+    "height_modules_with_quiet_zone": 41
+  },
+  {
+    "format": "aztec",
+    "requested_ec_level": "15",
+    "reported_ec_level": "33%",
+    "width_modules_with_quiet_zone": 41,
+    "height_modules_with_quiet_zone": 41
+  },
+  {
+    "format": "aztec",
+    "requested_ec_level": "20",
+    "reported_ec_level": "33%",
+    "width_modules_with_quiet_zone": 41,
+    "height_modules_with_quiet_zone": 41
+  },
+  {
+    "format": "aztec",
+    "requested_ec_level": "25",
+    "reported_ec_level": "33%",
+    "width_modules_with_quiet_zone": 41,
+    "height_modules_with_quiet_zone": 41
+  },
+  {
+    "format": "aztec",
+    "requested_ec_level": "30",
+    "reported_ec_level": "33%",
+    "width_modules_with_quiet_zone": 41,
+    "height_modules_with_quiet_zone": 41
+  },
+  {
+    "format": "aztec",
+    "requested_ec_level": "33",
+    "reported_ec_level": "33%",
+    "width_modules_with_quiet_zone": 41,
+    "height_modules_with_quiet_zone": 41
+  },
+  {
+    "format": "aztec",
+    "requested_ec_level": "40",
+    "reported_ec_level": "33%",
+    "width_modules_with_quiet_zone": 41,
+    "height_modules_with_quiet_zone": 41
+  },
+  {
+    "format": "aztec",
+    "requested_ec_level": "50",
+    "reported_ec_level": "33%",
+    "width_modules_with_quiet_zone": 41,
+    "height_modules_with_quiet_zone": 41
+  }
+]

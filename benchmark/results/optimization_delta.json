@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-08-26T18:15:54.896934+00:00",
+  "baseline_path": "benchmark/baselines/pre_optimization_normalized.json",
+  "current_summary_path": "benchmark/results/normalized_summary.json",
+  "methodology": "1024 px canvas, 900 px occupied area, 7 px nominal feature floor, 64-byte timing payload",
+  "metrics": [
+    {
+      "key": "capacity",
+      "label": "Orbiqo capacity",
+      "before": 571,
+      "after": 922,
+      "unit": "B",
+      "change": 351,
+      "change_percent": 61.471103327495626,
+      "direction": "higher_is_better"
+    },
+    {
+      "key": "generation",
+      "label": "Median generation",
+      "before": 252.39,
+      "after": 170.58865597937256,
+      "unit": "ms",
+      "change": -81.80134402062743,
+      "change_percent": -32.41069139848149,
+      "direction": "lower_is_better"
+    },
+    {
+      "key": "decode",
+      "label": "Median decode",
+      "before": 112.15,
+      "after": 108.53760852478445,
+      "unit": "ms",
+      "change": -3.61239147521556,
+      "change_percent": -3.221035644418689,
+      "direction": "lower_is_better"
+    },
+    {
+      "key": "robustness",
+      "label": "All-format exact degradation",
+      "before": 86.71875,
+      "after": 90.625,
+      "unit": "%",
+      "change": 3.90625,
+      "change_percent": 4.504504504504505,
+      "direction": "higher_is_better"
+    }
+  ],
+  "orbiqo_degradation": {
+    "before": 24,
+    "after": 29,
+    "trials": 32
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-08-27T16:34:17.373022+00:00",
+  "method": {
+    "runs": 10,
+    "dpi": 600,
+    "payload_bytes": 67,
+    "ecc": "balanced",
+    "identity": "pulse-equivalent fills, empty center",
+    "scope": "PNG-ready renderer comparison only; C++ process launch is included; Python remains the reference encoder and decoder"
+  },
+  "cases": [
+    {
+      "geometry": "micro-4",
+      "diameter_mm": 18.0,
+      "native_output_bytes": 97196,
+      "reference_output_bytes": 249888,
+      "reference_renderer_median_ms": 71.7531000263989,
+      "native_renderer_median_ms": 71.212402661331,
+      "native_relative_change_percent": -0.753552619843556,
+      "reference_roundtrip": true,
+      "native_roundtrip": true
+    },
+    {
+      "geometry": "small",
+      "diameter_mm": 30.0,
+      "native_output_bytes": 67005,
+      "reference_output_bytes": 119480,
+      "reference_renderer_median_ms": 153.5827120533213,
+      "native_renderer_median_ms": 73.27837054617703,
+      "native_relative_change_percent": -52.28735736823293,
+      "reference_roundtrip": true,
+      "native_roundtrip": true
+    },
+    {
+      "geometry": "medium",
+      "diameter_mm": 42.0,
+      "native_output_bytes": 115855,
+      "reference_output_bytes": 210903,
+      "reference_renderer_median_ms": 300.49841152504086,
+      "native_renderer_median_ms": 140.22711000870913,
+      "native_relative_change_percent": -53.335157647905284,
+      "reference_roundtrip": true,
+      "native_roundtrip": true
+    }
+  ]
+}

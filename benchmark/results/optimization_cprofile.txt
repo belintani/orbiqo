@@ -1,0 +1,70 @@
+
+=== render_png small ===
+         596408 function calls (584251 primitive calls) in 0.479 seconds
+
+   Ordered by: cumulative time
+   List reduced from 239 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.479    0.479 profile_optimization_hotspots.py:154(<lambda>)
+        1    0.000    0.000    0.479    0.479 renderer.py:226(render_png)
+        1    0.000    0.000    0.470    0.470 __init__.py:50(svg2png)
+        1    0.000    0.000    0.470    0.470 surface.py:96(convert)
+        1    0.000    0.000    0.407    0.407 surface.py:146(__init__)
+   1216/1    0.046    0.000    0.407    0.407 surface.py:286(draw)
+     1206    0.036    0.000    0.129    0.000 path.py:121(path)
+     4864    0.008    0.000    0.050    0.000 helpers.py:75(normalize)
+        1    0.000    0.000    0.048    0.048 parser.py:343(__init__)
+   1216/1    0.014    0.000    0.040    0.040 parser.py:157(__init__)
+    14597    0.010    0.000    0.039    0.000 __init__.py:179(sub)
+9728/1216    0.015    0.000    0.035    0.000 copy.py:118(deepcopy)
+     1211    0.030    0.000    0.031    0.000 context.py:1472(stroke)
+     1216    0.004    0.000    0.031    0.000 copy.py:200(_deepcopy_tuple)
+    30214    0.024    0.000    0.029    0.000 context.py:106(_check_status)
+    12122    0.012    0.000    0.029    0.000 helpers.py:342(size)
+     4856    0.003    0.000    0.022    0.000 url.py:98(parse_url)
+     3618    0.007    0.000    0.022    0.000 helpers.py:84(point)
+     4856    0.011    0.000    0.020    0.000 parse.py:374(urlparse)
+    14597    0.017    0.000    0.017    0.000 {method 'sub' of 're.Pattern' objects}
+    71757    0.016    0.000    0.016    0.000 {method 'get' of 'dict' objects}
+     1216    0.007    0.000    0.016    0.000 path.py:15(draw_markers)
+    18215    0.010    0.000    0.015    0.000 __init__.py:280(_compile)
+     2432    0.004    0.000    0.014    0.000 copy.py:191(_deepcopy_list)
+        1    0.000    0.000    0.014    0.014 surface.py:534(finish)
+
+
+
+=== decode_image small ===
+         121467 function calls in 0.146 seconds
+
+   Ordered by: cumulative time
+   List reduced from 224 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.149    0.149 profile_optimization_hotspots.py:155(<lambda>)
+        1    0.000    0.000    0.149    0.149 vision.py:550(decode_image)
+        1    0.000    0.000    0.123    0.123 decoder.py:360(decode_canonical)
+        1    0.004    0.004    0.099    0.099 decoder.py:233(_color_payload_samples)
+     1064    0.023    0.000    0.053    0.000 color.py:31(classify)
+     1080    0.003    0.000    0.036    0.000 decoder.py:141(_sample_cell)
+     1272    0.009    0.000    0.034    0.000 decoder.py:118(_sample_patch)
+        1    0.000    0.000    0.019    0.019 vision.py:102(_detect_outer_guard_bgr)
+     1276    0.002    0.000    0.017    0.000 fromnumeric.py:3737(mean)
+     1276    0.007    0.000    0.015    0.000 _methods.py:115(_mean)
+      247    0.001    0.000    0.013    0.000 vision.py:75(_ellipse_candidate)
+      247    0.011    0.000    0.011    0.000 {fitEllipse}
+        1    0.000    0.000    0.008    0.008 ecc.py:96(decode)
+     1071    0.004    0.000    0.007    0.000 {built-in method numpy.asarray}
+     2128    0.003    0.000    0.007    0.000 fromnumeric.py:66(_wrapreduction)
+     3404    0.007    0.000    0.007    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+        2    0.000    0.000    0.007    0.003 reedsolo.py:542(rs_calc_syndromes)
+      128    0.003    0.000    0.006    0.000 reedsolo.py:473(gf_poly_eval)
+        1    0.000    0.000    0.006    0.006 decoder.py:212(_decode_header)
+        1    0.000    0.000    0.005    0.005 decoder.py:86(_load_rgb)
+     1064    0.001    0.000    0.005    0.000 fromnumeric.py:3049(max)
+     1064    0.001    0.000    0.005    0.000 einsumfunc.py:1242(einsum)
+     1064    0.001    0.000    0.005    0.000 fromnumeric.py:1115(argsort)
+     1064    0.001    0.000    0.005    0.000 fromnumeric.py:2342(sum)
+        3    0.000    0.000    0.004    0.001 decoder.py:200(_sample_header_ring)
+
+

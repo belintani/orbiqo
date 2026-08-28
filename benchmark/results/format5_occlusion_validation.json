@@ -1,0 +1,132 @@
+{
+  "profile": {
+    "blur_radius": 0.0,
+    "noise_sigma": 0.0,
+    "brightness": 1.0,
+    "contrast": 1.0,
+    "saturation": 1.0,
+    "jpeg_quality": 100,
+    "downsample_factor": 1.0,
+    "occlusion_fraction": 0.06,
+    "seed": 1
+  },
+  "rows": [
+    {
+      "ecc": "balanced",
+      "payload": "benchmark",
+      "bytes": 64,
+      "successes": 1,
+      "trials": 4,
+      "outcomes": [
+        true,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "ecc": "balanced",
+      "payload": "counter",
+      "bytes": 64,
+      "successes": 0,
+      "trials": 4,
+      "outcomes": [
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "ecc": "balanced",
+      "payload": "periodic",
+      "bytes": 64,
+      "successes": 1,
+      "trials": 4,
+      "outcomes": [
+        true,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "ecc": "robust",
+      "payload": "benchmark",
+      "bytes": 64,
+      "successes": 3,
+      "trials": 4,
+      "outcomes": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "ecc": "robust",
+      "payload": "counter",
+      "bytes": 64,
+      "successes": 3,
+      "trials": 4,
+      "outcomes": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "ecc": "robust",
+      "payload": "periodic",
+      "bytes": 64,
+      "successes": 3,
+      "trials": 4,
+      "outcomes": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    {
+      "ecc": "extreme",
+      "payload": "benchmark",
+      "bytes": 64,
+      "successes": 0,
+      "trials": 4,
+      "outcomes": [
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "ecc": "extreme",
+      "payload": "counter",
+      "bytes": 64,
+      "successes": 0,
+      "trials": 4,
+      "outcomes": [
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "ecc": "extreme",
+      "payload": "periodic",
+      "bytes": 64,
+      "successes": 0,
+      "trials": 4,
+      "outcomes": [
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  ]
+}

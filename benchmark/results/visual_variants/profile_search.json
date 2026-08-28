@@ -1,0 +1,635 @@
+{
+  "profiles": [
+    "clean",
+    "blur_1_2",
+    "jpeg_55",
+    "downsample_0_55",
+    "noise_7"
+  ],
+  "rows": [
+    {
+      "angular_fill": 0.82,
+      "radial_fill": 0.86,
+      "successes": 4,
+      "minimum_success_confidence": 0.9874173434714417,
+      "mean_confidence": 0.7938859174281665,
+      "profiles": [
+        {
+          "profile": "clean",
+          "exact": true,
+          "confidence": 0.9938479140770614,
+          "error": ""
+        },
+        {
+          "profile": "blur_1_2",
+          "exact": true,
+          "confidence": 0.9874173434714417,
+          "error": ""
+        },
+        {
+          "profile": "jpeg_55",
+          "exact": false,
+          "confidence": 0.0,
+          "error": "EccDecodeError: RS block 0 is not recoverable"
+        },
+        {
+          "profile": "downsample_0_55",
+          "exact": true,
+          "confidence": 0.9946434004985442,
+          "error": ""
+        },
+        {
+          "profile": "noise_7",
+          "exact": true,
+          "confidence": 0.9935209290937852,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "angular_fill": 0.85,
+      "radial_fill": 0.86,
+      "successes": 4,
+      "minimum_success_confidence": 0.9765424097821119,
+      "mean_confidence": 0.7892428855751312,
+      "profiles": [
+        {
+          "profile": "clean",
+          "exact": true,
+          "confidence": 0.9901297899445433,
+          "error": ""
+        },
+        {
+          "profile": "blur_1_2",
+          "exact": true,
+          "confidence": 0.9765424097821119,
+          "error": ""
+        },
+        {
+          "profile": "jpeg_55",
+          "exact": false,
+          "confidence": 0.0,
+          "error": "EccDecodeError: RS block 0 is not recoverable"
+        },
+        {
+          "profile": "downsample_0_55",
+          "exact": true,
+          "confidence": 0.9895104972115689,
+          "error": ""
+        },
+        {
+          "profile": "noise_7",
+          "exact": true,
+          "confidence": 0.990031730937432,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "angular_fill": 0.88,
+      "radial_fill": 0.86,
+      "successes": 4,
+      "minimum_success_confidence": 0.9730580172591894,
+      "mean_confidence": 0.7867919421451471,
+      "profiles": [
+        {
+          "profile": "clean",
+          "exact": true,
+          "confidence": 0.9875342901321174,
+          "error": ""
+        },
+        {
+          "profile": "blur_1_2",
+          "exact": true,
+          "confidence": 0.9730580172591894,
+          "error": ""
+        },
+        {
+          "profile": "jpeg_55",
+          "exact": false,
+          "confidence": 0.0,
+          "error": "EccDecodeError: RS block 0 is not recoverable"
+        },
+        {
+          "profile": "downsample_0_55",
+          "exact": true,
+          "confidence": 0.9857925156971151,
+          "error": ""
+        },
+        {
+          "profile": "noise_7",
+          "exact": true,
+          "confidence": 0.9875748876373137,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "angular_fill": 0.88,
+      "radial_fill": 0.74,
+      "successes": 4,
+      "minimum_success_confidence": 0.9403722281168818,
+      "mean_confidence": 0.7780271947363038,
+      "profiles": [
+        {
+          "profile": "clean",
+          "exact": true,
+          "confidence": 0.9666187288610656,
+          "error": ""
+        },
+        {
+          "profile": "blur_1_2",
+          "exact": true,
+          "confidence": 0.9950525493554644,
+          "error": ""
+        },
+        {
+          "profile": "jpeg_55",
+          "exact": true,
+          "confidence": 0.9403722281168818,
+          "error": ""
+        },
+        {
+          "profile": "downsample_0_55",
+          "exact": true,
+          "confidence": 0.9880924673481072,
+          "error": ""
+        },
+        {
+          "profile": "noise_7",
+          "exact": false,
+          "confidence": 0.0,
+          "error": "EccDecodeError: RS block 0 is not recoverable"
+        }
+      ]
+    },
+    {
+      "angular_fill": 0.88,
+      "radial_fill": 0.78,
+      "successes": 4,
+      "minimum_success_confidence": 0.9403722281168818,
+      "mean_confidence": 0.7780271947363038,
+      "profiles": [
+        {
+          "profile": "clean",
+          "exact": true,
+          "confidence": 0.9666187288610656,
+          "error": ""
+        },
+        {
+          "profile": "blur_1_2",
+          "exact": true,
+          "confidence": 0.9950525493554644,
+          "error": ""
+        },
+        {
+          "profile": "jpeg_55",
+          "exact": true,
+          "confidence": 0.9403722281168818,
+          "error": ""
+        },
+        {
+          "profile": "downsample_0_55",
+          "exact": true,
+          "confidence": 0.9880924673481072,
+          "error": ""
+        },
+        {
+          "profile": "noise_7",
+          "exact": false,
+          "confidence": 0.0,
+          "error": "EccDecodeError: RS block 0 is not recoverable"
+        }
+      ]
+    },
+    {
+      "angular_fill": 0.88,
+      "radial_fill": 0.82,
+      "successes": 4,
+      "minimum_success_confidence": 0.9403722281168818,
+      "mean_confidence": 0.7780271947363038,
+      "profiles": [
+        {
+          "profile": "clean",
+          "exact": true,
+          "confidence": 0.9666187288610656,
+          "error": ""
+        },
+        {
+          "profile": "blur_1_2",
+          "exact": true,
+          "confidence": 0.9950525493554644,
+          "error": ""
+        },
+        {
+          "profile": "jpeg_55",
+          "exact": true,
+          "confidence": 0.9403722281168818,
+          "error": ""
+        },
+        {
+          "profile": "downsample_0_55",
+          "exact": true,
+          "confidence": 0.9880924673481072,
+          "error": ""
+        },
+        {
+          "profile": "noise_7",
+          "exact": false,
+          "confidence": 0.0,
+          "error": "EccDecodeError: RS block 0 is not recoverable"
+        }
+      ]
+    },
+    {
+      "angular_fill": 0.91,
+      "radial_fill": 0.86,
+      "successes": 4,
+      "minimum_success_confidence": 0.9324622502917277,
+      "mean_confidence": 0.7786466369219082,
+      "profiles": [
+        {
+          "profile": "clean",
+          "exact": true,
+          "confidence": 0.9891783225641864,
+          "error": ""
+        },
+        {
+          "profile": "blur_1_2",
+          "exact": false,
+          "confidence": 0.0,
+          "error": "EccDecodeError: RS block 0 is not recoverable"
+        },
+        {
+          "profile": "jpeg_55",
+          "exact": true,
+          "confidence": 0.9324622502917277,
+          "error": ""
+        },
+        {
+          "profile": "downsample_0_55",
+          "exact": true,
+          "confidence": 0.9825938162381392,
+          "error": ""
+        },
+        {
+          "profile": "noise_7",
+          "exact": true,
+          "confidence": 0.9889987955154877,
+          "error": ""
+        }
+      ]
+    },
+    {
+      "angular_fill": 0.82,
+      "radial_fill": 0.74,
+      "successes": 4,
+      "minimum_success_confidence": 0.9292465927995093,
+      "mean_confidence": 0.776895867402985,
+      "profiles": [
+        {
+          "profile": "clean",
+          "exact": true,
+          "confidence": 0.973761112756038,
+          "error": ""
+        },
+        {
+          "profile": "blur_1_2",
+          "exact": true,
+          "confidence": 0.9942184087050602,
+          "error": ""
+        },
+        {
+          "profile": "jpeg_55",
+          "exact": true,
+          "confidence": 0.9292465927995093,
+          "error": ""
+        },
+        {
+          "profile": "downsample_0_55",
+          "exact": true,
+          "confidence": 0.9872532227543174,
+          "error": ""
+        },
+        {
+          "profile": "noise_7",
+          "exact": false,
+          "confidence": 0.0,
+          "error": "EccDecodeError: RS block 0 is not recoverable"
+        }
+      ]
+    },
+    {
+      "angular_fill": 0.82,
+      "radial_fill": 0.78,
+      "successes": 4,
+      "minimum_success_confidence": 0.9292465927995093,
+      "mean_confidence": 0.776895867402985,
+      "profiles": [
+        {
+          "profile": "clean",
+          "exact": true,
+          "confidence": 0.973761112756038,
+          "error": ""
+        },
+        {
+          "profile": "blur_1_2",
+          "exact": true,
+          "confidence": 0.9942184087050602,
+          "error": ""
+        },
+        {
+          "profile": "jpeg_55",
+          "exact": true,
+          "confidence": 0.9292465927995093,
+          "error": ""
+        },
+        {
+          "profile": "downsample_0_55",
+          "exact": true,
+          "confidence": 0.9872532227543174,
+          "error": ""
+        },
+        {
+          "profile": "noise_7",
+          "exact": false,
+          "confidence": 0.0,
+          "error": "EccDecodeError: RS block 0 is not recoverable"
+        }
+      ]
+    },
+    {
+      "angular_fill": 0.82,
+      "radial_fill": 0.82,
+      "successes": 4,
+      "minimum_success_confidence": 0.9292465927995093,
+      "mean_confidence": 0.776895867402985,
+      "profiles": [
+        {
+          "profile": "clean",
+          "exact": true,
+          "confidence": 0.973761112756038,
+          "error": ""
+        },
+        {
+          "profile": "blur_1_2",
+          "exact": true,
+          "confidence": 0.9942184087050602,
+          "error": ""
+        },
+        {
+          "profile": "jpeg_55",
+          "exact": true,
+          "confidence": 0.9292465927995093,
+          "error": ""
+        },
+        {
+          "profile": "downsample_0_55",
+          "exact": true,
+          "confidence": 0.9872532227543174,
+          "error": ""
+        },
+        {
+          "profile": "noise_7",
+          "exact": false,
+          "confidence": 0.0,
+          "error": "EccDecodeError: RS block 0 is not recoverable"
+        }
+      ]
+    },
+    {
+      "angular_fill": 0.91,
+      "radial_fill": 0.74,
+      "successes": 3,
+      "minimum_success_confidence": 0.9687043071342457,
+      "mean_confidence": 0.5880917282973188,
+      "profiles": [
+        {
+          "profile": "clean",
+          "exact": true,
+          "confidence": 0.9687043071342457,
+          "error": ""
+        },
+        {
+          "profile": "blur_1_2",
+          "exact": true,
+          "confidence": 0.9856690452731689,
+          "error": ""
+        },
+        {
+          "profile": "jpeg_55",
+          "exact": false,
+          "confidence": 0.0,
+          "error": "EccDecodeError: RS block 0 is not recoverable"
+        },
+        {
+          "profile": "downsample_0_55",
+          "exact": true,
+          "confidence": 0.9860852890791793,
+          "error": ""
+        },
+        {
+          "profile": "noise_7",
+          "exact": false,
+          "confidence": 0.0,
+          "error": "EccDecodeError: RS block 0 is not recoverable"
+        }
+      ]
+    },
+    {
+      "angular_fill": 0.91,
+      "radial_fill": 0.78,
+      "successes": 3,
+      "minimum_success_confidence": 0.9687043071342457,
+      "mean_confidence": 0.5880917282973188,
+      "profiles": [
+        {
+          "profile": "clean",
+          "exact": true,
+          "confidence": 0.9687043071342457,
+          "error": ""
+        },
+        {
+          "profile": "blur_1_2",
+          "exact": true,
+          "confidence": 0.9856690452731689,
+          "error": ""
+        },
+        {
+          "profile": "jpeg_55",
+          "exact": false,
+          "confidence": 0.0,
+          "error": "EccDecodeError: RS block 0 is not recoverable"
+        },
+        {
+          "profile": "downsample_0_55",
+          "exact": true,
+          "confidence": 0.9860852890791793,
+          "error": ""
+        },
+        {
+          "profile": "noise_7",
+          "exact": false,
+          "confidence": 0.0,
+          "error": "EccDecodeError: RS block 0 is not recoverable"
+        }
+      ]
+    },
+    {
+      "angular_fill": 0.91,
+      "radial_fill": 0.82,
+      "successes": 3,
+      "minimum_success_confidence": 0.9687043071342457,
+      "mean_confidence": 0.5880917282973188,
+      "profiles": [
+        {
+          "profile": "clean",
+          "exact": true,
+          "confidence": 0.9687043071342457,
+          "error": ""
+        },
+        {
+          "profile": "blur_1_2",
+          "exact": true,
+          "confidence": 0.9856690452731689,
+          "error": ""
+        },
+        {
+          "profile": "jpeg_55",
+          "exact": false,
+          "confidence": 0.0,
+          "error": "EccDecodeError: RS block 0 is not recoverable"
+        },
+        {
+          "profile": "downsample_0_55",
+          "exact": true,
+          "confidence": 0.9860852890791793,
+          "error": ""
+        },
+        {
+          "profile": "noise_7",
+          "exact": false,
+          "confidence": 0.0,
+          "error": "EccDecodeError: RS block 0 is not recoverable"
+        }
+      ]
+    },
+    {
+      "angular_fill": 0.85,
+      "radial_fill": 0.74,
+      "successes": 3,
+      "minimum_success_confidence": 0.9291362684879638,
+      "mean_confidence": 0.5812286839192614,
+      "profiles": [
+        {
+          "profile": "clean",
+          "exact": false,
+          "confidence": 0.0,
+          "error": "EccDecodeError: RS block 0 is not recoverable"
+        },
+        {
+          "profile": "blur_1_2",
+          "exact": true,
+          "confidence": 0.9924756107211623,
+          "error": ""
+        },
+        {
+          "profile": "jpeg_55",
+          "exact": true,
+          "confidence": 0.9291362684879638,
+          "error": ""
+        },
+        {
+          "profile": "downsample_0_55",
+          "exact": true,
+          "confidence": 0.9845315403871809,
+          "error": ""
+        },
+        {
+          "profile": "noise_7",
+          "exact": false,
+          "confidence": 0.0,
+          "error": "EccDecodeError: RS block 0 is not recoverable"
+        }
+      ]
+    },
+    {
+      "angular_fill": 0.85,
+      "radial_fill": 0.78,
+      "successes": 3,
+      "minimum_success_confidence": 0.9291362684879638,
+      "mean_confidence": 0.5812286839192614,
+      "profiles": [
+        {
+          "profile": "clean",
+          "exact": false,
+          "confidence": 0.0,
+          "error": "EccDecodeError: RS block 0 is not recoverable"
+        },
+        {
+          "profile": "blur_1_2",
+          "exact": true,
+          "confidence": 0.9924756107211623,
+          "error": ""
+        },
+        {
+          "profile": "jpeg_55",
+          "exact": true,
+          "confidence": 0.9291362684879638,
+          "error": ""
+        },
+        {
+          "profile": "downsample_0_55",
+          "exact": true,
+          "confidence": 0.9845315403871809,
+          "error": ""
+        },
+        {
+          "profile": "noise_7",
+          "exact": false,
+          "confidence": 0.0,
+          "error": "EccDecodeError: RS block 0 is not recoverable"
+        }
+      ]
+    },
+    {
+      "angular_fill": 0.85,
+      "radial_fill": 0.82,
+      "successes": 3,
+      "minimum_success_confidence": 0.9291362684879638,
+      "mean_confidence": 0.5812286839192614,
+      "profiles": [
+        {
+          "profile": "clean",
+          "exact": false,
+          "confidence": 0.0,
+          "error": "EccDecodeError: RS block 0 is not recoverable"
+        },
+        {
+          "profile": "blur_1_2",
+          "exact": true,
+          "confidence": 0.9924756107211623,
+          "error": ""
+        },
+        {
+          "profile": "jpeg_55",
+          "exact": true,
+          "confidence": 0.9291362684879638,
+          "error": ""
+        },
+        {
+          "profile": "downsample_0_55",
+          "exact": true,
+          "confidence": 0.9845315403871809,
+          "error": ""
+        },
+        {
+          "profile": "noise_7",
+          "exact": false,
+          "confidence": 0.0,
+          "error": "EccDecodeError: RS block 0 is not recoverable"
+        }
+      ]
+    }
+  ]
+}

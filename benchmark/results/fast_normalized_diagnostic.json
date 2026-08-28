@@ -1,0 +1,85 @@
+{
+  "geometry": 1,
+  "rows": [
+    {
+      "dpi": 300,
+      "supersample": 1,
+      "native_size": [
+        373,
+        373
+      ],
+      "exact": false,
+      "error": "EccDecodeError: RS block 0 is not recoverable"
+    },
+    {
+      "dpi": 300,
+      "supersample": 2,
+      "native_size": [
+        373,
+        373
+      ],
+      "exact": false,
+      "error": "EccDecodeError: RS block 0 is not recoverable"
+    },
+    {
+      "dpi": 300,
+      "supersample": 3,
+      "native_size": [
+        373,
+        373
+      ],
+      "exact": true,
+      "error": ""
+    },
+    {
+      "dpi": 300,
+      "supersample": 4,
+      "native_size": [
+        373,
+        373
+      ],
+      "exact": false,
+      "error": "EccDecodeError: RS block 0 is not recoverable"
+    },
+    {
+      "dpi": 724,
+      "supersample": 1,
+      "native_size": [
+        898,
+        898
+      ],
+      "exact": true,
+      "error": ""
+    },
+    {
+      "dpi": 724,
+      "supersample": 2,
+      "native_size": [
+        898,
+        898
+      ],
+      "exact": true,
+      "error": ""
+    },
+    {
+      "dpi": 724,
+      "supersample": 3,
+      "native_size": [
+        898,
+        898
+      ],
+      "exact": true,
+      "error": ""
+    },
+    {
+      "dpi": 724,
+      "supersample": 4,
+      "native_size": [
+        898,
+        898
+      ],
+      "exact": true,
+      "error": ""
+    }
+  ]
+}

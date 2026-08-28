@@ -1,0 +1,266 @@
+[
+  {
+    "payload_bytes": 1,
+    "geometry_version": 1,
+    "geometry_name": "small",
+    "normalized_pitch_px": 18.928571428571427,
+    "success": true,
+    "confidence": 1.0,
+    "corrected_rs_symbols": 0,
+    "error": "",
+    "elapsed_ms": 732.7000659424812
+  },
+  {
+    "payload_bytes": 64,
+    "geometry_version": 1,
+    "geometry_name": "small",
+    "normalized_pitch_px": 18.928571428571427,
+    "success": true,
+    "confidence": 1.0,
+    "corrected_rs_symbols": 0,
+    "error": "",
+    "elapsed_ms": 575.5217329133302
+  },
+  {
+    "payload_bytes": 183,
+    "geometry_version": 1,
+    "geometry_name": "small",
+    "normalized_pitch_px": 18.928571428571427,
+    "success": true,
+    "confidence": 1.0,
+    "corrected_rs_symbols": 0,
+    "error": "",
+    "elapsed_ms": 576.4555209316313
+  },
+  {
+    "payload_bytes": 184,
+    "geometry_version": 2,
+    "geometry_name": "medium",
+    "normalized_pitch_px": 12.61904761904762,
+    "success": true,
+    "confidence": 1.0,
+    "corrected_rs_symbols": 0,
+    "error": "",
+    "elapsed_ms": 928.8748388644308
+  },
+  {
+    "payload_bytes": 410,
+    "geometry_version": 2,
+    "geometry_name": "medium",
+    "normalized_pitch_px": 12.61904761904762,
+    "success": true,
+    "confidence": 1.0,
+    "corrected_rs_symbols": 0,
+    "error": "",
+    "elapsed_ms": 914.4128700718284
+  },
+  {
+    "payload_bytes": 411,
+    "geometry_version": 3,
+    "geometry_name": "large",
+    "normalized_pitch_px": 9.464285714285714,
+    "success": true,
+    "confidence": 0.9999787595399637,
+    "corrected_rs_symbols": 0,
+    "error": "",
+    "elapsed_ms": 1438.407676992938
+  },
+  {
+    "payload_bytes": 550,
+    "geometry_version": 3,
+    "geometry_name": "large",
+    "normalized_pitch_px": 9.464285714285714,
+    "success": true,
+    "confidence": 0.9998508937736483,
+    "corrected_rs_symbols": 1,
+    "error": "",
+    "elapsed_ms": 1531.6447271034122
+  },
+  {
+    "payload_bytes": 570,
+    "geometry_version": 3,
+    "geometry_name": "large",
+    "normalized_pitch_px": 9.464285714285714,
+    "success": true,
+    "confidence": 0.9999696624380591,
+    "corrected_rs_symbols": 0,
+    "error": "",
+    "elapsed_ms": 1425.5469699855894
+  },
+  {
+    "payload_bytes": 571,
+    "geometry_version": 3,
+    "geometry_name": "large",
+    "normalized_pitch_px": 9.464285714285714,
+    "success": true,
+    "confidence": 0.9999999889417698,
+    "corrected_rs_symbols": 0,
+    "error": "",
+    "elapsed_ms": 1403.2362028956413
+  },
+  {
+    "payload_bytes": 572,
+    "geometry_version": 3,
+    "geometry_name": "large",
+    "normalized_pitch_px": 9.464285714285714,
+    "success": true,
+    "confidence": 0.9998473689688009,
+    "corrected_rs_symbols": 0,
+    "error": "",
+    "elapsed_ms": 1412.78787702322
+  },
+  {
+    "payload_bytes": 573,
+    "geometry_version": 3,
+    "geometry_name": "large",
+    "normalized_pitch_px": 9.464285714285714,
+    "success": true,
+    "confidence": 0.9999991242342735,
+    "corrected_rs_symbols": 1,
+    "error": "",
+    "elapsed_ms": 1412.5409459229559
+  },
+  {
+    "payload_bytes": 650,
+    "geometry_version": 3,
+    "geometry_name": "large",
+    "normalized_pitch_px": 9.464285714285714,
+    "success": true,
+    "confidence": 0.9999809355333371,
+    "corrected_rs_symbols": 0,
+    "error": "",
+    "elapsed_ms": 1406.8070410285145
+  },
+  {
+    "payload_bytes": 700,
+    "geometry_version": 3,
+    "geometry_name": "large",
+    "normalized_pitch_px": 9.464285714285714,
+    "success": true,
+    "confidence": 0.9999704731200861,
+    "corrected_rs_symbols": 1,
+    "error": "",
+    "elapsed_ms": 1429.9254310317338
+  },
+  {
+    "payload_bytes": 750,
+    "geometry_version": 3,
+    "geometry_name": "large",
+    "normalized_pitch_px": 9.464285714285714,
+    "success": true,
+    "confidence": 0.9999990452807931,
+    "corrected_rs_symbols": 0,
+    "error": "",
+    "elapsed_ms": 1407.653901958838
+  },
+  {
+    "payload_bytes": 762,
+    "geometry_version": 3,
+    "geometry_name": "large",
+    "normalized_pitch_px": 9.464285714285714,
+    "success": true,
+    "confidence": 0.9999999567094369,
+    "corrected_rs_symbols": 0,
+    "error": "",
+    "elapsed_ms": 1413.733780849725
+  },
+  {
+    "payload_bytes": 763,
+    "geometry_version": 4,
+    "geometry_name": "xl",
+    "normalized_pitch_px": 7.571428571428571,
+    "success": false,
+    "error": "EccDecodeError: RS block 0 is not recoverable",
+    "elapsed_ms": 2050.2341841347516
+  },
+  {
+    "payload_bytes": 800,
+    "geometry_version": 4,
+    "geometry_name": "xl",
+    "normalized_pitch_px": 7.571428571428571,
+    "success": false,
+    "error": "EccDecodeError: RS block 0 is not recoverable",
+    "elapsed_ms": 2043.8065261114389
+  },
+  {
+    "payload_bytes": 900,
+    "geometry_version": 4,
+    "geometry_name": "xl",
+    "normalized_pitch_px": 7.571428571428571,
+    "success": true,
+    "confidence": 0.9976165409779063,
+    "corrected_rs_symbols": 31,
+    "error": "",
+    "elapsed_ms": 2038.5673770215362
+  },
+  {
+    "payload_bytes": 1000,
+    "geometry_version": 4,
+    "geometry_name": "xl",
+    "normalized_pitch_px": 7.571428571428571,
+    "success": true,
+    "confidence": 0.999352474931695,
+    "corrected_rs_symbols": 4,
+    "error": "",
+    "elapsed_ms": 2056.45968997851
+  },
+  {
+    "payload_bytes": 1100,
+    "geometry_version": 4,
+    "geometry_name": "xl",
+    "normalized_pitch_px": 7.571428571428571,
+    "success": true,
+    "confidence": 0.9935443967144374,
+    "corrected_rs_symbols": 49,
+    "error": "",
+    "elapsed_ms": 2102.15519904159
+  },
+  {
+    "payload_bytes": 1200,
+    "geometry_version": 4,
+    "geometry_name": "xl",
+    "normalized_pitch_px": 7.571428571428571,
+    "success": true,
+    "confidence": 0.9982620079584683,
+    "corrected_rs_symbols": 23,
+    "error": "",
+    "elapsed_ms": 2112.2795110568404
+  },
+  {
+    "payload_bytes": 1240,
+    "geometry_version": 4,
+    "geometry_name": "xl",
+    "normalized_pitch_px": 7.571428571428571,
+    "success": true,
+    "confidence": 0.9909097622832845,
+    "corrected_rs_symbols": 71,
+    "error": "",
+    "elapsed_ms": 2135.183318052441
+  },
+  {
+    "payload_bytes": 1250,
+    "geometry_version": 4,
+    "geometry_name": "xl",
+    "normalized_pitch_px": 7.571428571428571,
+    "success": true,
+    "confidence": 0.9980129996690079,
+    "corrected_rs_symbols": 42,
+    "error": "",
+    "elapsed_ms": 2148.7080538645387
+  },
+  {
+    "payload_bytes": 1252,
+    "geometry_version": 4,
+    "geometry_name": "xl",
+    "normalized_pitch_px": 7.571428571428571,
+    "success": false,
+    "error": "EccDecodeError: RS block 0 is not recoverable",
+    "elapsed_ms": 2050.024949014187
+  },
+  {
+    "payload_bytes": 1253,
+    "success": false,
+    "error": "ValueError: frame requires 1709 channel bytes; largest geometry provides 1708",
+    "elapsed_ms": 54.90024178288877
+  }
+]

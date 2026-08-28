@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-08-27T16:34:21.463626+00:00",
+  "scope": "Draft 0.6 empty-center native core only; exact canonical decode through the Python reference decoder",
+  "cases": [
+    {
+      "geometry": "micro-1",
+      "geometry_version": 6,
+      "ecc": "FAST",
+      "diameter_mm": 16.0,
+      "png_bytes": 80749,
+      "exact_payload": true
+    },
+    {
+      "geometry": "micro-2",
+      "geometry_version": 0,
+      "ecc": "BALANCED",
+      "diameter_mm": 16.0,
+      "png_bytes": 77075,
+      "exact_payload": true
+    },
+    {
+      "geometry": "micro-4",
+      "geometry_version": 5,
+      "ecc": "BALANCED",
+      "diameter_mm": 18.0,
+      "png_bytes": 97873,
+      "exact_payload": true
+    },
+    {
+      "geometry": "small",
+      "geometry_version": 1,
+      "ecc": "ROBUST",
+      "diameter_mm": 30.0,
+      "png_bytes": 66943,
+      "exact_payload": true
+    },
+    {
+      "geometry": "medium",
+      "geometry_version": 2,
+      "ecc": "BALANCED",
+      "diameter_mm": 42.0,
+      "png_bytes": 115335,
+      "exact_payload": true
+    },
+    {
+      "geometry": "large",
+      "geometry_version": 3,
+      "ecc": "BALANCED",
+      "diameter_mm": 50.0,
+      "png_bytes": 310272,
+      "exact_payload": true
+    },
+    {
+      "geometry": "xl",
+      "geometry_version": 4,
+      "ecc": "BALANCED",
+      "diameter_mm": 70.0,
+      "png_bytes": 495935,
+      "exact_payload": true
+    }
+  ]
+}

@@ -1,0 +1,1231 @@
+{
+  "minimum_pitch_px": 7.0,
+  "theoretical_by_ecc": {
+    "fast": {
+      "columns": 266,
+      "pitch_px": 7.015436226437358,
+      "payload_cells": 226,
+      "channel_bytes": 56,
+      "capacities": {
+        "fast": 16,
+        "balanced": 0,
+        "robust": 0,
+        "extreme": 0
+      }
+    },
+    "balanced": {
+      "columns": 266,
+      "pitch_px": 7.015436226437358,
+      "payload_cells": 226,
+      "channel_bytes": 56,
+      "capacities": {
+        "fast": 16,
+        "balanced": 0,
+        "robust": 0,
+        "extreme": 0
+      }
+    },
+    "robust": {
+      "columns": 266,
+      "pitch_px": 7.015436226437358,
+      "payload_cells": 226,
+      "channel_bytes": 56,
+      "capacities": {
+        "fast": 16,
+        "balanced": 0,
+        "robust": 0,
+        "extreme": 0
+      }
+    },
+    "extreme": {
+      "columns": 266,
+      "pitch_px": 7.015436226437358,
+      "payload_cells": 226,
+      "channel_bytes": 56,
+      "capacities": {
+        "fast": 16,
+        "balanced": 0,
+        "robust": 0,
+        "extreme": 0
+      }
+    }
+  },
+  "validations": [
+    {
+      "columns": 266,
+      "ecc": "FAST",
+      "maximum_payload_bytes": 16,
+      "passed": 20,
+      "total": 20,
+      "eligible": true,
+      "trials": [
+        {
+          "pattern": "deterministic",
+          "profile": "clean",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "deterministic",
+          "profile": "blur_1_2",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "deterministic",
+          "profile": "jpeg_55",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "deterministic",
+          "profile": "downsample_0_55",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "deterministic",
+          "profile": "noise_7",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "alternate-seed",
+          "profile": "clean",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "alternate-seed",
+          "profile": "blur_1_2",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "alternate-seed",
+          "profile": "jpeg_55",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "alternate-seed",
+          "profile": "downsample_0_55",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "alternate-seed",
+          "profile": "noise_7",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "zeros",
+          "profile": "clean",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "zeros",
+          "profile": "blur_1_2",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "zeros",
+          "profile": "jpeg_55",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "zeros",
+          "profile": "downsample_0_55",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "zeros",
+          "profile": "noise_7",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "alternating",
+          "profile": "clean",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "alternating",
+          "profile": "blur_1_2",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "alternating",
+          "profile": "jpeg_55",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "alternating",
+          "profile": "downsample_0_55",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "alternating",
+          "profile": "noise_7",
+          "success": true,
+          "error": null
+        }
+      ]
+    }
+  ],
+  "strict_selected": {
+    "columns": 266,
+    "pitch_px": 7.015436226437358,
+    "payload_cells": 226,
+    "channel_bytes": 56,
+    "capacities": {
+      "fast": 16,
+      "balanced": 0,
+      "robust": 0,
+      "extreme": 0
+    },
+    "strict_validation": {
+      "columns": 266,
+      "ecc": "FAST",
+      "maximum_payload_bytes": 16,
+      "passed": 20,
+      "total": 20,
+      "eligible": true,
+      "trials": [
+        {
+          "pattern": "deterministic",
+          "profile": "clean",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "deterministic",
+          "profile": "blur_1_2",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "deterministic",
+          "profile": "jpeg_55",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "deterministic",
+          "profile": "downsample_0_55",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "deterministic",
+          "profile": "noise_7",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "alternate-seed",
+          "profile": "clean",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "alternate-seed",
+          "profile": "blur_1_2",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "alternate-seed",
+          "profile": "jpeg_55",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "alternate-seed",
+          "profile": "downsample_0_55",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "alternate-seed",
+          "profile": "noise_7",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "zeros",
+          "profile": "clean",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "zeros",
+          "profile": "blur_1_2",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "zeros",
+          "profile": "jpeg_55",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "zeros",
+          "profile": "downsample_0_55",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "zeros",
+          "profile": "noise_7",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "alternating",
+          "profile": "clean",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "alternating",
+          "profile": "blur_1_2",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "alternating",
+          "profile": "jpeg_55",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "alternating",
+          "profile": "downsample_0_55",
+          "success": true,
+          "error": null
+        },
+        {
+          "pattern": "alternating",
+          "profile": "noise_7",
+          "success": true,
+          "error": null
+        }
+      ]
+    }
+  },
+  "diameter_gate": {
+    "columns": 266,
+    "maximum_payload_bytes": 16,
+    "minimum_passing_diameter_mm": 16,
+    "minimum_passing_native_pixels": 397,
+    "attempts": [
+      {
+        "diameter_mm": 10,
+        "native_pixels": 249,
+        "passed": 0,
+        "total": 20,
+        "trials": [
+          {
+            "pattern": "deterministic",
+            "profile": "clean",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "blur_1_2",
+            "success": false,
+            "error": "could not recover a usable set of guard-notch anchors"
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "jpeg_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "downsample_0_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "noise_7",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "clean",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "blur_1_2",
+            "success": false,
+            "error": "could not recover a usable set of guard-notch anchors"
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "jpeg_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "downsample_0_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "noise_7",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "clean",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "blur_1_2",
+            "success": false,
+            "error": "all rectification hypotheses completed but canonical decoding failed"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "jpeg_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "downsample_0_55",
+            "success": false,
+            "error": "could not recover a usable set of guard-notch anchors"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "noise_7",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "clean",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "blur_1_2",
+            "success": false,
+            "error": "all rectification hypotheses completed but canonical decoding failed"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "jpeg_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "downsample_0_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "noise_7",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          }
+        ]
+      },
+      {
+        "diameter_mm": 11,
+        "native_pixels": 273,
+        "passed": 0,
+        "total": 20,
+        "trials": [
+          {
+            "pattern": "deterministic",
+            "profile": "clean",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "blur_1_2",
+            "success": false,
+            "error": "all rectification hypotheses completed but canonical decoding failed"
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "jpeg_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "downsample_0_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "noise_7",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "clean",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "blur_1_2",
+            "success": false,
+            "error": "could not recover a usable set of guard-notch anchors"
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "jpeg_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "downsample_0_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "noise_7",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "clean",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "blur_1_2",
+            "success": false,
+            "error": "could not recover a usable set of guard-notch anchors"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "jpeg_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "downsample_0_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "noise_7",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "clean",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "blur_1_2",
+            "success": false,
+            "error": "all rectification hypotheses completed but canonical decoding failed"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "jpeg_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "downsample_0_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "noise_7",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          }
+        ]
+      },
+      {
+        "diameter_mm": 12,
+        "native_pixels": 298,
+        "passed": 0,
+        "total": 20,
+        "trials": [
+          {
+            "pattern": "deterministic",
+            "profile": "clean",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "blur_1_2",
+            "success": false,
+            "error": "all rectification hypotheses completed but canonical decoding failed"
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "jpeg_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "downsample_0_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "noise_7",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "clean",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "blur_1_2",
+            "success": false,
+            "error": "all rectification hypotheses completed but canonical decoding failed"
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "jpeg_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "downsample_0_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "noise_7",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "clean",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "blur_1_2",
+            "success": false,
+            "error": "all rectification hypotheses completed but canonical decoding failed"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "jpeg_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "downsample_0_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "noise_7",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "clean",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "blur_1_2",
+            "success": false,
+            "error": "all rectification hypotheses completed but canonical decoding failed"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "jpeg_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "downsample_0_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "noise_7",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          }
+        ]
+      },
+      {
+        "diameter_mm": 13,
+        "native_pixels": 323,
+        "passed": 1,
+        "total": 20,
+        "trials": [
+          {
+            "pattern": "deterministic",
+            "profile": "clean",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "blur_1_2",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "jpeg_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "downsample_0_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "noise_7",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "clean",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "blur_1_2",
+            "success": false,
+            "error": "all rectification hypotheses completed but canonical decoding failed"
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "jpeg_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "downsample_0_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "noise_7",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "clean",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "blur_1_2",
+            "success": false,
+            "error": "all rectification hypotheses completed but canonical decoding failed"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "jpeg_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "downsample_0_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "noise_7",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "clean",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "blur_1_2",
+            "success": false,
+            "error": "all rectification hypotheses completed but canonical decoding failed"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "jpeg_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "downsample_0_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "noise_7",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          }
+        ]
+      },
+      {
+        "diameter_mm": 14,
+        "native_pixels": 348,
+        "passed": 5,
+        "total": 20,
+        "trials": [
+          {
+            "pattern": "deterministic",
+            "profile": "clean",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "blur_1_2",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "jpeg_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "downsample_0_55",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "noise_7",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "clean",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "blur_1_2",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "jpeg_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "downsample_0_55",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "noise_7",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "zeros",
+            "profile": "clean",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "blur_1_2",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "jpeg_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "downsample_0_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "noise_7",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "clean",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "blur_1_2",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "jpeg_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "downsample_0_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "noise_7",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          }
+        ]
+      },
+      {
+        "diameter_mm": 15,
+        "native_pixels": 373,
+        "passed": 14,
+        "total": 20,
+        "trials": [
+          {
+            "pattern": "deterministic",
+            "profile": "clean",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "blur_1_2",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "jpeg_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "downsample_0_55",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "noise_7",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "clean",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "blur_1_2",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "jpeg_55",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "downsample_0_55",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "noise_7",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "zeros",
+            "profile": "clean",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "zeros",
+            "profile": "blur_1_2",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "zeros",
+            "profile": "jpeg_55",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "zeros",
+            "profile": "downsample_0_55",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "zeros",
+            "profile": "noise_7",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "alternating",
+            "profile": "clean",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "alternating",
+            "profile": "blur_1_2",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "jpeg_55",
+            "success": false,
+            "error": "RS block 0 is not recoverable"
+          },
+          {
+            "pattern": "alternating",
+            "profile": "downsample_0_55",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "alternating",
+            "profile": "noise_7",
+            "success": true,
+            "error": null
+          }
+        ]
+      },
+      {
+        "diameter_mm": 16,
+        "native_pixels": 397,
+        "passed": 20,
+        "total": 20,
+        "trials": [
+          {
+            "pattern": "deterministic",
+            "profile": "clean",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "blur_1_2",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "jpeg_55",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "downsample_0_55",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "deterministic",
+            "profile": "noise_7",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "clean",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "blur_1_2",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "jpeg_55",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "downsample_0_55",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "alternate-seed",
+            "profile": "noise_7",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "zeros",
+            "profile": "clean",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "zeros",
+            "profile": "blur_1_2",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "zeros",
+            "profile": "jpeg_55",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "zeros",
+            "profile": "downsample_0_55",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "zeros",
+            "profile": "noise_7",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "alternating",
+            "profile": "clean",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "alternating",
+            "profile": "blur_1_2",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "alternating",
+            "profile": "jpeg_55",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "alternating",
+            "profile": "downsample_0_55",
+            "success": true,
+            "error": null
+          },
+          {
+            "pattern": "alternating",
+            "profile": "noise_7",
+            "success": true,
+            "error": null
+          }
+        ]
+      }
+    ]
+  }
+}

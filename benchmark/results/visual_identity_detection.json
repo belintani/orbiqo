@@ -1,0 +1,118 @@
+[
+  {
+    "palette_id": 0,
+    "palette_name": "C4-PRINT-1",
+    "colors": [
+      "#111111",
+      "#00A6D6",
+      "#D81B60",
+      "#F0C808"
+    ],
+    "image_size": [
+      745,
+      745
+    ],
+    "guard_center": [
+      371.82830810546875,
+      371.84210205078125
+    ],
+    "guard_axes": [
+      672.2568969726562,
+      673.9421997070312
+    ],
+    "guard_axis_ratio": 0.9974993363895188,
+    "frontal_success": false,
+    "frontal_error": "DecodeError('all three BCH header copies failed')",
+    "canonical_success": true,
+    "canonical_error": null,
+    "full_success": true,
+    "full_error": null
+  },
+  {
+    "palette_id": 1,
+    "palette_name": "C4-NOCTURNE-1",
+    "colors": [
+      "#111111",
+      "#4CC9F0",
+      "#F72585",
+      "#A7C957"
+    ],
+    "image_size": [
+      745,
+      745
+    ],
+    "guard_center": [
+      371.8346252441406,
+      371.84454345703125
+    ],
+    "guard_axes": [
+      671.82421875,
+      673.4822387695312
+    ],
+    "guard_axis_ratio": 0.9975381384629229,
+    "frontal_success": false,
+    "frontal_error": "DecodeError('all three BCH header copies failed')",
+    "canonical_success": true,
+    "canonical_error": null,
+    "full_success": true,
+    "full_error": null
+  },
+  {
+    "palette_id": 2,
+    "palette_name": "C4-TERRA-1",
+    "colors": [
+      "#111111",
+      "#2A9D8F",
+      "#E76F51",
+      "#FFD60A"
+    ],
+    "image_size": [
+      745,
+      745
+    ],
+    "guard_center": [
+      371.830322265625,
+      371.8426208496094
+    ],
+    "guard_axes": [
+      672.2669677734375,
+      673.943115234375
+    ],
+    "guard_axis_ratio": 0.9975129244248536,
+    "frontal_success": false,
+    "frontal_error": "DecodeError('all three BCH header copies failed')",
+    "canonical_success": true,
+    "canonical_error": null,
+    "full_success": true,
+    "full_error": null
+  },
+  {
+    "palette_id": 3,
+    "palette_name": "C4-SIGNAL-1",
+    "colors": [
+      "#111111",
+      "#219EBC",
+      "#FF4D6D",
+      "#80ED99"
+    ],
+    "image_size": [
+      745,
+      745
+    ],
+    "guard_center": [
+      371.830322265625,
+      371.8426208496094
+    ],
+    "guard_axes": [
+      672.2669677734375,
+      673.943115234375
+    ],
+    "guard_axis_ratio": 0.9975129244248536,
+    "frontal_success": false,
+    "frontal_error": "DecodeError('all three BCH header copies failed')",
+    "canonical_success": true,
+    "canonical_error": null,
+    "full_success": true,
+    "full_error": null
+  }
+]
