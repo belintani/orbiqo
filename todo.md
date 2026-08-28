@@ -234,11 +234,11 @@
 - [x] Expor dados do benchmark nativo por tRPC e integrar navegação sem alterar o renderer padrão
 - [x] Validar testes, desktop/mobile e salvar checkpoint da página comparativa
 - [x] Remover a entrada Python/C++ da navegação pública, preservando o protótipo no código para evolução futura
-- [ ] Validar o fluxo público, preparar autoria exclusiva de belintani e enviar o estado revisado ao remoto autorizado
+- [x] Validar o fluxo público, preparar autoria exclusiva de belintani e enviar o estado revisado ao remoto autorizado
 - [x] Adicionar GH_TOKEN como segredo de escrita para autenticar exclusivamente o push autorizado
 - [x] Remover o teste temporário de token antes da primeira versão pública
 - [x] Remover o metadado Git aninhado do JAB e ignorar caches Python antes do primeiro push público
-- [ ] Consolidar o JAB em uma única cópia de runtime antes do primeiro push público
+- [x] Consolidar o JAB em uma única cópia de runtime antes do primeiro push público
 - [x] Criar README de entrada para a primeira versão pública do repositório Orbiqo
 - [x] Espelhar LICENSE, NOTICE, ATTRIBUTION e licença da especificação RadialCode antes do primeiro push
 - [x] Incluir a especificação Draft 0.6 no repositório público junto à sua licença
