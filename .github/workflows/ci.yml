@@ -1,0 +1,101 @@
+name: Orbiqo CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    env:
+      ORBIQO_RADIALCODE_ROOT: ${{ github.workspace }}/server/python/vendor/radialcode
+      ORBIQO_JAB_ROOT: ${{ github.workspace }}/benchmark/jabcode-runtime
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install native dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            build-essential \
+            libcairo2-dev \
+            libfreetype6-dev \
+            libjpeg-dev \
+            libpng-dev \
+            libtiff-dev \
+            libwebp-dev \
+            libzxing-dev \
+            pkg-config \
+            zlib1g-dev
+
+      - name: Install JavaScript dependencies
+        run: |
+          corepack enable
+          corepack prepare pnpm@10.4.1 --activate
+          pnpm install --frozen-lockfile
+
+      - name: Install Python reference dependencies
+        run: |
+          python -m venv .ci-venv
+          .ci-venv/bin/pip install --upgrade pip
+          .ci-venv/bin/pip install -e "server/python/vendor/radialcode[vision]" requests zxing-cpp
+
+      - name: Build JAB runtime
+        run: |
+          make -C benchmark/jabcode-runtime/jabcode clean
+          make -C benchmark/jabcode-runtime/jabcodeWriter clean
+          make -C benchmark/jabcode-runtime/jabcodeReader clean
+          mkdir -p benchmark/jabcode-runtime/jabcode/build \
+            benchmark/jabcode-runtime/jabcodeWriter/bin \
+            benchmark/jabcode-runtime/jabcodeReader/bin
+          make -C benchmark/jabcode-runtime/jabcode CFLAGS="-O2 -std=c11 -no-pie"
+          make -C benchmark/jabcode-runtime/jabcodeWriter CFLAGS="-O2 -std=c11 -no-pie"
+          make -C benchmark/jabcode-runtime/jabcodeReader CFLAGS="-O2 -std=c11 -no-pie"
+
+      - name: Build native targets
+        run: make -C server/python/native clean all
+
+      - name: Build external native adapters
+        run: |
+          make -C benchmark/native clean all
+          ./benchmark/native/orbiqo_external_compare qr 6f726269716f2d65787465726e616c
+          ./benchmark/native/orbiqo_external_compare aztec 6f726269716f2d65787465726e616c
+          ./benchmark/native/orbiqo_external_compare jab 6f726269716f2d65787465726e616c "$ORBIQO_JAB_ROOT"
+
+      - name: Native logical parity
+        run: .ci-venv/bin/python benchmark/test_native_codec.py
+
+      - name: Native full-path parity
+        run: .ci-venv/bin/python benchmark/test_native_full.py
+
+      - name: Native visual matrix
+        run: .ci-venv/bin/python benchmark/validate_native_visual_matrix.py
+
+      - name: Native profile benchmark
+        run: .ci-venv/bin/python benchmark/benchmark_native_codec_profiles.py
+
+      - name: Native extended visual matrix
+        run: .ci-venv/bin/python benchmark/validate_native_visual_extended.py
+
+      - name: Typecheck and JavaScript tests
+        run: |
+          pnpm check
+          pnpm test
+
+      - name: Production build
+        run: pnpm build

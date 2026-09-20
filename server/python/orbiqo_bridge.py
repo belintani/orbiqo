@@ -38,6 +38,9 @@ def _reference_root() -> Path:
     configured = os.environ.get("ORBIQO_RADIALCODE_ROOT")
     if configured:
         return Path(configured).expanduser().resolve()
+    vendored = Path(__file__).resolve().parent / "vendor" / "radialcode"
+    if vendored.is_dir():
+        return vendored
     return Path(__file__).resolve().parents[3] / "radialcode"
 
 
@@ -59,6 +62,7 @@ from radialcode.constants import (  # noqa: E402
     BOOTSTRAP_DARK,
     CLOCK_INNER,
     CLOCK_OUTER,
+    DATA_OUTER,
     CLOCK_SLOTS,
     FORMAT_VERSION,
     GEOMETRY_SELECTION_ORDER,
@@ -152,6 +156,8 @@ TAU = 2.0 * pi
 NATIVE_RENDERER_MAGIC = "ORBIQO_RASTER_V1"
 NATIVE_RENDERER_TIMEOUT_SECONDS = 15
 NATIVE_RENDERER_MAX_OUTPUT_BYTES = 12 * 1024 * 1024
+NATIVE_PROTOCOL_TIMEOUT_SECONDS = 30
+NATIVE_PROTOCOL_MAX_OUTPUT_BYTES = 24 * 1024 * 1024
 
 
 class BridgeError(ValueError):
@@ -172,6 +178,151 @@ def _native_renderer_path() -> Path:
     if configured:
         return Path(configured).expanduser().resolve()
     return PROJECT_ROOT / "server" / "python" / "native" / "orbiqo_renderer"
+
+
+def _native_protocol_path() -> Path:
+    configured = os.environ.get("ORBIQO_NATIVE_PROTOCOL_PATH")
+    if configured:
+        return Path(configured).expanduser().resolve()
+    return PROJECT_ROOT / "server" / "python" / "native" / "orbiqo_native"
+
+
+def _native_protocol_call(lines: list[str]) -> dict[str, str]:
+    executable = _native_protocol_path()
+    if not executable.is_file() or not os.access(executable, os.X_OK):
+        raise BridgeError("NATIVE_PROTOCOL_UNAVAILABLE", f"native protocol executable not found at {executable}")
+    try:
+        completed = subprocess.run(
+            [str(executable)],
+            input=("\n".join(lines) + "\n").encode("ascii"),
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            check=False,
+            timeout=NATIVE_PROTOCOL_TIMEOUT_SECONDS,
+        )
+    except subprocess.TimeoutExpired as exc:
+        raise BridgeError("NATIVE_PROTOCOL_TIMEOUT", "native protocol exceeded its time limit") from exc
+    if completed.returncode != 0:
+        detail = completed.stderr.decode("utf-8", errors="replace").strip()[:240]
+        raise BridgeError("NATIVE_PROTOCOL_FAILED", detail or f"native protocol exited with {completed.returncode}")
+    if not completed.stdout or len(completed.stdout) > NATIVE_PROTOCOL_MAX_OUTPUT_BYTES:
+        raise BridgeError("NATIVE_PROTOCOL_FAILED", "native protocol returned an invalid output size")
+    result: dict[str, str] = {}
+    for raw_line in completed.stdout.decode("utf-8", errors="strict").splitlines():
+        if raw_line in ("ORBIQO_NATIVE_RESULT_V1", "END") or not raw_line:
+            continue
+        key, separator, value = raw_line.partition(" ")
+        if not separator:
+            raise BridgeError("NATIVE_PROTOCOL_FAILED", "native protocol returned a malformed field")
+        result[key] = value
+    if "png_base64" in result:
+        try:
+            png = base64.b64decode(result["png_base64"], validate=True)
+        except ValueError as exc:
+            raise BridgeError("NATIVE_PROTOCOL_FAILED", "native protocol returned invalid PNG base64") from exc
+        if len(png) == 0 or len(png) > NATIVE_PROTOCOL_MAX_OUTPUT_BYTES:
+            raise BridgeError("NATIVE_PROTOCOL_FAILED", "native protocol returned an invalid PNG size")
+    return result
+
+
+def _geometry_version_for_native(value: int | str) -> str:
+    if value == "auto":
+        return "auto"
+    mapping = {
+        "micro-2": "0",
+        "small": "1",
+        "medium": "2",
+        "large": "3",
+        "xl": "4",
+        "micro-4": "5",
+        "micro-1": "6",
+    }
+    if isinstance(value, int):
+        return str(value)
+    return mapping.get(str(value), str(value))
+
+
+def _native_payload_type_name(value: str) -> str:
+    return {"0": "BINARY", "1": "UTF8", "2": "URL"}.get(value, "BINARY")
+
+
+def _native_generate(request: dict[str, Any], *, payload: bytes | str, payload_type: PayloadType, sizing_mode: str, requested_geometry: int | str, diameter: float | None, dpi: int, palette_id: int, options: RenderOptions, identity_id: str, identity: dict[str, Any], visual_style: str, center_image_host: str | None) -> dict[str, Any]:
+    payload_bytes = payload.encode("utf-8") if isinstance(payload, str) else payload
+    native_payload_type = {PayloadType.BINARY: "binary", PayloadType.UTF8: "text", PayloadType.URL: "url"}[payload_type]
+    native_alphabet = "mono2" if request.get("alphabet", "color4") == "mono2" else "color4"
+    lines = [
+        "OP generate",
+        f"PAYLOAD_HEX {payload_bytes.hex()}",
+        f"GEOMETRY {_geometry_version_for_native(requested_geometry)}",
+        "FORMAT 5",
+        f"ALPHABET {native_alphabet}",
+        f"PAYLOAD_TYPE {native_payload_type}",
+        f"ECC {str(request.get('ecc', 'balanced')).lower()}",
+        f"COMPRESSION {str(request.get('compression', 'auto')).lower()}",
+        f"PALETTE {palette_id}",
+        f"DPI {dpi}",
+        f"DIAMETER_MM {diameter if diameter is not None else 0.0}",
+        f"RADIAL_FILL {float(options.radial_fill):.8f}",
+        f"ANGULAR_FILL {float(options.angular_fill):.8f}",
+        f"BACKGROUND #{_rgb(options.background)[0]:02x}{_rgb(options.background)[1]:02x}{_rgb(options.background)[2]:02x}",
+        f"CENTER_TEXT_B64 {base64.b64encode((options.center_text or '').encode('utf-8')).decode('ascii')}",
+        f"CENTER_IMAGE_HEX {(options.center_image_png or b'').hex()}",
+        "END",
+    ]
+    native = _native_protocol_call(lines)
+    try:
+        svg = base64.b64decode(native["svg_base64"], validate=True).decode("utf-8")
+        png = base64.b64decode(native["png_base64"], validate=True)
+    except (KeyError, ValueError, UnicodeDecodeError) as exc:
+        raise BridgeError("NATIVE_PROTOCOL_FAILED", "native protocol omitted SVG or PNG") from exc
+    geometry_version = int(native["geometry_version"])
+    format_version = int(native["format_version"])
+    data_inner = float(native["data_inner"])
+    radial_pitch = (DATA_OUTER - data_inner) / GEOMETRY_VERSIONS[geometry_version].data_rings
+    effective_diameter = float(native["diameter_mm"])
+    physical_pitch = radial_pitch * (effective_diameter / 2.0)
+    capacity = capacity_for(geometry_version, _enum(ALPHABET_NAMES, request.get("alphabet", "color4"), "alphabet"), _enum(ECC_NAMES, request.get("ecc", "balanced"), "ecc"), format_version=format_version)
+    payload_type_name = _native_payload_type_name(native.get("payload_type", "0"))
+    return {
+        "svg": svg,
+        "png_base64": base64.b64encode(png).decode("ascii"),
+        "center_image_preview_base64": base64.b64encode(options.center_image_png).decode("ascii") if options.center_image_png is not None else None,
+        "metadata": {
+            "format_version": format_version,
+            "geometry_version": geometry_version,
+            "geometry_name": native["geometry_name"],
+            "layout_name": native["layout_name"],
+            "columns": int(native["columns"]),
+            "data_inner": data_inner,
+            "diameter_mm": effective_diameter,
+            "recommended_diameter_mm": float(native["recommended_diameter_mm"]),
+            "sizing_mode": sizing_mode,
+            "requested_geometry": requested_geometry,
+            "selection_reason": "smallest geometry that fits the encoded frame at the selected ECC" if sizing_mode == "auto" else "manual geometry and diameter override",
+            "physical_pitch_mm": physical_pitch,
+            "print_pitch_warning": physical_pitch < 0.50,
+            "alphabet": str(request.get("alphabet", "color4")).upper(),
+            "ecc_level": str(request.get("ecc", "balanced")).upper(),
+            "payload_type": payload_type_name,
+            "payload_bytes": int(native["payload_bytes"]),
+            "frame_bytes": int(native["frame_bytes"]),
+            "mask_id": int(native["mask_id"]),
+            "palette_id": palette_id,
+            "palette_name": PALETTE_NAMES[palette_id],
+            "palette_colors": list(PALETTES[palette_id]),
+            "maximum_uncompressed_payload_bytes": capacity.maximum_uncompressed_payload_bytes,
+            "generation_time_ms": 0.0,
+            "raster_backend_requested": str(request.get("raster_backend", "native-cpp")),
+            "raster_renderer": "cpp-native-full",
+            "native_fallback_reason": None,
+            "attribution": "Built with RadialCode — an open radial 2D code project.",
+            "visual_style": visual_style,
+            "identity_id": identity_id,
+            "identity_name": identity["name"],
+            "center_image_applied": options.center_image_png is not None,
+            "center_image_host": center_image_host,
+        },
+    }
 
 
 def _native_renderer_input(symbol: Any, *, dpi: int, options: RenderOptions) -> tuple[bytes, int]:
@@ -452,6 +603,31 @@ def _generate(request: dict[str, Any]) -> dict[str, Any]:
     center_image_png, center_image_host = _fetch_center_image(request.get("center_image_url"))
 
     started = perf_counter()
+    style = VISUAL_STYLES[visual_style]
+    protocol_backend = request.get("protocol_backend", os.environ.get("ORBIQO_PROTOCOL_BACKEND", "reference"))
+    if protocol_backend == "native-cpp":
+        return _native_generate(
+            request,
+            payload=payload,
+            payload_type=payload_type,
+            sizing_mode=sizing_mode,
+            requested_geometry=requested_geometry,
+            diameter=diameter,
+            dpi=dpi,
+            palette_id=palette_id,
+            options=RenderOptions(
+                center_text=center_mark or None,
+                center_image_png=center_image_png,
+                angular_fill=style["angular_fill"],
+                radial_fill=style["radial_fill"],
+            ),
+            identity_id=identity_id,
+            identity=identity,
+            visual_style=visual_style,
+            center_image_host=center_image_host,
+        )
+    if protocol_backend != "reference":
+        raise BridgeError("INVALID_INPUT", "protocol_backend must be reference or native-cpp")
     try:
         symbol = encode(
             payload,
@@ -467,7 +643,6 @@ def _generate(request: dict[str, Any]) -> dict[str, Any]:
         if "frame requires" in str(exc):
             raise BridgeError("CAPACITY_EXCEEDED", str(exc)) from exc
         raise
-    style = VISUAL_STYLES[visual_style]
     options = RenderOptions(
         center_text=center_mark or None,
         center_image_png=center_image_png,
@@ -693,6 +868,68 @@ def _preflight_image(image_bytes: bytes) -> dict[str, Any]:
     return {"width": width, "height": height, "format": image_format}
 
 
+def _native_decode(image_bytes: bytes, *, canonical: bool, erasure_threshold: float, image_info: dict[str, Any]) -> dict[str, Any]:
+    started = perf_counter()
+    try:
+        with Image.open(BytesIO(image_bytes)) as opened:
+            opened.load()
+            normalized = BytesIO()
+            opened.convert("RGB").save(normalized, format="PNG", optimize=True)
+            png_bytes = normalized.getvalue()
+    except (UnidentifiedImageError, OSError, ValueError) as exc:
+        raise BridgeError("INVALID_IMAGE", "image could not be normalized for the native decoder") from exc
+    native = _native_protocol_call(
+        [
+            "OP decode",
+            f"IMAGE_HEX {png_bytes.hex()}",
+            f"CANONICAL {1 if canonical else 0}",
+            f"ERASURE_THRESHOLD {erasure_threshold:.8f}",
+            "END",
+        ]
+    )
+    try:
+        payload = bytes.fromhex(native["payload_hex"])
+        payload_type = _native_payload_type_name(native.get("payload_type", "0"))
+        result: dict[str, Any] = {
+            "payload_base64": base64.b64encode(payload).decode("ascii"),
+            "payload_type": payload_type,
+            "payload_bytes": len(payload),
+            "format_version": int(native["format_version"]),
+            "geometry_version": int(native["geometry_version"]),
+            "alphabet": "COLOR4" if native.get("alphabet", "1") == "1" else "MONO2",
+            "palette_id": int(native["palette_id"]),
+            "palette_name": PALETTE_NAMES[int(native["palette_id"])],
+            "ecc_level": ["FAST", "BALANCED", "ROBUST", "EXTREME"][int(native["ecc_level"])],
+            "mask_id": int(native["mask_id"]),
+            "image": image_info,
+            "diagnostics": {
+                "header_corrected_bits": [int(native.get("header_corrected_bits", "0"))],
+                "corrected_rs_symbols": int(native.get("corrected_rs_symbols", "0")),
+                "erasure_cells": int(native.get("erasure_cells", "0")),
+                "erasure_bytes": 0,
+                "average_confidence": float(native.get("average_confidence", "1")),
+                "minimum_confidence": float(native.get("minimum_confidence", "1")),
+                "processing_time_ms": (perf_counter() - started) * 1000.0,
+                "color_reference_means": [],
+            },
+        }
+    except (KeyError, ValueError, IndexError) as exc:
+        raise BridgeError("NATIVE_PROTOCOL_FAILED", "native decoder returned malformed diagnostics") from exc
+    if payload_type in ("UTF8", "URL"):
+        try:
+            result["text"] = payload.decode("utf-8")
+        except UnicodeDecodeError as exc:
+            raise BridgeError("DECODE_FAILED", "native decoder returned invalid UTF-8 payload") from exc
+    if not canonical:
+        result["rectification"] = {
+            "axis_ratio": float(native.get("axis_ratio", "1")),
+            "anchor_widths": [],
+            "reprojection_error_px": 0.0,
+            "homography": [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 0.0, 1.0]],
+        }
+    return result
+
+
 def _decode(request: dict[str, Any]) -> dict[str, Any]:
     image_bytes = _decode_b64(request.get("image_base64"), field="image_base64", maximum=MAX_IMAGE_BYTES)
     image_info = _preflight_image(image_bytes)
@@ -701,6 +938,28 @@ def _decode(request: dict[str, Any]) -> dict[str, Any]:
         raise BridgeError("INVALID_INPUT", "erasure_threshold must be between zero and one")
 
     canonical = bool(request.get("canonical", False))
+    requested_decoder_backend = request.get("decoder_backend")
+    promoted_canonical_default = requested_decoder_backend is None and canonical and os.environ.get("ORBIQO_CANONICAL_NATIVE_DEFAULT", "1") == "1"
+    decoder_backend = requested_decoder_backend or os.environ.get("ORBIQO_DECODER_BACKEND", "native-cpp" if promoted_canonical_default else "reference")
+    native_fallback_reason: str | None = None
+    if decoder_backend == "native-cpp":
+        try:
+            native_result = _native_decode(
+                image_bytes,
+                canonical=canonical,
+                erasure_threshold=erasure_threshold,
+                image_info=image_info,
+            )
+        except BridgeError as error:
+            if not promoted_canonical_default:
+                raise
+            native_fallback_reason = error.message
+        else:
+            native_result["decoder_backend"] = "native-cpp"
+            native_result["decoder_fallback_reason"] = None
+            return native_result
+    if decoder_backend != "reference":
+        raise BridgeError("INVALID_INPUT", "decoder_backend must be reference or native-cpp")
     rectification = None
     if canonical:
         hint = request.get("geometry_hint")
@@ -753,6 +1012,8 @@ def _decode(request: dict[str, Any]) -> dict[str, Any]:
             "reprojection_error_px": rectification.reprojection_error_px,
             "homography": [list(row) for row in rectification.homography],
         }
+    result["decoder_backend"] = "reference"
+    result["decoder_fallback_reason"] = native_fallback_reason
     return result
 
 

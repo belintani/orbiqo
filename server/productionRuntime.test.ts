@@ -2,29 +2,37 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
-import { resolveBridgePath } from "./orbiqoPython";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
-describe("production Python runtime", () => {
-  it("ships the interpreter, vendored reference and comparison dependencies required by the real bridge", () => {
+describe("production native runtime", () => {
+  it("ships only the native codec, image and external comparison runtimes", () => {
     const dockerfile = readFileSync(path.join(projectRoot, "Dockerfile"), "utf8");
 
-    expect(dockerfile).toContain("python3");
-    expect(dockerfile).toContain("python3-venv");
-    expect(dockerfile).toContain("/app/server/python/vendor/radialcode[vision]");
-    expect(dockerfile).toContain("ORBIQO_BRIDGE_PATH=/app/server/python/orbiqo_bridge.py");
-    expect(dockerfile).toContain("ORBIQO_RADIALCODE_ROOT=/app/server/python/vendor/radialcode");
+    expect(dockerfile).not.toContain("python3");
+    expect(dockerfile).not.toContain("python3-venv");
+    expect(dockerfile).not.toContain("ORBIQO_BRIDGE_PATH");
+    expect(dockerfile).not.toContain("ORBIQO_RADIALCODE_ROOT");
+    expect(dockerfile).toContain("libzxing-dev");
+    expect(dockerfile).toContain("ORBIQO_NATIVE_PATH=/app/server/python/native/orbiqo_native");
+    expect(dockerfile).toContain("ORBIQO_EXTERNAL_COMPARE_PATH=/app/benchmark/native/orbiqo_external_compare");
     expect(dockerfile).toContain("ORBIQO_JAB_ROOT=/app/benchmark/jabcode-runtime");
-    expect(dockerfile).toContain("PATH=/opt/orbiqo-venv/bin:$PATH");
     expect(dockerfile).toContain("make -C benchmark/jabcode-runtime/jabcodeReader");
     expect(dockerfile).toContain("mkdir -p benchmark/jabcode-runtime/jabcode/build");
     expect(dockerfile).toContain("-no-pie");
     expect(dockerfile).toContain("make -C server/python/native");
+    expect(dockerfile).toContain("make -C benchmark/native");
   });
 
-  it("keeps the bridge outside dist because esbuild does not copy Python source files", () => {
-    expect(resolveBridgePath("/app", undefined)).toBe("/app/server/python/orbiqo_bridge.py");
-    expect(resolveBridgePath("/app", "/custom/bridge.py")).toBe("/custom/bridge.py");
+  it("keeps the C++ executables at the paths consumed by the Node adapter", () => {
+    const adapter = readFileSync(path.join(projectRoot, "server", "orbiqoNative.ts"), "utf8");
+    expect(adapter).toContain('"python", "native"');
+    expect(adapter).toContain('"benchmark", "native"');
+  });
+
+  it("does not wire the Python bridge into production procedures", () => {
+    const router = readFileSync(path.join(projectRoot, "server", "routers", "orbiqo.ts"), "utf8");
+    expect(router).not.toContain("orbiqoPython");
+    expect(router).not.toContain("callOrbiqoPython");
   });
 });

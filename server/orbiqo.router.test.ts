@@ -48,6 +48,58 @@ describe("orbiqo visual identity tRPC contract", () => {
     });
   }, 20_000);
 
+  it("uses the native decoder by default for canonical frontal PNGs", async () => {
+    const caller = appRouter.createCaller(createPublicContext());
+    const generated = await caller.orbiqo.generate({
+      payloadType: "text",
+      text: "canonical-native-default",
+      geometry: "small",
+      diameterMm: 30,
+      alphabet: "color4",
+      ecc: "balanced",
+      compression: "none",
+      dpi: 600,
+      identityId: "pulse",
+    });
+
+    const decoded = await caller.orbiqo.decode({
+      imageBase64: generated.png_base64,
+      canonical: true,
+      outputSize: 1024,
+      erasureThreshold: 0.55,
+    });
+
+    expect(decoded.decoder_backend).toBe("native-cpp");
+    expect(decoded.decoder_fallback_reason).toBeNull();
+    expect(decoded.text).toBe("canonical-native-default");
+  }, 30_000);
+
+  it("runs native protocol generation and decode without the Python bridge", async () => {
+    const caller = appRouter.createCaller(createPublicContext());
+    const generated = await caller.orbiqo.generate({
+      payloadType: "text",
+      text: "direct-native-core",
+      sizingMode: "manual",
+      geometry: "small",
+      diameterMm: 30,
+      alphabet: "color4",
+      ecc: "balanced",
+      compression: "none",
+      dpi: 600,
+      protocolBackend: "native-cpp",
+    });
+
+    expect(generated.metadata.raster_renderer).toBe("cpp-native-full");
+    const decoded = await caller.orbiqo.decode({
+      imageBase64: generated.png_base64,
+      canonical: true,
+      decoderBackend: "native-cpp",
+    });
+
+    expect(decoded.decoder_backend).toBe("native-cpp");
+    expect(Buffer.from(decoded.payload_base64, "base64").toString("utf8")).toBe("direct-native-core");
+  }, 30_000);
+
   it("rejects an unknown raster backend before invoking the bridge", async () => {
     await expect(
       appRouter.createCaller(createPublicContext()).orbiqo.generate({

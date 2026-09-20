@@ -7,14 +7,10 @@ dist/
 build/
 *.dist
 server/python/native/orbiqo_renderer
-*.o
-benchmark/vendor/jabcode/src/jabcodeWriter/bin/jabcodeWriter
-benchmark/vendor/jabcode/src/jabcodeReader/bin/jabcodeReader
-
-# Python bytecode and test caches
-__pycache__/
-*.py[cod]
-.pytest_cache/
+server/python/native/orbiqo_codec
+server/python/native/orbiqo_codec_bench
+server/python/native/orbiqo_native
+benchmark/native/orbiqo_external_compare
 
 # Environment variables
 .env

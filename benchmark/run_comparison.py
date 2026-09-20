@@ -48,7 +48,7 @@ TIMING_RUNS = 10
 DEGRADATION_TRIALS = 4
 CANVAS_SIZE = 1024
 
-JAB_ROOT = ROOT / "benchmark" / "vendor" / "jabcode" / "src"
+JAB_ROOT = Path(os.environ.get("ORBIQO_JAB_ROOT", ROOT / "benchmark" / "jabcode-runtime")).resolve()
 JAB_WRITER = JAB_ROOT / "jabcodeWriter" / "bin" / "jabcodeWriter"
 JAB_READER = JAB_ROOT / "jabcodeReader" / "bin" / "jabcodeReader"
 

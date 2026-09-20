@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "payload_bytes": 67,
+  "rows": [
+    {
+      "geometry": 1,
+      "diameter_mm": 30.0,
+      "runs": 10,
+      "python_encode_render_median_ms": 172.8596134998952,
+      "cpp_encode_render_process_median_ms": 83.00981650063477,
+      "encode_render_delta_percent": -51.97847847745819,
+      "python_decode_median_ms": 144.773266500124,
+      "cpp_decode_process_median_ms": 21.384353500252473,
+      "decode_delta_percent": -85.2290730069048,
+      "scope": "digital PNG; native process startup included; reference and native decode same Python-produced PNG"
+    },
+    {
+      "geometry": 2,
+      "diameter_mm": 40.0,
+      "runs": 10,
+      "python_encode_render_median_ms": 318.22799949804903,
+      "cpp_encode_render_process_median_ms": 138.98673500079894,
+      "encode_render_delta_percent": -56.32479378935007,
+      "python_decode_median_ms": 139.16324300043925,
+      "cpp_decode_process_median_ms": 36.31593049794901,
+      "decode_delta_percent": -73.90407860943972,
+      "scope": "digital PNG; native process startup included; reference and native decode same Python-produced PNG"
+    }
+  ]
+}

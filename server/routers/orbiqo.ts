@@ -1,7 +1,16 @@
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
 import { publicProcedure, router } from "../_core/trpc";
-import { callOrbiqoPython, OrbiqoBridgeError } from "../orbiqoPython";
+import {
+  nativeCapacities,
+  nativeDecode,
+  nativeCompareSymbols,
+  nativeGenerate,
+  nativeHealth,
+  nativeIdentities,
+  nativeRecommendSizing,
+  OrbiqoNativeError,
+} from "../orbiqoNative";
 import {
   loadBenchmarkArtifacts,
   loadBenchmarkSummary,
@@ -11,51 +20,37 @@ import {
   loadFormat5OcclusionValidation,
   loadEccProfileComparison,
   loadEccProfileComparisonArtifacts,
+  loadNativeFullComparison,
   loadNativeRendererComparison,
 } from "../benchmarkResults";
-import type {
-  OrbiqoCapacities,
-  OrbiqoDecodedSymbol,
-  OrbiqoGeneratedSymbol,
-  OrbiqoHealth,
-  OrbiqoSizingRecommendation,
-  OrbiqoSymbolComparison,
-  OrbiqoVisualIdentityCatalog,
-} from "../../shared/orbiqo";
 
 const geometry = z.union([z.enum(["auto", "micro-1", "micro-2", "micro-4", "small", "medium", "large", "xl"]), z.number().int().min(0).max(6)]);
 const ecc = z.enum(["fast", "balanced", "robust", "extreme"]);
 const alphabet = z.enum(["color4", "mono2"]);
 const identity = z.enum(["reference", "pulse", "nocturne", "terra", "signal"]);
-const rasterBackend = z.enum(["reference", "native-experimental"]);
+const rasterBackend = z.literal("native-cpp");
+const protocolBackend = z.literal("native-cpp");
+const decoderBackend = z.literal("native-cpp");
 
 function bridgeFailure(error: unknown): never {
-  if (error instanceof OrbiqoBridgeError) {
+  if (error instanceof OrbiqoNativeError) {
     const badInputCodes = new Set([
       "INVALID_INPUT",
-      "INVALID_BASE64",
-      "INVALID_IMAGE",
-      "IMAGE_TOO_SMALL",
-      "IMAGE_TOO_LARGE",
       "INPUT_TOO_LARGE",
       "CAPACITY_EXCEEDED",
-      "DECODE_FAILED",
       "CENTER_IMAGE_INVALID_URL",
-      "CENTER_IMAGE_URL_TOO_LONG",
       "CENTER_IMAGE_FORBIDDEN_HOST",
-      "CENTER_IMAGE_UNREACHABLE",
       "CENTER_IMAGE_REDIRECT_LIMIT",
       "CENTER_IMAGE_FETCH_FAILED",
       "CENTER_IMAGE_TOO_LARGE",
-      "CENTER_IMAGE_INVALID_FORMAT",
     ]);
     throw new TRPCError({
-      code: badInputCodes.has(error.bridgeCode) ? "BAD_REQUEST" : "INTERNAL_SERVER_ERROR",
+      code: badInputCodes.has(error.nativeCode) ? "BAD_REQUEST" : "INTERNAL_SERVER_ERROR",
       message: error.message,
       cause: error,
     });
   }
-  throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Unexpected Orbiqo reference failure", cause: error });
+  throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Unexpected Orbiqo native failure", cause: error });
 }
 
 export const orbiqoRouter = router({
@@ -67,30 +62,13 @@ export const orbiqoRouter = router({
   format5OcclusionValidation: publicProcedure.query(async () => loadFormat5OcclusionValidation()),
   eccProfileComparison: publicProcedure.query(async () => loadEccProfileComparison()),
   eccProfileComparisonArtifacts: publicProcedure.query(async () => loadEccProfileComparisonArtifacts()),
+  nativeFullComparison: publicProcedure.query(async () => loadNativeFullComparison()),
   nativeRendererComparison: publicProcedure.query(async () => loadNativeRendererComparison()),
-  health: publicProcedure.query(async () => {
-    try {
-      return await callOrbiqoPython<OrbiqoHealth>({ op: "health" }, { timeoutMs: 5_000 });
-    } catch (error) {
-      bridgeFailure(error);
-    }
-  }),
-  identities: publicProcedure.query(async () => {
-    try {
-      return await callOrbiqoPython<OrbiqoVisualIdentityCatalog>({ op: "identities" }, { timeoutMs: 5_000 });
-    } catch (error) {
-      bridgeFailure(error);
-    }
-  }),
+  health: publicProcedure.query(() => nativeHealth()),
+  identities: publicProcedure.query(() => nativeIdentities()),
   capacities: publicProcedure
     .input(z.object({ alphabet: alphabet.default("color4"), ecc: ecc.default("balanced") }))
-    .query(async ({ input }) => {
-      try {
-        return await callOrbiqoPython<OrbiqoCapacities>({ op: "capacity", ...input }, { timeoutMs: 5_000 });
-      } catch (error) {
-        bridgeFailure(error);
-      }
-    }),
+    .query(async ({ input }) => nativeCapacities(input)),
   recommendSizing: publicProcedure
     .input(
       z
@@ -113,18 +91,7 @@ export const orbiqoRouter = router({
     )
     .query(async ({ input }) => {
       try {
-        return await callOrbiqoPython<OrbiqoSizingRecommendation>(
-          {
-            op: "recommend_sizing",
-            payload_type: input.payloadType,
-            text: input.text,
-            payload_base64: input.payloadBase64,
-            alphabet: input.alphabet,
-            ecc: input.ecc,
-            compression: input.compression,
-          },
-          { timeoutMs: 5_000 },
-        );
+        return await nativeRecommendSizing(input);
       } catch (error) {
         bridgeFailure(error);
       }
@@ -150,17 +117,7 @@ export const orbiqoRouter = router({
     )
     .mutation(async ({ input }) => {
       try {
-        return await callOrbiqoPython<OrbiqoSymbolComparison>(
-          {
-            op: "compare_symbols",
-            payload_type: input.payloadType,
-            text: input.text,
-            payload_base64: input.payloadBase64,
-            identity_id: input.identityId,
-            center_mark: input.centerMark,
-          },
-          { timeoutMs: 45_000 },
-        );
+        return await nativeCompareSymbols(input);
       } catch (error) {
         bridgeFailure(error);
       }
@@ -182,7 +139,8 @@ export const orbiqoRouter = router({
           centerMark: z.string().max(8).optional(),
           centerImageUrl: z.string().max(2_048).url().refine(value => value.startsWith("https://"), "Center image URL must use HTTPS").optional(),
           identityId: identity.default("pulse"),
-          rasterBackend: rasterBackend.default("reference"),
+          rasterBackend: rasterBackend.default("native-cpp"),
+          protocolBackend: protocolBackend.optional(),
         })
         .superRefine((value, context) => {
           if (value.payloadType === "binary" && !value.payloadBase64) {
@@ -201,26 +159,7 @@ export const orbiqoRouter = router({
     )
     .mutation(async ({ input }) => {
       try {
-        return await callOrbiqoPython<OrbiqoGeneratedSymbol>(
-          {
-            op: "generate",
-            payload_type: input.payloadType,
-            text: input.text,
-            payload_base64: input.payloadBase64,
-            sizing_mode: input.sizingMode,
-            geometry: input.geometry,
-            diameter_mm: input.diameterMm,
-            alphabet: input.alphabet,
-            ecc: input.ecc,
-            compression: input.compression,
-            dpi: input.dpi,
-            center_mark: input.centerMark,
-            center_image_url: input.centerImageUrl,
-            identity_id: input.identityId,
-            raster_backend: input.rasterBackend,
-          },
-          { timeoutMs: 25_000 },
-        );
+        return await nativeGenerate(input);
       } catch (error) {
         bridgeFailure(error);
       }
@@ -232,22 +171,13 @@ export const orbiqoRouter = router({
         canonical: z.boolean().default(false),
         geometryHint: z.number().int().min(0).max(6).optional(),
         outputSize: z.number().int().min(512).max(1536).default(1024),
-        erasureThreshold: z.number().min(0).max(1).default(0.55),
+          erasureThreshold: z.number().min(0).max(1).default(0.55),
+          decoderBackend: decoderBackend.optional(),
       }),
     )
     .mutation(async ({ input }) => {
       try {
-        return await callOrbiqoPython<OrbiqoDecodedSymbol>(
-          {
-            op: "decode",
-            image_base64: input.imageBase64,
-            canonical: input.canonical,
-            geometry_hint: input.geometryHint,
-            output_size: input.outputSize,
-            erasure_threshold: input.erasureThreshold,
-          },
-          { timeoutMs: 30_000 },
-        );
+        return await nativeDecode(input);
       } catch (error) {
         bridgeFailure(error);
       }

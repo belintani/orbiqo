@@ -7,6 +7,7 @@ import {
   loadOptimizationDelta,
   loadEccProfileComparison,
   loadEccProfileComparisonArtifacts,
+  loadNativeFullComparison,
   loadNativeRendererComparison,
 } from "./benchmarkResults";
 
@@ -80,5 +81,13 @@ describe("Orbiqo benchmark artifacts", () => {
     expect(comparison.cases.map(item => item.geometry)).toEqual(["micro-4", "small", "medium"]);
     expect(comparison.cases.every(item => item.reference_roundtrip && item.native_roundtrip)).toBe(true);
     expect(comparison.cases.find(item => item.geometry === "small")?.native_relative_change_percent).toBeLessThan(-50);
+  });
+
+  it("publishes the final native production comparison by geometry", async () => {
+    const comparison = await loadNativeFullComparison();
+    expect(comparison.payload_bytes).toBe(67);
+    expect(comparison.rows.map(row => row.geometry)).toEqual([1, 2]);
+    expect(comparison.rows.every(row => row.cpp_encode_render_process_median_ms < row.python_encode_render_median_ms)).toBe(true);
+    expect(comparison.rows.every(row => row.cpp_decode_process_median_ms < row.python_decode_median_ms)).toBe(true);
   });
 });

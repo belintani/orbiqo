@@ -25,6 +25,11 @@ const profileLabels: Record<string, string> = {
   clean: "Clean", blur_1_5: "Blur 1.5", blur_3_0: "Blur 3.0", noise_8: "Noise 8", jpeg_40: "JPEG 40",
   downsample_0_35: "Downsample", occlusion_0_06: "Occlusion", combined: "Combined",
 };
+const nativeGeometryLabels: Record<number, string> = { 1: "Small", 2: "Medium" };
+
+function signedReduction(value: number) {
+  return `${value < 0 ? "−" : "+"}${Math.abs(value).toFixed(1)}%`;
+}
 
 function downloadText(contents: string, filename: string, type: string) {
   const url = URL.createObjectURL(new Blob([contents], { type }));
@@ -47,6 +52,7 @@ export function BenchmarkWorkspace() {
   const summaryQuery = trpc.orbiqo.normalizedBenchmarkSummary.useQuery(undefined, { staleTime: 60_000 });
   const legacyQuery = trpc.orbiqo.benchmarkSummary.useQuery(undefined, { staleTime: 60_000 });
   const eccProfileQuery = trpc.orbiqo.eccProfileComparison.useQuery(undefined, { staleTime: 60_000 });
+  const nativeFullQuery = trpc.orbiqo.nativeFullComparison.useQuery(undefined, { staleTime: 60_000 });
   const artifactQuery = trpc.orbiqo.normalizedBenchmarkArtifacts.useQuery(undefined, { enabled: false });
   const eccProfileArtifactQuery = trpc.orbiqo.eccProfileComparisonArtifacts.useQuery(undefined, { enabled: false });
 
@@ -65,14 +71,15 @@ export function BenchmarkWorkspace() {
     else downloadText(result.data.methodology, "orbiqo-ecc-profile-method.md", "text/markdown;charset=utf-8");
   }
 
-  if (summaryQuery.isPending || legacyQuery.isPending || eccProfileQuery.isPending) {
+  if (summaryQuery.isPending || legacyQuery.isPending || eccProfileQuery.isPending || nativeFullQuery.isPending) {
     return <section className="benchmark-loading"><LoaderCircle className="animate-spin" /><span>Validating normalized artifacts…</span></section>;
   }
-  if (!summaryQuery.data || !legacyQuery.data || !eccProfileQuery.data) {
+  if (!summaryQuery.data || !legacyQuery.data || !eccProfileQuery.data || !nativeFullQuery.data) {
     return <section className="benchmark-loading benchmark-loading--error"><AlertTriangle /><span>Benchmark artifacts could not be loaded.</span></section>;
   }
   const summary = summaryQuery.data;
   const profileComparison = eccProfileQuery.data;
+  const nativeFullComparison = nativeFullQuery.data;
   const internalProfiles = eccProfileOrder.map(ecc => profileComparison.profiles.find(profile => profile.ecc === ecc)).filter((profile): profile is OrbiqoEccProfileBenchmark["profiles"][number] => Boolean(profile));
   const balancedProfile = internalProfiles.find(profile => profile.ecc === "balanced");
   const profileTimingMaximum = Math.max(...internalProfiles.flatMap(profile => [profileMedian(profile, "encode"), profileMedian(profile, "decode")]));
@@ -84,6 +91,7 @@ export function BenchmarkWorkspace() {
   const degradationTrials = summary.degradation.reduce((total, row) => total + row.trials, 0);
   const generatedAt = new Date(summary.environment.generated_utc);
   const orbiqoCapacity = summary.capacity.find(row => row.format === "orbiqo");
+  const nativeFullTimingMaximum = Math.max(...nativeFullComparison.rows.flatMap(row => [row.python_encode_render_median_ms, row.python_decode_median_ms]));
 
   return (
     <section className="benchmark-workspace">
@@ -135,7 +143,28 @@ export function BenchmarkWorkspace() {
         <p className="profile-study-note">Encode measures framing, protection coding and placement. Decode measures the full vision pipeline from the same normalized digital raster. Neither result is a print or device guarantee.</p>
       </section>
 
-      <div className="benchmark-section-break"><span>02 / EXTERNAL CONTEXT</span><div><h3>Balanced beside QR, Aztec and JAB.</h3><p>The external equal-area benchmark uses Orbiqo Balanced as its declared default. It is useful for context, but it does not make protection families or color handling equivalent.</p></div></div>
+      <section className="profile-study native-full-study" aria-labelledby="native-full-title">
+        <header className="profile-study-head">
+          <div><p>02 / IMPLEMENTATION GAIN</p><h3 id="native-full-title">C++ production path, measured.</h3></div>
+          <span>Same payload · 600 DPI · process startup included</span>
+        </header>
+        <div className="profile-study-grid">
+          {nativeFullComparison.rows.map(row => (
+            <article className="profile-study-card is-robust" key={row.geometry}>
+              <header><span>{nativeGeometryLabels[row.geometry] ?? `Geometry ${row.geometry}`}</span><small>{row.runs} runs · {nativeFullComparison.payload_bytes} B</small></header>
+              <div className="profile-study-timing">
+                <div><span>ENCODE + PNG</span><i style={{ width: `${Math.max(3, (row.python_encode_render_median_ms / nativeFullTimingMaximum) * 100)}%` }} /><strong>{signedReduction(row.encode_render_delta_percent)}</strong></div>
+                <div><span>DECODE</span><i style={{ width: `${Math.max(3, (row.python_decode_median_ms / nativeFullTimingMaximum) * 100)}%` }} /><strong>{signedReduction(row.decode_delta_percent)}</strong></div>
+              </div>
+              <div className="profile-study-occlusion"><span>REFERENCE → C++</span><strong>{row.python_encode_render_median_ms.toFixed(0)} → {row.cpp_encode_render_process_median_ms.toFixed(0)} ms</strong><small>encode + raster production median</small></div>
+              <p>Decode: {row.python_decode_median_ms.toFixed(0)} → {row.cpp_decode_process_median_ms.toFixed(0)} ms. Digital PNG only; this comparison is not a print or camera claim.</p>
+            </article>
+          ))}
+        </div>
+        <p className="profile-study-note">Negative percentages mean less time than the Python reference. The logical codec benchmark is separate and excludes PNG, SVG, process startup and vision.</p>
+      </section>
+
+      <div className="benchmark-section-break"><span>03 / EXTERNAL CONTEXT</span><div><h3>Balanced beside QR, Aztec and JAB.</h3><p>The external equal-area benchmark uses Orbiqo Balanced as its declared default. It is useful for context, but it does not make protection families or color handling equivalent.</p></div></div>
 
       <div className="benchmark-kpis">
         <div><Database /><span>Compared toolchains</span><strong>{summary.adapters.length}</strong><small>One occupied digital area</small></div>
@@ -161,7 +190,7 @@ export function BenchmarkWorkspace() {
               </div>
             ))}
           </div>
-          <p className="benchmark-note">{externalTimingCopy.scope} ZXing is native C++; Orbiqo remains a Python reference; JAB includes process startup.</p>
+          <p className="benchmark-note">{externalTimingCopy.scope} ZXing and the Orbiqo production path are native C++; JAB includes process startup.</p>
         </article>
 
         <article className="benchmark-card">

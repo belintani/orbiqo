@@ -10,7 +10,7 @@ import { trpc } from "@/lib/trpc";
 import { describeCenterImageError } from "@/lib/centerImageError";
 import { brandCopy } from "@/lib/brandCopy";
 import { workspaceContext } from "@/lib/workspaceContext";
-import type { OrbiqoEcc, OrbiqoGeometry, OrbiqoIdentityId, OrbiqoPayloadType, OrbiqoRasterBackend, OrbiqoSizingMode } from "@shared/orbiqo";
+import type { OrbiqoEcc, OrbiqoGeometry, OrbiqoIdentityId, OrbiqoPayloadType, OrbiqoSizingMode } from "@shared/orbiqo";
 import {
   Activity,
   ArrowUpRight,
@@ -82,7 +82,6 @@ export default function Home() {
   const [centerImageUrl, setCenterImageUrl] = useState(() => initialParams.get("centerImageUrl") ?? "");
   const [centerImageDismissed, setCenterImageDismissed] = useState(false);
   const [identityId, setIdentityId] = useState<OrbiqoIdentityId>("pulse");
-  const [rasterBackend, setRasterBackend] = useState<OrbiqoRasterBackend>("reference");
   const [activeView, setActiveView] = useState<"create" | "read" | "compare" | "benchmarks">(() => {
     const requested = new URLSearchParams(window.location.search).get("view");
     return requested === "read" || requested === "compare" || requested === "benchmarks" ? requested : "create";
@@ -125,7 +124,6 @@ export default function Home() {
     centerMark: centerMark || undefined,
     centerImageUrl: centerImageUrl.trim() || undefined,
     identityId,
-    rasterBackend,
   };
 
   useEffect(() => {
@@ -139,11 +137,10 @@ export default function Home() {
   const selectedCapacity = capacities.data?.rows.find(row =>
     sizingMode === "auto"
       ? row.version === sizingRecommendation.data?.geometry_version
-      : row.name.toLowerCase() === geometry,
+      : typeof geometry === "string" && String(row.name).toLowerCase() === geometry,
   );
   const selectedIdentity = identities.data?.identities.find(identity => identity.id === identityId);
   const activeContext = activeView === "create" ? null : workspaceContext[activeView];
-  const nativeCoreEligible = !centerMark.trim() && !centerImageUrl.trim();
   const centerImageBridgeError = generate.isError && centerImageUrl.trim() && /center image/i.test(generate.error.message)
     ? describeCenterImageError(generate.error.message)
     : null;
@@ -375,15 +372,6 @@ export default function Home() {
                 error={centerImageBridgeError}
               />
 
-              <div className="renderer-experiment-field">
-                <FieldLabel hint="Optional / C++">Raster engine</FieldLabel>
-                <div className="select-wrap"><select value={rasterBackend} onChange={event => setRasterBackend(event.target.value as OrbiqoRasterBackend)}>
-                  <option value="reference">Reference renderer — Python</option>
-                  <option value="native-experimental" disabled={!nativeCoreEligible && rasterBackend !== "native-experimental"}>Native core — C++ experiment</option>
-                </select><ChevronDown size={15} /></div>
-                <p>{nativeCoreEligible ? "Tests the C++ raster core. The encoder, decoder and SVG stay on the reference path." : "Clear the center mark and image to test the C++ raster core. Center content stays on the reference renderer."}</p>
-              </div>
-
               <div className="visual-identity-field">
                 <FieldLabel hint="Validated visual templates">Visual identity</FieldLabel>
                 <p className="identity-explainer">Each template combines a validated palette with a safe cell profile. Free-form colors remain disabled.</p>
@@ -398,7 +386,7 @@ export default function Home() {
 
               <Button className="generate-button" onClick={handleGenerate} disabled={generate.isPending || (sizingMode === "auto" && sizingRecommendation.isError)}>
                 {generate.isPending ? <LoaderCircle className="animate-spin" size={18} /> : <Sparkles size={18} />}
-                {generate.isPending ? "Encoding through Python…" : "Generate Orbiqo"}
+                {generate.isPending ? "Encoding through C++…" : "Generate Orbiqo"}
                 {!generate.isPending ? <ArrowUpRight size={18} /> : null}
               </Button>
             </div>
@@ -429,13 +417,6 @@ export default function Home() {
                 <div><span>Sizing</span><strong>{generate.data?.metadata.sizing_mode ?? "—"}</strong></div>
                 <div><span>Identity</span><strong>{generate.data?.metadata.identity_name ?? "—"}</strong></div>
               </div>
-              {generate.data?.metadata.raster_backend_requested === "native-experimental" ? (
-                <p className={`renderer-status ${generate.data.metadata.raster_renderer === "cpp-native-experimental" ? "is-native" : ""}`}>
-                  {generate.data.metadata.raster_renderer === "cpp-native-experimental"
-                    ? "C++ raster core produced this PNG. Encoding, SVG and decoding remain on the reference path."
-                    : `Python reference renderer used: ${generate.data.metadata.native_fallback_reason ?? "native core is not available for this configuration."}`}
-                </p>
-              ) : null}
               <p className="attribution-line">{brandCopy.artifactAttribution}</p>
             </div>
           </section>
@@ -452,7 +433,7 @@ export default function Home() {
             identityId={identityId}
             centerMark={centerMark || undefined}
           />
-        ) : activeView === "benchmarks" ? <BenchmarkWorkspace /> : null}
+        ) : <BenchmarkWorkspace />}
 
         <section className="circular-fit-section" aria-labelledby="circular-fit-title">
           <header className="circular-fit-heading">

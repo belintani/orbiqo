@@ -3,7 +3,8 @@ export type OrbiqoGeometry = "auto" | "micro-1" | "micro-2" | "micro-4" | "small
 export type OrbiqoEcc = "fast" | "balanced" | "robust" | "extreme";
 export type OrbiqoSizingMode = "auto" | "manual";
 export type OrbiqoIdentityId = "reference" | "pulse" | "nocturne" | "terra" | "signal";
-export type OrbiqoRasterBackend = "reference" | "native-experimental";
+export type OrbiqoRasterBackend = "native-cpp";
+export type OrbiqoProtocolBackend = "native-cpp";
 
 export type OrbiqoNativeRendererComparison = {
   schema_version: number;
@@ -26,6 +27,23 @@ export type OrbiqoNativeRendererComparison = {
     native_relative_change_percent: number;
     reference_roundtrip: boolean;
     native_roundtrip: boolean;
+  }>;
+};
+
+export type OrbiqoNativeFullComparison = {
+  schema_version: number;
+  payload_bytes: number;
+  rows: Array<{
+    geometry: number;
+    diameter_mm: number;
+    runs: number;
+    python_encode_render_median_ms: number;
+    cpp_encode_render_process_median_ms: number;
+    encode_render_delta_percent: number;
+    python_decode_median_ms: number;
+    cpp_decode_process_median_ms: number;
+    decode_delta_percent: number;
+    scope: string;
   }>;
 };
 
@@ -144,6 +162,9 @@ export type OrbiqoGeneratedSymbol = {
     payload_type: string;
     payload_bytes: number;
     frame_bytes: number;
+    payload_cells?: number;
+    channel_bits?: number;
+    channel_bytes?: number;
     mask_id: number;
     palette_id: number;
     palette_name: string;
@@ -151,7 +172,7 @@ export type OrbiqoGeneratedSymbol = {
     maximum_uncompressed_payload_bytes: number;
     generation_time_ms: number;
     raster_backend_requested: OrbiqoRasterBackend;
-    raster_renderer: "python-reference" | "cpp-native-experimental" | "python-reference-fallback";
+    raster_renderer: "cpp-native-full";
     native_fallback_reason: string | null;
     attribution: string;
     visual_style: "reference" | "pulse";
@@ -164,6 +185,8 @@ export type OrbiqoGeneratedSymbol = {
 
 export type OrbiqoDecodedSymbol = {
   payload_base64: string;
+  decoder_backend: "native-cpp";
+  decoder_fallback_reason: string | null;
   text?: string;
   payload_type: string;
   payload_bytes: number;

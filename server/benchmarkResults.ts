@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { z } from "zod";
-import type { OrbiqoBenchmarkSummary, OrbiqoEccProfileBenchmark, OrbiqoNativeRendererComparison, OrbiqoNormalizedBenchmarkSummary, OrbiqoOptimizationDelta } from "../shared/orbiqo";
+import type { OrbiqoBenchmarkSummary, OrbiqoEccProfileBenchmark, OrbiqoNativeFullComparison, OrbiqoNativeRendererComparison, OrbiqoNormalizedBenchmarkSummary, OrbiqoOptimizationDelta } from "../shared/orbiqo";
 
 const moduleDirectory = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(moduleDirectory, "..");
@@ -19,6 +19,7 @@ const eccProfileComparisonPath = path.join(projectRoot, "benchmark", "results", 
 const eccProfileComparisonRawPath = path.join(projectRoot, "benchmark", "results", "ecc_profile_comparison_raw.csv");
 const eccProfileMethodologyPath = path.join(projectRoot, "docs", "ECC_PROFILE_BENCHMARK.md");
 const nativeRendererComparisonPath = path.join(projectRoot, "benchmark", "results", "native_renderer_comparison.json");
+const nativeFullComparisonPath = path.join(projectRoot, "benchmark", "results", "native_full_comparison.json");
 
 const summarySchema = z.object({
   schema_version: z.number().int().positive(),
@@ -150,6 +151,23 @@ const nativeRendererComparisonSchema = z.object({
   })).min(1),
 });
 
+const nativeFullComparisonSchema = z.object({
+  schema_version: z.number().int().positive(),
+  payload_bytes: z.number().int().positive(),
+  rows: z.array(z.object({
+    geometry: z.number().int().min(0).max(6),
+    diameter_mm: z.number().positive(),
+    runs: z.number().int().positive(),
+    python_encode_render_median_ms: z.number().nonnegative(),
+    cpp_encode_render_process_median_ms: z.number().nonnegative(),
+    encode_render_delta_percent: z.number(),
+    python_decode_median_ms: z.number().nonnegative(),
+    cpp_decode_process_median_ms: z.number().nonnegative(),
+    decode_delta_percent: z.number(),
+    scope: z.string(),
+  })).min(1),
+});
+
 export async function loadBenchmarkSummary(): Promise<OrbiqoBenchmarkSummary> {
   const parsed = JSON.parse(await readFile(summaryPath, "utf8"));
   return summarySchema.parse(parsed) as OrbiqoBenchmarkSummary;
@@ -197,4 +215,9 @@ export async function loadEccProfileComparisonArtifacts() {
 export async function loadNativeRendererComparison(): Promise<OrbiqoNativeRendererComparison> {
   const parsed = JSON.parse(await readFile(nativeRendererComparisonPath, "utf8"));
   return nativeRendererComparisonSchema.parse(parsed) as OrbiqoNativeRendererComparison;
+}
+
+export async function loadNativeFullComparison(): Promise<OrbiqoNativeFullComparison> {
+  const parsed = JSON.parse(await readFile(nativeFullComparisonPath, "utf8"));
+  return nativeFullComparisonSchema.parse(parsed) as OrbiqoNativeFullComparison;
 }

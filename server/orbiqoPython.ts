@@ -8,7 +8,7 @@ export function resolveBridgePath(projectRoot = process.cwd(), configuredPath?: 
 }
 
 const bridgePath = resolveBridgePath(process.cwd(), process.env.ORBIQO_BRIDGE_PATH);
-const referenceRoot = process.env.ORBIQO_RADIALCODE_ROOT ?? path.resolve(moduleDirectory, "..", "..", "radialcode");
+const referenceRoot = process.env.ORBIQO_RADIALCODE_ROOT ?? path.resolve(moduleDirectory, "python", "vendor", "radialcode");
 const maxInputBytes = 12 * 1024 * 1024;
 const maxOutputBytes = 30 * 1024 * 1024;
 

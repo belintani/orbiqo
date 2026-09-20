@@ -1,0 +1,12 @@
+name,format,geometry,python_encode_ms,cpp_encode_ms,encode_delta_percent,python_decode_ms,cpp_decode_ms,decode_delta_percent,repeats
+color4_binary_micro1,5,6,1.902,0.273,-85.6,2.019,0.053,-97.4,1000
+color4_url_micro2,5,0,3.211,0.651,-79.7,5.658,0.098,-98.3,1000
+color4_utf8_micro4,5,5,4.829,1.502,-68.9,7.581,0.168,-97.8,1000
+color4_binary_small_robust,5,1,12.786,4.364,-65.9,24.913,0.497,-98.0,1000
+color4_binary_xl,5,4,28.909,14.143,-51.1,41.407,1.202,-97.1,1000
+format1_url_small,1,1,6.093,2.613,-57.1,7.859,0.230,-97.1,1000
+format2_utf8_medium,2,2,12.365,6.082,-50.8,14.193,0.477,-96.6,1000
+format3_binary_large,3,3,20.425,10.366,-49.3,20.773,0.746,-96.4,1000
+format4_binary_micro2,4,0,2.351,0.665,-71.7,2.764,0.080,-97.1,1000
+format4_url_micro4,4,5,4.710,1.411,-70.0,6.614,0.170,-97.4,1000
+format5_binary_micro1,5,6,1.567,0.286,-81.7,1.861,0.052,-97.2,1000
