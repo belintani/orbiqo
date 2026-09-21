@@ -1,0 +1,7 @@
+images/*
+!images/.gitkeep
+*.jpg
+*.jpeg
+*.png
+*.webp
+report.json

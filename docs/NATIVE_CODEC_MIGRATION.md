@@ -90,13 +90,15 @@ O primeiro run público foi disparado pelo commit `30d8ff5` e executou com suces
 
 O workflow foi corrigido para adicionar `.ci-venv/bin` ao `GITHUB_PATH` depois da instalação da referência. Assim, quando um teste Node precisar exercitar o bridge Python como oracle, ele usa o mesmo interpretador e as mesmas dependências instaladas pela CI. Essa correção não reintroduz Python no runtime de produção, que continua chamando apenas os executáveis C++.
 
-O próximo run precisa confirmar a CI verde. Enquanto isso, a equivalência nativa continua sustentada pelos gates locais completos, e o primeiro run remoto já demonstrou que a falha não está no codec, no renderer, nos adapters externos ou nas matrizes visuais.
+O segundo run, no commit `f7e157a`, confirmou a correção do ambiente Python. O terceiro run, no commit `aaa9554`, também terminou com sucesso depois de incluir a matriz sintética de câmera. A tag anotada `v0.6.0-draft` aponta para esse commit validado.
 
 ## Próximos passos
 
-Após a CI verde, o próximo marco recomendado é criar uma tag de release mantendo explícito o estado Draft 0.6. Em seguida, a validação deve ampliar o corpus de visão C++ com imagens de câmera digital, iluminação variável, ruído e oclusões não retangulares. Novas medições de desempenho devem cobrir mais máquinas e resoluções, sempre separando codec lógico de produção completa.
+O runner `benchmark/run_camera_corpus.py` está pronto para receber um corpus privado de imagens capturadas por celular ou webcam. O manifest de exemplo e o protocolo de captura estão em `benchmark/camera-corpus/`. O runner compara diretamente o executável C++ com o oracle Python, registra hashes das imagens e dos payloads, dimensões, formatos, tempos e divergências, mas não copia imagens nem payloads para o relatório.
 
-Mudanças normativas e otimizações adicionais de visão devem aguardar esses gates. A implementação Python permanece como oracle até que cada mudança preserve os vetores, o decode e os limites documentados.
+O smoke test local do runner passou em **1/1 caso** com round-trip exato nos dois decoders. Isso valida a infraestrutura, não constitui evidência de câmera real: ainda não há imagens físicas fornecidas neste workspace. O próximo gate precisa usar arquivos originais de câmera, preservados sem resize ou melhoria, e manter esses arquivos fora do Git.
+
+Depois do corpus real, novas medições de desempenho devem cobrir mais máquinas, mantendo separadas as medições lógicas, de produção completa e de visão. Mudanças normativas e otimizações adicionais de visão devem aguardar esses gates.
 
 ## Referências
 

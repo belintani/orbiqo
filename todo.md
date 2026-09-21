@@ -250,9 +250,11 @@
 - [x] Corrigir o PATH da CI para que os testes Node usem o venv Python do oracle
 - [x] Atualizar README e documentação da migração com o estado real do runtime e da CI
 - [x] Confirmar um run verde da CI pública após a correção do ambiente
-- [ ] Criar a primeira tag de release mantendo explícito o estado Draft 0.6
+- [x] Criar a primeira tag de release mantendo explícito o estado Draft 0.6 (`v0.6.0-draft`)
 - [x] Ampliar o corpus digital de visão C++ com reamostragem, iluminação, ruído, JPEG e oclusões não retangulares
 - [x] Repetir o benchmark Python versus C++ em 300, 450 e 600 DPI na máquina local
-- [ ] Ampliar o corpus com imagens capturadas por câmeras reais, mantendo-o separado da matriz sintética
+- [x] Criar runner, manifest de exemplo e regras de privacidade para corpus de câmera real
+- [x] Validar o runner com smoke test C++ versus Python em 1/1 caso
+- [ ] Executar o runner com imagens capturadas por câmeras reais, mantendo-as separadas da matriz sintética
 - [ ] Repetir o benchmark Python versus C++ em máquinas adicionais
 - [ ] Avaliar novas otimizações de visão somente depois dos gates de compatibilidade ampliados

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "corpus_label": "orbiqo-draft06-real-camera-local",
+  "capture_protocol_version": "1",
+  "notes": "Private local manifest. Do not commit personal images or payloads.",
+  "cases": [
+    {
+      "id": "phone-front-01",
+      "image": "images/phone-front-01.jpg",
+      "geometry": "small",
+      "expected_payload_sha256": "",
+      "capture": {
+        "device_class": "phone",
+        "view": "frontal",
+        "lighting": "neutral",
+        "compression": "original-camera-file"
+      }
+    },
+    {
+      "id": "phone-perspective-01",
+      "image": "images/phone-perspective-01.jpg",
+      "geometry": "small",
+      "expected_payload_sha256": "",
+      "capture": {
+        "device_class": "phone",
+        "view": "mild-perspective",
+        "lighting": "neutral",
+        "compression": "original-camera-file"
+      }
+    }
+  ]
+}

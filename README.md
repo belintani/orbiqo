@@ -74,14 +74,15 @@ O workflow [`Orbiqo CI`](.github/workflows/ci.yml) instala dependências nativas
 
 A referência Python é instalada em `.ci-venv` e esse ambiente é exportado para o `PATH` da execução. Isso é necessário porque alguns testes Node iniciam o bridge Python apenas para validar contratos legados; esse caminho de teste não altera o runtime de produção C++.
 
-A publicação do runtime nativo foi feita no commit `30d8ff5`. O primeiro run remoto confirmou que todos os gates nativos passaram e revelou apenas a ausência de `requests` no `python3` usado pelos testes Node. O workflow foi corrigido para usar o venv correto. O segundo run, no commit `f7e157a`, terminou com sucesso.
+A publicação do runtime nativo foi feita no commit `30d8ff5`. O primeiro run remoto confirmou que todos os gates nativos passaram e revelou apenas a ausência de `requests` no `python3` usado pelos testes Node. O workflow foi corrigido para usar o venv correto. O segundo run, no commit `f7e157a`, e o terceiro run, no commit `aaa9554`, terminaram com sucesso. A tag anotada `v0.6.0-draft` aponta para o terceiro commit validado.
+
+O runner de corpus real está em [`benchmark/run_camera_corpus.py`](benchmark/run_camera_corpus.py), com protocolo e manifest de exemplo em [`benchmark/camera-corpus/`](benchmark/camera-corpus/). As imagens de câmera ficam fora do Git por padrão. O smoke test local passou em 1/1 caso sintético; isso valida o runner, mas ainda não é evidência de câmera física.
 
 ## Próximos passos
 
-1. Criar a primeira tag de release mantendo explícito o estado Draft 0.6.
-2. Ampliar o corpus de visão C++ com capturas físicas ou imagens de câmera reais, sem misturar essa evidência com a matriz sintética digital.
-3. Repetir o benchmark Python versus C++ em mais máquinas e resoluções, mantendo separadas as medições lógicas e de produção completa.
-4. Só depois avaliar otimizações de visão ou mudanças normativas; o Python continuará como oracle até que novos gates de compatibilidade sejam aprovados.
+1. Executar o runner com imagens originais capturadas por celular ou webcam, mantendo-as privadas e separadas da matriz sintética.
+2. Repetir o benchmark Python versus C++ em máquinas adicionais, mantendo separadas as medições lógicas, de produção completa e de visão.
+3. Só depois avaliar otimizações de visão ou mudanças normativas; o Python continuará como oracle até que novos gates de compatibilidade sejam aprovados.
 
 ## Licenças e atribuição
 
