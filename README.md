@@ -64,7 +64,7 @@ No benchmark lógico por ECC e geometria, 23 das 28 combinações do Draft 0.6 f
 
 Na produção completa com processo incluído, a medição anterior registrou **−51,98%** no tempo de encode mais PNG em Small e **−56,32%** em Medium. O decode canônico ficou **−85,23%** e **−73,90%**, respectivamente. São números de uma máquina, uma resolução e um corpus específicos; não são garantias de dispositivo.
 
-A matriz visual digital final passou em **26/26 casos** nativos no corpus principal e em **44/44 casos** na matriz ampliada com blur, downsample, brilho, rotação, compressão e oclusões localizadas. Isso não equivale a uma garantia geral de câmera, impressão ou qualquer ângulo.
+A matriz visual digital final passou em **26/26 casos** nativos no corpus principal e em **44/44 casos** na matriz ampliada com blur, downsample, brilho, rotação, compressão e oclusões localizadas. A nova matriz sintética de câmera passou em **20/20 casos nativos** com reamostragem, resposta de cor, vinheta, ruído, JPEG, brilho difuso e oclusões circulares, elípticas e arredondadas. A referência Python passou 19/20 nessa última matriz, com um limite conhecido no caso Small com oclusão circular de 6%. Esses resultados são digitais e específicos dos corpora; não equivalem a uma garantia geral de câmera, impressão ou qualquer ângulo.
 
 Consulte [`docs/NATIVE_CODEC_MIGRATION.md`](docs/NATIVE_CODEC_MIGRATION.md) para os parâmetros completos, resultados por geometria e as limitações declaradas.
 
@@ -74,15 +74,14 @@ O workflow [`Orbiqo CI`](.github/workflows/ci.yml) instala dependências nativas
 
 A referência Python é instalada em `.ci-venv` e esse ambiente é exportado para o `PATH` da execução. Isso é necessário porque alguns testes Node iniciam o bridge Python apenas para validar contratos legados; esse caminho de teste não altera o runtime de produção C++.
 
-A publicação do runtime nativo foi feita no commit `30d8ff5`. O primeiro run remoto confirmou que todos os gates nativos passaram e revelou apenas a ausência de `requests` no `python3` usado pelos testes Node. O workflow foi corrigido para usar o venv correto; o próximo push deve confirmar a CI verde.
+A publicação do runtime nativo foi feita no commit `30d8ff5`. O primeiro run remoto confirmou que todos os gates nativos passaram e revelou apenas a ausência de `requests` no `python3` usado pelos testes Node. O workflow foi corrigido para usar o venv correto. O segundo run, no commit `f7e157a`, terminou com sucesso.
 
 ## Próximos passos
 
-1. Confirmar a CI pública verde após a correção do ambiente Python de testes.
-2. Criar a primeira tag de release mantendo explícito o estado Draft 0.6.
-3. Ampliar o corpus de visão C++ com imagens de câmera digital, variações de iluminação, ruído e oclusões não retangulares.
-4. Comparar novamente Python e C++ em máquinas e resoluções adicionais, mantendo separadas as medições lógicas e de produção completa.
-5. Só depois avaliar otimizações de visão ou mudanças normativas; o Python continuará como oracle até que novos gates de compatibilidade sejam aprovados.
+1. Criar a primeira tag de release mantendo explícito o estado Draft 0.6.
+2. Ampliar o corpus de visão C++ com capturas físicas ou imagens de câmera reais, sem misturar essa evidência com a matriz sintética digital.
+3. Repetir o benchmark Python versus C++ em mais máquinas e resoluções, mantendo separadas as medições lógicas e de produção completa.
+4. Só depois avaliar otimizações de visão ou mudanças normativas; o Python continuará como oracle até que novos gates de compatibilidade sejam aprovados.
 
 ## Licenças e atribuição
 

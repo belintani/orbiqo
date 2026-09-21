@@ -249,8 +249,10 @@
 - [x] Executar e analisar o primeiro run da CI pública
 - [x] Corrigir o PATH da CI para que os testes Node usem o venv Python do oracle
 - [x] Atualizar README e documentação da migração com o estado real do runtime e da CI
-- [ ] Confirmar um run verde da CI pública após a correção do ambiente
+- [x] Confirmar um run verde da CI pública após a correção do ambiente
 - [ ] Criar a primeira tag de release mantendo explícito o estado Draft 0.6
-- [ ] Ampliar o corpus de visão C++ com câmera digital, iluminação, ruído e oclusões não retangulares
-- [ ] Repetir o benchmark Python versus C++ em mais máquinas e resoluções
+- [x] Ampliar o corpus digital de visão C++ com reamostragem, iluminação, ruído, JPEG e oclusões não retangulares
+- [x] Repetir o benchmark Python versus C++ em 300, 450 e 600 DPI na máquina local
+- [ ] Ampliar o corpus com imagens capturadas por câmeras reais, mantendo-o separado da matriz sintética
+- [ ] Repetir o benchmark Python versus C++ em máquinas adicionais
 - [ ] Avaliar novas otimizações de visão somente depois dos gates de compatibilidade ampliados

@@ -42,6 +42,8 @@ Os gates Python continuam sendo executados em desenvolvimento e CI para comparar
 
 `benchmark/validate_native_visual_matrix.py` continua registrando a matriz digital de Small e Medium com frontal, perspectiva, ruído, JPEG, WebP e oclusões localizadas. Na execução final desta fase, o resultado foi de **26/26 casos nativos recuperados**, igualando 26/26 na referência Python para esse corpus específico. A matriz ampliada em `benchmark/validate_native_visual_extended.py` acrescentou blur, downsample, brilho, rotação, compressão mais agressiva e quatro posições de oclusão. Ela também passou em **44/44 casos nativos e 44/44 casos da referência**. Isso é evidência digital local, não garantia geral de câmera, impressão ou qualquer ângulo.
 
+O novo `benchmark/validate_native_visual_camera.py` acrescenta uma matriz sintética de câmera com reamostragem, resposta de cor quente e fria, gama, vinheta, ruído de sensor, pipeline combinado com JPEG, brilho difuso e três oclusões não retangulares. Foram executados 20 casos em Small e Medium. O C++ recuperou **20/20**. A referência recuperou 19/20 porque falhou no caso Micro 2/Small com oclusão circular de 6%; esse caso é registrado como limite conhecido da referência neste corpus e não como regressão do C++. A diferença não deve ser transformada em claim geral de robustez. O corpus continua sendo sintético e digital.
+
 O comparador externo possui ainda um smoke test C++ próprio para QR, Aztec e JAB, exigindo round-trip binário exato e PNG válido. Esse teste não usa bindings Python.
 
 ## Desempenho
@@ -54,6 +56,17 @@ O benchmark de produção completa permanece separado do benchmark lógico in-pr
 | Medium, 40 mm | 318,23 ms | 138,99 ms | −56,32% | 139,16 ms | 36,32 ms | −73,90% |
 
 Esses números são medianas de uma máquina e execução específicas. Eles medem PNG digital e decode canônico; não medem publicação, câmera, impressão nem uma garantia de dispositivo. O benchmark lógico in-process anterior não deve ser misturado com essa tabela.
+
+Para verificar a dependência da resolução, `benchmark/benchmark_native_full_resolutions.py` repetiu cinco vezes cada combinação Small/Medium em 300, 450 e 600 DPI. O encode mais renderização C++ ficou entre **−22,82% e −54,22%** em relação ao Python. O decode canônico C++ ficou entre **−69,30% e −92,13%**. Os seis casos passaram round-trip exato. Os resultados são de uma máquina local com seis CPUs; a resolução nativa aceita atualmente vai de 72 a 600 DPI.
+
+| DPI | Geometria | Encode/render C++ | Decode C++ |
+|---:|---|---:|---:|
+| 300 | Small | −22,82% | −92,13% |
+| 300 | Medium | −24,57% | −80,81% |
+| 450 | Small | −44,15% | −88,18% |
+| 450 | Medium | −42,95% | −73,90% |
+| 600 | Small | −50,24% | −84,00% |
+| 600 | Medium | −54,22% | −69,30% |
 
 ### Codec lógico por ECC e geometria
 

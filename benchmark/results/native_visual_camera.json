@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "payload_bytes": 67,
+  "scope": "synthetic camera-like digital matrix; deterministic transformations; native and reference decode the same transformed native PNG; bridge startup included; not a physical-camera claim",
+  "total_cases": 20,
+  "native_successes": 20,
+  "reference_successes": 19,
+  "both_successes": 19,
+  "native_failure_cases": [],
+  "reference_failure_cases": [
+    "occlusion-circle-6"
+  ],
+  "known_reference_limit_cases": [
+    {
+      "geometry": 1,
+      "case": "occlusion-circle-6"
+    }
+  ],
+  "pixel_metrics": [
+    {
+      "geometry": 1,
+      "diameter_mm": 30.0,
+      "same_shape": 1,
+      "width": 745,
+      "height": 745,
+      "mae_rgb": 24.72832875396003,
+      "rmse_rgb": 74.07975107741187,
+      "p95_max_channel_error": 238.0,
+      "pixels_with_max_error_le_16": 0.8667087068150083,
+      "pixels_with_max_error_le_32": 0.8676762308004144
+    },
+    {
+      "geometry": 2,
+      "diameter_mm": 40.0,
+      "same_shape": 1,
+      "width": 993,
+      "height": 993,
+      "mae_rgb": 23.22115195762753,
+      "rmse_rgb": 72.18856387249541,
+      "p95_max_channel_error": 238.0,
+      "pixels_with_max_error_le_16": 0.8787382777123652,
+      "pixels_with_max_error_le_32": 0.8794978748520611
+    }
+  ],
+  "cases": [
+    {
+      "geometry": 1,
+      "diameter_mm": 30.0,
+      "case": "camera-resample-0.72",
+      "native_ok": true,
+      "reference_ok": true,
+      "both_ok": true,
+      "native_message": "ok",
+      "reference_message": "ok",
+      "native_bridge_ms": 1056.5329159981047,
+      "reference_bridge_ms": 865.1593960021273
+    },
+    {
+      "geometry": 1,
+      "diameter_mm": 30.0,
+      "case": "camera-color-warm-gamma",
+      "native_ok": true,
+      "reference_ok": true,
+      "both_ok": true,
+      "native_message": "ok",
+      "reference_message": "ok",
+      "native_bridge_ms": 890.0462800011155,
+      "reference_bridge_ms": 796.7717879982956
+    },
+    {
+      "geometry": 1,
+      "diameter_mm": 30.0,
+      "case": "camera-color-cool-gamma",
+      "native_ok": true,
+      "reference_ok": true,
+      "both_ok": true,
+      "native_message": "ok",
+      "reference_message": "ok",
+      "native_bridge_ms": 888.942653000413,
+      "reference_bridge_ms": 829.3587509979261
+    },
+    {
+      "geometry": 1,
+      "diameter_mm": 30.0,
+      "case": "camera-vignette",
+      "native_ok": true,
+      "reference_ok": true,
+      "both_ok": true,
+      "native_message": "ok",
+      "reference_message": "ok",
+      "native_bridge_ms": 1332.9030409986444,
+      "reference_bridge_ms": 863.6417670022638
+    },
+    {
+      "geometry": 1,
+      "diameter_mm": 30.0,
+      "case": "camera-sensor-noise",
+      "native_ok": true,
+      "reference_ok": true,
+      "both_ok": true,
+      "native_message": "ok",
+      "reference_message": "ok",
+      "native_bridge_ms": 1020.8703440002864,
+      "reference_bridge_ms": 863.9451130002271
+    },
+    {
+      "geometry": 1,
+      "diameter_mm": 30.0,
+      "case": "camera-pipeline-jpeg",
+      "native_ok": true,
+      "reference_ok": true,
+      "both_ok": true,
+      "native_message": "ok",
+      "reference_message": "ok",
+      "native_bridge_ms": 1000.2513520012144,
+      "reference_bridge_ms": 883.2560209993972
+    },
+    {
+      "geometry": 1,
+      "diameter_mm": 30.0,
+      "case": "occlusion-circle-6",
+      "native_ok": true,
+      "reference_ok": false,
+      "both_ok": false,
+      "native_message": "ok",
+      "reference_message": "RS block 0 is not recoverable",
+      "native_bridge_ms": 872.9073069989681,
+      "reference_bridge_ms": 900.124224001047
+    },
+    {
+      "geometry": 1,
+      "diameter_mm": 30.0,
+      "case": "occlusion-ellipse-6",
+      "native_ok": true,
+      "reference_ok": true,
+      "both_ok": true,
+      "native_message": "ok",
+      "reference_message": "ok",
+      "native_bridge_ms": 1105.8929810023983,
+      "reference_bridge_ms": 1296.7136339975696
+    },
+    {
+      "geometry": 1,
+      "diameter_mm": 30.0,
+      "case": "occlusion-rounded-strip-6",
+      "native_ok": true,
+      "reference_ok": true,
+      "both_ok": true,
+      "native_message": "ok",
+      "reference_message": "ok",
+      "native_bridge_ms": 1140.0831950013526,
+      "reference_bridge_ms": 1590.655002000858
+    },
+    {
+      "geometry": 1,
+      "diameter_mm": 30.0,
+      "case": "glare-rounded",
+      "native_ok": true,
+      "reference_ok": true,
+      "both_ok": true,
+      "native_message": "ok",
+      "reference_message": "ok",
+      "native_bridge_ms": 1081.1053020006511,
+      "reference_bridge_ms": 793.4920490006334
+    },
+    {
+      "geometry": 2,
+      "diameter_mm": 40.0,
+      "case": "camera-resample-0.72",
+      "native_ok": true,
+      "reference_ok": true,
+      "both_ok": true,
+      "native_message": "ok",
+      "reference_message": "ok",
+      "native_bridge_ms": 1491.7548670018732,
+      "reference_bridge_ms": 1289.4773309999437
+    },
+    {
+      "geometry": 2,
+      "diameter_mm": 40.0,
+      "case": "camera-color-warm-gamma",
+      "native_ok": true,
+      "reference_ok": true,
+      "both_ok": true,
+      "native_message": "ok",
+      "reference_message": "ok",
+      "native_bridge_ms": 1246.9686000004003,
+      "reference_bridge_ms": 1031.0294890005025
+    },
+    {
+      "geometry": 2,
+      "diameter_mm": 40.0,
+      "case": "camera-color-cool-gamma",
+      "native_ok": true,
+      "reference_ok": true,
+      "both_ok": true,
+      "native_message": "ok",
+      "reference_message": "ok",
+      "native_bridge_ms": 1146.0835299985774,
+      "reference_bridge_ms": 863.8913619979576
+    },
+    {
+      "geometry": 2,
+      "diameter_mm": 40.0,
+      "case": "camera-vignette",
+      "native_ok": true,
+      "reference_ok": true,
+      "both_ok": true,
+      "native_message": "ok",
+      "reference_message": "ok",
+      "native_bridge_ms": 1738.7753389994032,
+      "reference_bridge_ms": 1034.9088109978766
+    },
+    {
+      "geometry": 2,
+      "diameter_mm": 40.0,
+      "case": "camera-sensor-noise",
+      "native_ok": true,
+      "reference_ok": true,
+      "both_ok": true,
+      "native_message": "ok",
+      "reference_message": "ok",
+      "native_bridge_ms": 1339.995928999997,
+      "reference_bridge_ms": 997.3922950011911
+    },
+    {
+      "geometry": 2,
+      "diameter_mm": 40.0,
+      "case": "camera-pipeline-jpeg",
+      "native_ok": true,
+      "reference_ok": true,
+      "both_ok": true,
+      "native_message": "ok",
+      "reference_message": "ok",
+      "native_bridge_ms": 1285.6325289976667,
+      "reference_bridge_ms": 966.79996900275
+    },
+    {
+      "geometry": 2,
+      "diameter_mm": 40.0,
+      "case": "occlusion-circle-6",
+      "native_ok": true,
+      "reference_ok": true,
+      "both_ok": true,
+      "native_message": "ok",
+      "reference_message": "ok",
+      "native_bridge_ms": 1340.5421509996813,
+      "reference_bridge_ms": 969.4268130006094
+    },
+    {
+      "geometry": 2,
+      "diameter_mm": 40.0,
+      "case": "occlusion-ellipse-6",
+      "native_ok": true,
+      "reference_ok": true,
+      "both_ok": true,
+      "native_message": "ok",
+      "reference_message": "ok",
+      "native_bridge_ms": 1120.3536630018789,
+      "reference_bridge_ms": 1383.8522219994047
+    },
+    {
+      "geometry": 2,
+      "diameter_mm": 40.0,
+      "case": "occlusion-rounded-strip-6",
+      "native_ok": true,
+      "reference_ok": true,
+      "both_ok": true,
+      "native_message": "ok",
+      "reference_message": "ok",
+      "native_bridge_ms": 1302.3112250011764,
+      "reference_bridge_ms": 1238.868165997701
+    },
+    {
+      "geometry": 2,
+      "diameter_mm": 40.0,
+      "case": "glare-rounded",
+      "native_ok": true,
+      "reference_ok": true,
+      "both_ok": true,
+      "native_message": "ok",
+      "reference_message": "ok",
+      "native_bridge_ms": 1584.4876800001657,
+      "reference_bridge_ms": 1053.367699001683
+    }
+  ]
+}

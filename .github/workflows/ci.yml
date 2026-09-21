@@ -93,6 +93,9 @@ jobs:
       - name: Native extended visual matrix
         run: .ci-venv/bin/python benchmark/validate_native_visual_extended.py
 
+      - name: Native camera-like visual matrix
+        run: .ci-venv/bin/python benchmark/validate_native_visual_camera.py
+
       - name: Typecheck and JavaScript tests
         run: |
           pnpm check
