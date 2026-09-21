@@ -73,7 +73,17 @@ O Orbiqo não reivindica superioridade geral sobre QR, Aztec ou JAB. As compara�
 
 ## CI pública
 
-O workflow foi preparado e reproduzido localmente até o marcador `LOCAL_CI_EQUIVALENT_OK`, incluindo compilação do JAB, targets C++, adapters externos, paridade nativa, matriz visual, typecheck, 64 testes Vitest e build. A consulta pública ao repositório, antes de qualquer novo push, retornou zero execuções de GitHub Actions. Portanto, a CI remota ainda não foi disparada nesta etapa; isso requer que o workflow seja publicado no GitHub em uma alteração autorizada.
+O primeiro run público foi disparado pelo commit `30d8ff5` e executou com sucesso todos os gates nativos: compilação do JAB, targets C++, adapters externos, paridade lógica, paridade full-path, matriz visual principal, benchmark por perfil e matriz visual ampliada. A única falha ocorreu na etapa `Typecheck and JavaScript tests`: os testes Node iniciaram `server/python/orbiqo_bridge.py` com o `python3` do sistema, enquanto `requests` havia sido instalado somente em `.ci-venv`.
+
+O workflow foi corrigido para adicionar `.ci-venv/bin` ao `GITHUB_PATH` depois da instalação da referência. Assim, quando um teste Node precisar exercitar o bridge Python como oracle, ele usa o mesmo interpretador e as mesmas dependências instaladas pela CI. Essa correção não reintroduz Python no runtime de produção, que continua chamando apenas os executáveis C++.
+
+O próximo run precisa confirmar a CI verde. Enquanto isso, a equivalência nativa continua sustentada pelos gates locais completos, e o primeiro run remoto já demonstrou que a falha não está no codec, no renderer, nos adapters externos ou nas matrizes visuais.
+
+## Próximos passos
+
+Após a CI verde, o próximo marco recomendado é criar uma tag de release mantendo explícito o estado Draft 0.6. Em seguida, a validação deve ampliar o corpus de visão C++ com imagens de câmera digital, iluminação variável, ruído e oclusões não retangulares. Novas medições de desempenho devem cobrir mais máquinas e resoluções, sempre separando codec lógico de produção completa.
+
+Mudanças normativas e otimizações adicionais de visão devem aguardar esses gates. A implementação Python permanece como oracle até que cada mudança preserve os vetores, o decode e os limites documentados.
 
 ## Referências
 

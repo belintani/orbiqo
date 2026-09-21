@@ -242,3 +242,15 @@
 - [x] Criar README de entrada para a primeira versão pública do repositório Orbiqo
 - [x] Espelhar LICENSE, NOTICE, ATTRIBUTION e licença da especificação RadialCode antes do primeiro push
 - [x] Incluir a especificação Draft 0.6 no repositório público junto à sua licença
+
+## Pós-publicação do runtime C++
+
+- [x] Publicar o runtime C++ e os gates de compatibilidade em um commit público com autoria exclusiva de Daniel Belintani
+- [x] Executar e analisar o primeiro run da CI pública
+- [x] Corrigir o PATH da CI para que os testes Node usem o venv Python do oracle
+- [x] Atualizar README e documentação da migração com o estado real do runtime e da CI
+- [ ] Confirmar um run verde da CI pública após a correção do ambiente
+- [ ] Criar a primeira tag de release mantendo explícito o estado Draft 0.6
+- [ ] Ampliar o corpus de visão C++ com câmera digital, iluminação, ruído e oclusões não retangulares
+- [ ] Repetir o benchmark Python versus C++ em mais máquinas e resoluções
+- [ ] Avaliar novas otimizações de visão somente depois dos gates de compatibilidade ampliados

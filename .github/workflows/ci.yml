@@ -54,6 +54,7 @@ jobs:
           python -m venv .ci-venv
           .ci-venv/bin/pip install --upgrade pip
           .ci-venv/bin/pip install -e "server/python/vendor/radialcode[vision]" requests zxing-cpp
+          echo "${{ github.workspace }}/.ci-venv/bin" >> "$GITHUB_PATH"
 
       - name: Build JAB runtime
         run: |
